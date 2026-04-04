@@ -3,9 +3,9 @@ import Foundation
 struct WikipediaService {
     // MARK: - Public
 
-    func fetchSaint(named name: String) async throws -> Saint {
+    func fetchSaint(named name: String, for date: Date = Date()) async throws -> Saint {
         let title = try await resolveTitle(for: name)
-        return try await fetchArticle(title: title, originalName: name)
+        return try await fetchArticle(title: title, originalName: name, date: date)
     }
 
     // MARK: - Title Resolution
@@ -39,7 +39,7 @@ struct WikipediaService {
 
     // MARK: - Article Fetch
 
-    private func fetchArticle(title: String, originalName: String) async throws -> Saint {
+    private func fetchArticle(title: String, originalName: String, date: Date) async throws -> Saint {
         guard let page = try await queryPages(title: title) else {
             throw WikipediaError.notFound
         }
@@ -50,16 +50,15 @@ struct WikipediaService {
         let timePeriod = extractTimePeriod(from: extract)
         let imageURL = page.thumbnail.flatMap { URL(string: $0.source) }
 
-        let now = Date()
         let calendar = Calendar.current
-        let components = calendar.dateComponents([.month, .day], from: now)
+        let components = calendar.dateComponents([.month, .day], from: date)
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMMM d"
 
         return Saint(
             canonicalName: page.title,
-            feastDay: dateFormatter.string(from: now),
+            feastDay: dateFormatter.string(from: date),
             feastMonth: components.month ?? 1,
             feastDayOfMonth: components.day ?? 1,
             timePeriod: timePeriod,
@@ -67,7 +66,7 @@ struct WikipediaService {
             imageURL: imageURL,
             wikipediaTitle: page.title,
             sections: sections,
-            fetchedDate: now
+            fetchedDate: date
         )
     }
 

@@ -11,16 +11,24 @@ enum LoadState {
 @Observable
 final class SaintRepository {
     private(set) var state: LoadState = .idle
+    let date: Date
 
     private let vaticanService = VaticanNewsService()
     private let wikipediaService = WikipediaService()
     private let cacheService = CacheService()
 
-    func fetchTodaySaint() async {
-        let today = Date()
+    init(date: Date = Date()) {
+        self.date = date
+    }
 
-        // 1. Check cache first
-        if let cached = try? cacheService.load(for: today) {
+    func fetchIfNeeded() async {
+        if case .idle = state {
+            await fetchSaint(for: date)
+        }
+    }
+
+    func fetchSaint(for date: Date) async {
+        if let cached = try? cacheService.load(for: date) {
             state = .loaded(cached)
             return
         }
@@ -28,19 +36,12 @@ final class SaintRepository {
         state = .loading
 
         do {
-            // 2. Get saint name from Vatican News
-            let (name, _) = try await vaticanService.fetchSaint(for: today)
-
-            // 3. Get full content from Wikipedia
-            let saint = try await wikipediaService.fetchSaint(named: name)
-
-            // 4. Persist to cache
-            try? cacheService.save(saint, for: today)
-
+            let (name, _) = try await vaticanService.fetchSaint(for: date)
+            let saint = try await wikipediaService.fetchSaint(named: name, for: date)
+            try? cacheService.save(saint, for: date)
             state = .loaded(saint)
         } catch {
-            // Try returning a stale cache as fallback
-            if let stale = try? cacheService.load(for: today) {
+            if let stale = try? cacheService.load(for: date) {
                 state = .loaded(stale)
             } else {
                 state = .failed(error)
@@ -50,6 +51,6 @@ final class SaintRepository {
 
     func refresh() async {
         state = .idle
-        await fetchTodaySaint()
+        await fetchSaint(for: date)
     }
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-struct Saint: Codable, Identifiable {
+struct Saint: Codable, Identifiable, Hashable {
     var id: String { canonicalName }
     let canonicalName: String
     let feastDay: String

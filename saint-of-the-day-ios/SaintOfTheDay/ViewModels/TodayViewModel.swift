@@ -3,36 +3,70 @@ import Observation
 
 @Observable
 final class TodayViewModel {
-    var saint: Saint? {
-        if case .loaded(let s) = repository.state { return s }
-        return nil
+
+    // MARK: - Flip State
+    var isShowingYesterday: Bool = false
+
+    // MARK: - Repositories
+    let todayRepo: SaintRepository
+    let yesterdayRepo: SaintRepository
+
+    init() {
+        let today = Date()
+        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: today)!
+        self.todayRepo = SaintRepository(date: today)
+        self.yesterdayRepo = SaintRepository(date: yesterday)
     }
 
-    var isLoading: Bool {
-        if case .loading = repository.state { return true }
+    // MARK: - Today
+    var todaySaint: Saint? {
+        if case .loaded(let s) = todayRepo.state { return s }
+        return nil
+    }
+    var isTodayLoading: Bool {
+        if case .loading = todayRepo.state { return true }
         return false
     }
-
-    var errorMessage: String? {
-        if case .failed(let error) = repository.state {
-            return error.localizedDescription
-        }
+    var todayError: String? {
+        if case .failed(let e) = todayRepo.state { return e.localizedDescription }
         return nil
     }
 
-    private let repository: SaintRepository
-
-    init(repository: SaintRepository = SaintRepository()) {
-        self.repository = repository
+    // MARK: - Yesterday
+    var yesterdaySaint: Saint? {
+        if case .loaded(let s) = yesterdayRepo.state { return s }
+        return nil
+    }
+    var isYesterdayLoading: Bool {
+        if case .loading = yesterdayRepo.state { return true }
+        return false
+    }
+    var yesterdayError: String? {
+        if case .failed(let e) = yesterdayRepo.state { return e.localizedDescription }
+        return nil
     }
 
-    func loadIfNeeded() async {
-        if case .idle = repository.state {
-            await repository.fetchTodaySaint()
+    // MARK: - Actions
+    func loadToday() async {
+        await todayRepo.fetchIfNeeded()
+    }
+
+    func refreshToday() async {
+        await todayRepo.refresh()
+    }
+
+    func loadYesterdayIfNeeded() async {
+        await yesterdayRepo.fetchIfNeeded()
+    }
+
+    func retryYesterday() async {
+        await yesterdayRepo.refresh()
+    }
+
+    func flip() {
+        isShowingYesterday.toggle()
+        if isShowingYesterday {
+            Task { await loadYesterdayIfNeeded() }
         }
-    }
-
-    func refresh() async {
-        await repository.refresh()
     }
 }

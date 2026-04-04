@@ -34,6 +34,9 @@
 		AA000001000000000000025 /* Font+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000125 /* Font+Theme.swift */; };
 		AA000001000000000000026 /* View+CardStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000126 /* View+CardStyle.swift */; };
 		AA000001000000000000027 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000127 /* Assets.xcassets */; };
+		AA000001000000000000028 /* SaintPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000129 /* SaintPageView.swift */; };
+		AA000001000000000000029 /* FlipButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000130 /* FlipButton.swift */; };
+		AA000001000000000000030 /* PageFlipContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000131 /* PageFlipContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +69,9 @@
 		AA000001000000000000126 /* View+CardStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+CardStyle.swift"; sourceTree = "<group>"; };
 		AA000001000000000000127 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA000001000000000000128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA000001000000000000129 /* SaintPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintPageView.swift; sourceTree = "<group>"; };
+		AA000001000000000000130 /* FlipButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipButton.swift; sourceTree = "<group>"; };
+		AA000001000000000000131 /* PageFlipContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageFlipContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,9 @@
 				AA000001000000000000112 /* TodayView.swift */,
 				AA000001000000000000113 /* SaintHeroCard.swift */,
 				AA000001000000000000114 /* QuickBioSnippet.swift */,
+				AA000001000000000000129 /* SaintPageView.swift */,
+				AA000001000000000000130 /* FlipButton.swift */,
+				AA000001000000000000131 /* PageFlipContainer.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -305,6 +314,9 @@
 				AA000001000000000000024 /* Color+Theme.swift in Sources */,
 				AA000001000000000000025 /* Font+Theme.swift in Sources */,
 				AA000001000000000000026 /* View+CardStyle.swift in Sources */,
+				AA000001000000000000028 /* SaintPageView.swift in Sources */,
+				AA000001000000000000029 /* FlipButton.swift in Sources */,
+				AA000001000000000000030 /* PageFlipContainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

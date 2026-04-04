@@ -1,6 +1,6 @@
 import Foundation
 
-enum SectionKind: String, Codable {
+enum SectionKind: String, Codable, Hashable {
     case biography
     case miracles
     case writings
@@ -9,7 +9,7 @@ enum SectionKind: String, Codable {
     case other
 }
 
-struct SaintSection: Codable, Identifiable {
+struct SaintSection: Codable, Identifiable, Hashable {
     let id: UUID
     let kind: SectionKind
     let heading: String

@@ -10,7 +10,7 @@ final class CacheService {
         guard FileManager.default.fileExists(atPath: url.path) else { return nil }
         let data = try Data(contentsOf: url)
         let saint = try decoder.decode(Saint.self, from: data)
-        guard calendar.isDateInToday(saint.fetchedDate) else { return nil }
+        guard calendar.isDate(saint.fetchedDate, inSameDayAs: date) else { return nil }
         return saint
     }
 
