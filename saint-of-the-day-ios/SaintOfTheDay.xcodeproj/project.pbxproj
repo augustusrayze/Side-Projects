@@ -51,6 +51,8 @@
 		AA000001000000000000042 /* ShimmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000143 /* ShimmerView.swift */; };
 		AA000001000000000000043 /* SaintShareCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000144 /* SaintShareCard.swift */; };
 		AA000001000000000000044 /* View+RevealOnAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000145 /* View+RevealOnAppear.swift */; };
+		AA000001000000000000045 /* AppIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000146 /* AppIconView.swift */; };
+		AA000001000000000000046 /* AppIconExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA000001000000000000147 /* AppIconExporter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +102,9 @@
 		AA000001000000000000143 /* ShimmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerView.swift; sourceTree = "<group>"; };
 		AA000001000000000000144 /* SaintShareCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintShareCard.swift; sourceTree = "<group>"; };
 		AA000001000000000000145 /* View+RevealOnAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+RevealOnAppear.swift"; sourceTree = "<group>"; };
+		AA000001000000000000146 /* AppIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconView.swift; sourceTree = "<group>"; };
+		AA000001000000000000147 /* AppIconExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppIconExporter.swift; sourceTree = "<group>"; };
+		AA000001000000000000148 /* SaintOfTheDay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "SaintOfTheDay.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,12 +132,14 @@
 				AA000001000000000000101 /* SaintOfTheDayApp.swift */,
 				AA000001000000000000127 /* Assets.xcassets */,
 				AA000001000000000000128 /* Info.plist */,
+				AA000001000000000000148 /* SaintOfTheDay.entitlements */,
 				AA000001000000000000311 /* Models */,
 				AA000001000000000000312 /* Services */,
 				AA000001000000000000313 /* ViewModels */,
 				AA000001000000000000314 /* Views */,
 				AA000001000000000000315 /* Extensions */,
 				AA000001000000000000331 /* Resources */,
+				AA000001000000000000333 /* Utilities */,
 			);
 			path = SaintOfTheDay;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				AA000001000000000000111 /* RootView.swift */,
+				AA000001000000000000146 /* AppIconView.swift */,
 				AA000001000000000000316 /* Today */,
 				AA000001000000000000317 /* Detail */,
 				AA000001000000000000318 /* Onboarding */,
@@ -255,6 +263,14 @@
 				AA000001000000000000135 /* prayers.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		AA000001000000000000333 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				AA000001000000000000147 /* AppIconExporter.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		AA000001000000000000332 /* Menu */ = {
@@ -389,6 +405,8 @@
 				AA000001000000000000042 /* ShimmerView.swift in Sources */,
 				AA000001000000000000043 /* SaintShareCard.swift in Sources */,
 				AA000001000000000000044 /* View+RevealOnAppear.swift in Sources */,
+				AA000001000000000000045 /* AppIconView.swift in Sources */,
+				AA000001000000000000046 /* AppIconExporter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SaintOfTheDay/SaintOfTheDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -410,7 +429,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourname.saintoftheday";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.augustusrayze.saintoftheday";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -423,6 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SaintOfTheDay/SaintOfTheDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = NO;
@@ -433,7 +453,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yourname.saintoftheday";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.augustusrayze.saintoftheday";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
