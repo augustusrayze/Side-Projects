@@ -1,0 +1,62 @@
+[
+  {
+    "id": "morning-offering",
+    "name": "Morning Offering",
+    "occasion": "Morning",
+    "text": "O Jesus, through the Immaculate Heart of Mary, I offer You my prayers, works, joys and sufferings of this day for all the intentions of Your Sacred Heart, in union with the Holy Sacrifice of the Mass throughout the world, in reparation for my sins, for the intentions of all my relatives and friends, and in particular for the intentions of the Holy Father. Amen."
+  },
+  {
+    "id": "angelus",
+    "name": "The Angelus",
+    "occasion": "Midday",
+    "text": "The Angel of the Lord declared to Mary,\nAnd she conceived of the Holy Spirit.\n\nHail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.\n\nBehold the handmaid of the Lord,\nBe it done unto me according to Thy word.\n\nHail Mary…\n\nAnd the Word was made flesh,\nAnd dwelt among us.\n\nHail Mary…\n\nPray for us, O Holy Mother of God,\nThat we may be made worthy of the promises of Christ.\n\nLet us pray: Pour forth, we beseech Thee, O Lord, Thy grace into our hearts; that we, to whom the Incarnation of Christ, Thy Son, was made known by the message of an angel, may by His Passion and Cross be brought to the glory of His Resurrection, through the same Christ Our Lord. Amen."
+  },
+  {
+    "id": "act-of-contrition",
+    "name": "Act of Contrition",
+    "occasion": "Anytime",
+    "text": "O my God, I am heartily sorry for having offended Thee, and I detest all my sins because of Thy just punishments, but most of all because they offend Thee, my God, Who art all-good and deserving of all my love. I firmly resolve, with the help of Thy grace, to sin no more and to avoid the near occasions of sin. Amen."
+  },
+  {
+    "id": "act-of-faith",
+    "name": "Act of Faith",
+    "occasion": "Anytime",
+    "text": "O my God, I firmly believe that Thou art one God in three divine Persons, Father, Son, and Holy Spirit. I believe that Thy divine Son became man and died for our sins and that He will come to judge the living and the dead. I believe these and all the truths which the Holy Catholic Church teaches, because Thou hast revealed them, Who canst neither deceive nor be deceived. Amen."
+  },
+  {
+    "id": "act-of-hope",
+    "name": "Act of Hope",
+    "occasion": "Anytime",
+    "text": "O my God, relying on Thy almighty power and infinite mercy and promises, I hope to obtain pardon of my sins, the help of Thy grace, and life everlasting, through the merits of Jesus Christ, my Lord and Redeemer. Amen."
+  },
+  {
+    "id": "act-of-love",
+    "name": "Act of Love",
+    "occasion": "Anytime",
+    "text": "O my God, I love Thee above all things, with my whole heart and soul, because Thou art all-good and worthy of all love. I love my neighbor as myself for the love of Thee. I forgive all who have injured me and ask pardon of all whom I have injured. Amen."
+  },
+  {
+    "id": "memorare",
+    "name": "The Memorare",
+    "occasion": "Anytime",
+    "text": "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession was left unaided. Inspired by this confidence, I fly unto thee, O Virgin of virgins, my mother; to thee do I come, before thee I stand, sinful and sorrowful. O Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me. Amen."
+  },
+  {
+    "id": "sub-tuum",
+    "name": "Sub Tuum Praesidium",
+    "occasion": "Evening",
+    "text": "We fly to thy protection, O holy Mother of God. Despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin. Amen."
+  },
+  {
+    "id": "st-michael",
+    "name": "Prayer to Saint Michael",
+    "occasion": "Anytime",
+    "text": "Saint Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil. May God rebuke him, we humbly pray; and do Thou, O Prince of the Heavenly Host, by the power of God, cast into hell Satan and all evil spirits who wander through the world seeking the ruin of souls. Amen."
+  },
+  {
+    "id": "hail-holy-queen",
+    "name": "Hail Holy Queen",
+    "occasion": "Evening",
+    "text": "Hail, holy Queen, Mother of Mercy, our life, our sweetness and our hope. To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us; and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary! Pray for us, O Holy Mother of God, that we may be made worthy of the promises of Christ. Amen."
+  }
+]
