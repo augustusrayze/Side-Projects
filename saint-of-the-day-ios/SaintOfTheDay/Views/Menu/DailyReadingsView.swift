@@ -35,7 +35,7 @@ struct DailyReadingsView: View {
                 .padding(40)
             } else if let readings {
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 24) {
+                    VStack(alignment: .leading, spacing: 20) {
                         Text(formattedDate)
                             .font(.saintCaption)
                             .foregroundStyle(Color.ancientGold)
@@ -83,8 +83,28 @@ struct DailyReadingsView: View {
 private struct ReadingCard: View {
     let reading: Reading
 
+    private var compactText: String {
+        reading.text
+            .components(separatedBy: CharacterSet.newlines)
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .reduce(into: [String]()) { result, line in
+                guard !line.isEmpty else { return }
+                if let lastIndex = result.indices.last,
+                   !result[lastIndex].hasSuffix("."),
+                   !result[lastIndex].hasSuffix(":"),
+                   !result[lastIndex].hasSuffix(";"),
+                   !result[lastIndex].hasSuffix("?"),
+                   !result[lastIndex].hasSuffix("!") {
+                    result[lastIndex] += " " + line
+                } else {
+                    result.append(line)
+                }
+            }
+            .joined(separator: "\n")
+    }
+
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 10) {
                 Image(systemName: iconName)
                     .font(.system(size: 14, weight: .medium))
@@ -95,16 +115,18 @@ private struct ReadingCard: View {
                     .tracking(1.0)
             }
 
-            Text(reading.reference)
-                .font(.saintHeading)
-                .foregroundStyle(Color.inkBrown)
+            if !reading.reference.isEmpty {
+                Text(reading.reference)
+                    .font(.saintHeading)
+                    .foregroundStyle(Color.inkBrown)
+            }
 
-            Text(reading.text)
+            Text(compactText)
                 .font(.saintBody)
                 .foregroundStyle(Color.inkBrown.opacity(0.85))
-                .lineSpacing(5)
+                .lineSpacing(3)
         }
-        .padding(20)
+        .padding(18)
         .background(
             RoundedRectangle(cornerRadius: 12)
                 .fill(Color.vellumShadow.opacity(0.25))

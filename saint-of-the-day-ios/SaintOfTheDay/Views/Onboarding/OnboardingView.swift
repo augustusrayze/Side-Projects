@@ -47,7 +47,11 @@ struct OnboardingView: View {
                         isRequesting = true
                         Task {
                             _ = await NotificationService.shared.requestPermissionIfNeeded()
-                            await NotificationService.shared.scheduleDailyNotification()
+                            await NotificationService.shared.scheduleDailyNotification(
+                                imageURL: nil,
+                                saintName: nil,
+                                date: Date()
+                            )
                             isRequesting = false
                             hasSeenOnboarding = true
                         }

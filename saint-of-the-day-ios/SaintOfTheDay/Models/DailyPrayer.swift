@@ -1,8 +1,21 @@
 import Foundation
 
-struct DailyPrayer: Codable, Identifiable {
+struct DailyPrayer: Codable, Identifiable, Hashable {
     let id: String
-    let name: String
+    let title: String
     let text: String
-    let occasion: String  // "Morning", "Evening", "Anytime", etc.
+    let occasion: String
+    let category: String
+    let summary: String
+    let sourceTitle: String
+    let sourceURL: String?
+    let weekdays: [Int]?
+    let months: [Int]?
+    let saintAliases: [String]
+    let tags: [String]
+
+    var sourceLink: URL? {
+        guard let sourceURL else { return nil }
+        return URL(string: sourceURL)
+    }
 }

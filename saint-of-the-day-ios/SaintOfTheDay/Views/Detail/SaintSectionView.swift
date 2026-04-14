@@ -3,6 +3,24 @@ import SwiftUI
 struct SaintSectionView: View {
     let section: SaintSection
 
+    private var writingLines: [String] {
+        section.body
+            .components(separatedBy: CharacterSet.newlines)
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+    }
+
+    private var notableWorks: [String] {
+        writingLines.filter { $0.hasPrefix("- ") }
+            .map { String($0.dropFirst(2)).trimmingCharacters(in: .whitespacesAndNewlines) }
+    }
+
+    private var writingSummary: String {
+        writingLines
+            .filter { !$0.hasPrefix("- ") }
+            .joined(separator: "\n\n")
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(spacing: 8) {
@@ -29,28 +47,37 @@ struct SaintSectionView: View {
         .cardStyle()
     }
 
-    // MARK: - Decorative Quote for Writings
-
     private var writingsBody: some View {
-        ZStack(alignment: .topLeading) {
-            // Large decorative open-quote in the background
-            Text("\u{201C}")
-                .font(.system(size: 80, weight: .light, design: .serif))
-                .foregroundStyle(Color.ancientGold.opacity(0.22))
-                .offset(x: -6, y: -14)
-                .allowsHitTesting(false)
+        VStack(alignment: .leading, spacing: 12) {
+            if !notableWorks.isEmpty {
+                Text("Notable works")
+                    .font(.saintCaption)
+                    .foregroundStyle(Color.ancientGold)
 
-            Text(section.body)
-                .font(.saintBody)
-                .italic()
-                .foregroundStyle(Color.inkBrown.opacity(0.9))
-                .lineSpacing(6)
-                .padding(.top, 22)
-                .padding(.leading, 6)
+                VStack(alignment: .leading, spacing: 8) {
+                    ForEach(notableWorks, id: \.self) { work in
+                        HStack(alignment: .top, spacing: 8) {
+                            Image(systemName: "circle.fill")
+                                .font(.system(size: 6))
+                                .foregroundStyle(Color.ancientGold)
+                                .padding(.top, 7)
+
+                            Text(work)
+                                .font(.saintBody)
+                                .foregroundStyle(Color.inkBrown.opacity(0.95))
+                        }
+                    }
+                }
+            }
+
+            if !writingSummary.isEmpty {
+                Text(writingSummary)
+                    .font(.saintBody)
+                    .foregroundStyle(Color.inkBrown.opacity(0.9))
+                    .lineSpacing(5)
+            }
         }
     }
-
-    // MARK: - Icon
 
     private func icon(for kind: SectionKind) -> String {
         switch kind {

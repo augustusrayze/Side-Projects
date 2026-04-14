@@ -8,6 +8,7 @@ struct Saint: Codable, Identifiable, Hashable {
     let feastDayOfMonth: Int
     let timePeriod: String?
     let shortBio: String
+    let popularQuote: String?
     let imageURL: URL?
     let wikipediaTitle: String
     let sections: [SaintSection]

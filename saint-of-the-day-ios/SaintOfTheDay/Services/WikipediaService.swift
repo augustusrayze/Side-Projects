@@ -12,11 +12,34 @@ struct WikipediaService {
 
     private func resolveTitle(for name: String) async throws -> String {
         // First attempt: direct lookup
-        if let page = try? await queryPages(title: name), !isDisambiguation(page.extract ?? "") {
+        if let page = try? await queryPages(title: name),
+           page.missing != true,
+           let extract = page.extract,
+           !extract.isEmpty,
+           !isDisambiguation(extract) {
             return page.title
         }
-        // Fallback: search with "Catholic saint" qualifier
-        return try await searchTitle(for: "\(name) Catholic saint")
+        // Fallback: search with a Catholic qualifier and a simplified saint title.
+        return try await searchTitle(for: "\(searchQueryName(for: name)) Catholic saint")
+    }
+
+    private func searchQueryName(for name: String) -> String {
+        let cleaned = name
+            .replacingOccurrences(of: "St.", with: "", options: .caseInsensitive)
+            .replacingOccurrences(of: "Saint", with: "", options: .caseInsensitive)
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+
+        let parts = cleaned.split(separator: ",").map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+        if parts.count >= 2,
+           let title = parts.dropFirst().first(where: { $0.localizedCaseInsensitiveContains("Bishop of ") }),
+           let locationRange = title.range(of: "Bishop of ", options: .caseInsensitive) {
+            let location = title[locationRange.upperBound...].trimmingCharacters(in: .whitespacesAndNewlines)
+            if !location.isEmpty {
+                return "\(parts[0]) of \(location)"
+            }
+        }
+
+        return cleaned
     }
 
     private func searchTitle(for query: String) async throws -> String {
@@ -63,6 +86,7 @@ struct WikipediaService {
             feastDayOfMonth: components.day ?? 1,
             timePeriod: timePeriod,
             shortBio: shortBio,
+            popularQuote: nil,
             imageURL: imageURL,
             wikipediaTitle: page.title,
             sections: sections,
@@ -214,6 +238,7 @@ struct WikipediaPage: Decodable {
     let title: String
     let extract: String?
     let thumbnail: WikipediaThumbnail?
+    let missing: Bool?
 }
 
 struct WikipediaThumbnail: Decodable {

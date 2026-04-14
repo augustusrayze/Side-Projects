@@ -1,11 +1,11 @@
 import SwiftUI
 
-/// Debug utility to render AppIconView to a PNG on the Desktop.
+/// Debug utility to render AppIconView to a PNG in the app's Documents directory.
 ///
 /// HOW TO USE:
 /// 1. Add AppIconExporterTrigger() anywhere temporarily (e.g. in RootView's .onAppear)
 /// 2. Run the app once in Simulator
-/// 3. Find AppIcon.png on your Mac Desktop
+/// 3. Find AppIcon.png in the app container's Documents directory
 /// 4. Drag it into SaintOfTheDay/Assets.xcassets/AppIcon.appiconset/ in Finder
 /// 5. Remove AppIconExporterTrigger() from your code
 #if DEBUG
@@ -30,10 +30,9 @@ enum AppIconExporter {
             return
         }
 
-        // Write to ~/Desktop/AppIcon.png
-        let desktop = FileManager.default.homeDirectoryForCurrentUser
-            .appendingPathComponent("Desktop")
-        let dest = desktop.appendingPathComponent("AppIcon.png")
+        // Write to the app's Documents directory.
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let dest = documents.appendingPathComponent("AppIcon.png")
 
         do {
             try pngData.write(to: dest, options: .atomic)

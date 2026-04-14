@@ -8,6 +8,8 @@ struct PageFlipContainer: View {
     @State private var flipProgress: Double = 0.0
     @State private var isAnimating: Bool = false
     @State private var showMenu: Bool = false
+    @State private var showDatePicker: Bool = false
+    @State private var pendingDate = Date()
 
     // Swipe gesture state
     @State private var dragHapticFired: Bool = false
@@ -27,7 +29,7 @@ struct PageFlipContainer: View {
                     anchorZ: 0,
                     perspective: 0.4
                 )
-                .opacity(flipProgress >= 0.5 ? 1 : 0)
+                .opacity(yesterdayLayerOpacity)
 
             // MARK: Today (top layer, flips away)
             todayLayer
@@ -38,7 +40,7 @@ struct PageFlipContainer: View {
                     anchorZ: 0,
                     perspective: 0.4
                 )
-                .opacity(flipProgress < 0.5 ? 1 : 0)
+                .opacity(todayLayerOpacity)
                 .shadow(
                     color: .black.opacity(midpointShadow),
                     radius: midpointShadow * 20,
@@ -50,7 +52,7 @@ struct PageFlipContainer: View {
             HStack {
                 FlipButton(
                     isShowingYesterday: viewModel.isShowingYesterday,
-                    isLoading: viewModel.isYesterdayLoading && viewModel.isShowingYesterday
+                    isLoading: viewModel.isYesterdayLoading
                 ) {
                     performFlip()
                 }
@@ -62,12 +64,75 @@ struct PageFlipContainer: View {
                 }
             }
             .padding(.horizontal, 20)
-            .padding(.bottom, 36)
+            .padding(.bottom, 12)
         }
         .background(Color.parchment.ignoresSafeArea())
         .gesture(swipeGesture)
         .sheet(isPresented: $showMenu) {
             MenuSheet(saint: currentSaint)
+        }
+        .fullScreenCover(isPresented: $showDatePicker) {
+            ZStack {
+                Color.black.opacity(0.12)
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        showDatePicker = false
+                    }
+
+                VStack {
+                    VStack(spacing: 20) {
+                        HStack {
+                            Text("Select a Date")
+                                .font(.saintHeading)
+                                .foregroundStyle(Color.inkBrown)
+
+                            Spacer()
+
+                            Button("Close") {
+                                showDatePicker = false
+                            }
+                            .font(.saintBody)
+                            .foregroundStyle(Color.inkBrown.opacity(0.8))
+                        }
+
+                        DatePicker(
+                            "Choose a Date",
+                            selection: $pendingDate,
+                            in: ...Date(),
+                            displayedComponents: .date
+                        )
+                        .datePickerStyle(.graphical)
+
+                        Button {
+                            let selectedDate = pendingDate
+                            showDatePicker = false
+                            Task {
+                                await viewModel.selectDate(selectedDate)
+                            }
+                        } label: {
+                            Text("Open Saint")
+                                .font(.saintBody)
+                                .foregroundStyle(Color.parchment)
+                                .frame(maxWidth: .infinity)
+                                .padding(.vertical, 14)
+                                .background(Color.ancientGold)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                        }
+                    }
+                    .padding(20)
+                    .background(Color.parchment)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 16)
+                            .stroke(Color.ancientGold.opacity(0.35), lineWidth: 1)
+                    )
+                    .shadow(color: Color.inkBrown.opacity(0.18), radius: 16, x: 0, y: 8)
+                    .padding(.horizontal, 20)
+                    .padding(.top, 110)
+
+                    Spacer()
+                }
+            }
         }
     }
 
@@ -81,80 +146,70 @@ struct PageFlipContainer: View {
 
     @ViewBuilder
     private var todayLayer: some View {
-        NavigationStack(path: $todayPath) {
-            ZStack {
-                Color.parchment.ignoresSafeArea()
-                if viewModel.isTodayLoading {
-                    SaintPageSkeleton()
-                } else if let error = viewModel.todayError {
-                    ErrorView(message: error) {
-                        Task { await viewModel.refreshToday() }
-                    }
-                } else if let saint = viewModel.todaySaint {
-                    SaintPageView(
-                        saint: saint,
-                        dateLabel: "Today",
-                        navigationPath: $todayPath,
-                        onRefresh: { await viewModel.refreshToday() }
-                    )
-                }
-            }
-            .navigationTitle("Saint of the Day")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(Color.parchment, for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
-            .navigationDestination(for: Saint.self) { saint in
-                SaintDetailView(saint: saint)
-            }
-        }
+        SaintScreenView(
+            saint: viewModel.todaySaint,
+            error: viewModel.todayError,
+            isLoading: viewModel.isTodayLoading,
+            dateLabel: viewModel.todayDateLabel,
+            navigationPath: $todayPath,
+            onRefresh: { await viewModel.refreshCurrentDate() },
+            leadingToolbar: AnyView(calendarButton)
+        )
     }
 
     @ViewBuilder
     private var yesterdayLayer: some View {
-        NavigationStack(path: $yesterdayPath) {
-            ZStack {
-                Color.parchment.ignoresSafeArea()
-                if viewModel.isYesterdayLoading {
-                    SaintPageSkeleton()
-                } else if let error = viewModel.yesterdayError {
-                    ErrorView(message: error) {
-                        Task { await viewModel.retryYesterday() }
-                    }
-                } else if let saint = viewModel.yesterdaySaint {
-                    SaintPageView(
-                        saint: saint,
-                        dateLabel: "Yesterday",
-                        navigationPath: $yesterdayPath,
-                        onRefresh: { await viewModel.retryYesterday() }
-                    )
-                } else {
-                    Color.parchment.ignoresSafeArea()
-                }
-            }
-            .navigationTitle("Saint of the Day")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbarBackground(Color.parchment, for: .navigationBar)
-            .toolbarBackground(.visible, for: .navigationBar)
-            .navigationDestination(for: Saint.self) { saint in
-                SaintDetailView(saint: saint)
-            }
-        }
+        SaintScreenView(
+            saint: viewModel.yesterdaySaint,
+            error: viewModel.yesterdayError,
+            isLoading: viewModel.isYesterdayLoading,
+            dateLabel: viewModel.previousDateLabel,
+            navigationPath: $yesterdayPath,
+            onRefresh: { await viewModel.refreshPreviousDate() },
+            leadingToolbar: AnyView(calendarButton)
+        )
     }
 
     // MARK: - Animation Math
 
+    private var isFlipInProgress: Bool {
+        isAnimating || flipProgress > 0
+    }
+
+    private var todayLayerOpacity: Double {
+        if isFlipInProgress {
+            return viewModel.isShowingYesterday ? (flipProgress >= 0.5 ? 1 : 0) : (flipProgress < 0.5 ? 1 : 0)
+        }
+        return viewModel.isShowingYesterday ? 0 : 1
+    }
+
+    private var yesterdayLayerOpacity: Double {
+        if isFlipInProgress {
+            return viewModel.isShowingYesterday ? (flipProgress < 0.5 ? 1 : 0) : (flipProgress >= 0.5 ? 1 : 0)
+        }
+        return viewModel.isShowingYesterday ? 1 : 0
+    }
+
     private var todayRotation: Double {
-        let half = min(flipProgress * 2.0, 1.0)
-        return viewModel.isShowingYesterday
-            ? -90.0 * half
-            : -90.0 * (1.0 - half)
+        guard isFlipInProgress else { return 0 }
+        if viewModel.isShowingYesterday {
+            let half = max((flipProgress - 0.5) * 2.0, 0.0)
+            return -90.0 * (1.0 - half)
+        } else {
+            let half = min(flipProgress * 2.0, 1.0)
+            return -90.0 * half
+        }
     }
 
     private var yesterdayRotation: Double {
-        let half = max((flipProgress - 0.5) * 2.0, 0.0)
-        return viewModel.isShowingYesterday
-            ? 90.0 * (1.0 - half)
-            : 90.0 * half
+        guard isFlipInProgress else { return 0 }
+        if viewModel.isShowingYesterday {
+            let half = min(flipProgress * 2.0, 1.0)
+            return 90.0 * half
+        } else {
+            let half = max((flipProgress - 0.5) * 2.0, 0.0)
+            return 90.0 * (1.0 - half)
+        }
     }
 
     private var midpointShadow: Double {
@@ -169,14 +224,14 @@ struct PageFlipContainer: View {
                 guard !isAnimating else { return }
                 let width = UIScreen.main.bounds.width
                 let raw = viewModel.isShowingYesterday
-                    ? value.translation.x / width      // right drag → back to today
-                    : -value.translation.x / width     // left drag → reveal yesterday
+                    ? value.translation.width / width      // right drag → back to today
+                    : -value.translation.width / width     // left drag → reveal yesterday
                 let clamped = max(0, min(0.85, raw))
                 flipProgress = clamped
 
                 // Kick off lazy load early when user starts dragging toward yesterday
                 if !viewModel.isShowingYesterday && clamped > 0.05 {
-                    Task { await viewModel.loadYesterdayIfNeeded() }
+                    Task { await viewModel.loadPreviousDateIfNeeded() }
                 }
 
                 // Haptic at midpoint crossing
@@ -205,31 +260,45 @@ struct PageFlipContainer: View {
     private func performFlip() {
         guard !isAnimating else { return }
 
-        if !viewModel.isShowingYesterday {
-            Task { await viewModel.loadYesterdayIfNeeded() }
+        if !viewModel.isShowingYesterday,
+           viewModel.yesterdaySaint == nil,
+           viewModel.yesterdayError == nil {
+            Task {
+                await viewModel.loadPreviousDateIfNeeded()
+                startFlip(duration: 0.65)
+            }
+        } else {
+            startFlip(duration: 0.65)
         }
+    }
 
-        withAnimation(.timingCurve(0.4, 0.0, 0.2, 1.0, duration: 0.6)) {
+    private func startFlip(duration: Double) {
+        guard !isAnimating else { return }
+        isAnimating = true
+
+        withAnimation(.timingCurve(0.4, 0.0, 0.2, 1.0, duration: max(duration - 0.05, 0.1))) {
             flipProgress = 1.0
         }
 
         // Haptic at midpoint
         Task {
-            try? await Task.sleep(for: .seconds(0.3))
+            try? await Task.sleep(for: .seconds(duration / 2))
             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         }
 
-        completeFlip(duration: 0.65)
+        finishFlip(after: duration)
     }
 
     private func completeFlip(duration: Double) {
+        guard !isAnimating else { return }
         isAnimating = true
-        if duration < 0.6 {
-            // Came from swipe — animate remainder
-            withAnimation(.timingCurve(0.4, 0.0, 0.2, 1.0, duration: duration)) {
-                flipProgress = 1.0
-            }
+        withAnimation(.timingCurve(0.4, 0.0, 0.2, 1.0, duration: duration)) {
+            flipProgress = 1.0
         }
+        finishFlip(after: duration)
+    }
+
+    private func finishFlip(after duration: Double) {
         Task {
             try? await Task.sleep(for: .seconds(duration + 0.05))
             viewModel.isShowingYesterday.toggle()
@@ -237,5 +306,17 @@ struct PageFlipContainer: View {
             isAnimating = false
             dragHapticFired = false
         }
+    }
+
+    private var calendarButton: some View {
+        Button {
+            pendingDate = viewModel.selectedDate
+            showDatePicker = true
+        } label: {
+            Image(systemName: "calendar")
+                .font(.system(size: 17, weight: .medium))
+                .foregroundStyle(Color.inkBrown)
+        }
+        .buttonStyle(.plain)
     }
 }

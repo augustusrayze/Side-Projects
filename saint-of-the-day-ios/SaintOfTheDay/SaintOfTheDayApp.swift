@@ -17,6 +17,7 @@ struct SaintOfTheDayApp: App {
             RootView()
                 .preferredColorScheme(resolvedColorScheme)
                 .task {
+                    NotificationService.shared.configure()
                     await NotificationService.shared.rescheduleIfNeeded()
                 }
         }
@@ -26,7 +27,7 @@ struct SaintOfTheDayApp: App {
         switch storedScheme {
         case "light": return .light
         case "dark":  return .dark
-        default:      return nil  // "system" — follow iOS setting
+        default:      return nil
         }
     }
 }

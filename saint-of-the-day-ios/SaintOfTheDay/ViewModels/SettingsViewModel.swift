@@ -1,6 +1,7 @@
 import Foundation
-import UserNotifications
 import Observation
+import UIKit
+import UserNotifications
 
 @Observable
 final class SettingsViewModel {
@@ -15,7 +16,11 @@ final class SettingsViewModel {
     func requestNotificationPermission() async {
         let granted = await NotificationService.shared.requestPermissionIfNeeded()
         if granted {
-            await NotificationService.shared.scheduleDailyNotification()
+            await NotificationService.shared.scheduleDailyNotification(
+                imageURL: nil,
+                saintName: nil,
+                date: Date()
+            )
         }
         await checkNotificationStatus()
     }

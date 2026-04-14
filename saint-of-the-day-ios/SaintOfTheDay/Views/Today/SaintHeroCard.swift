@@ -2,11 +2,11 @@ import SwiftUI
 
 struct SaintHeroCard: View {
     let saint: Saint
+    @State private var savedStore = SavedSaintsStore.shared
 
     var body: some View {
         GeometryReader { geo in
             ZStack(alignment: .bottom) {
-                // Saint image
                 AsyncImage(url: saint.imageURL) { phase in
                     switch phase {
                     case .success(let image):
@@ -24,7 +24,6 @@ struct SaintHeroCard: View {
                 .frame(width: geo.size.width, height: geo.size.height)
                 .clipped()
 
-                // Bottom gradient overlay
                 LinearGradient(
                     colors: [Color.inkBrown.opacity(0.85), .clear],
                     startPoint: .bottom,
@@ -32,7 +31,6 @@ struct SaintHeroCard: View {
                 )
                 .frame(height: geo.size.height * 0.55)
 
-                // Name and feast day
                 VStack(alignment: .leading, spacing: 4) {
                     Text(saint.canonicalName)
                         .font(.saintDisplay)
@@ -52,6 +50,27 @@ struct SaintHeroCard: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
+
+                HStack {
+                    Spacer()
+
+                    Button {
+                        savedStore.toggle(saint)
+                    } label: {
+                        Image(systemName: savedStore.contains(saint) ? "bookmark.fill" : "bookmark")
+                            .font(.system(size: 15, weight: .semibold))
+                            .foregroundStyle(savedStore.contains(saint) ? Color.ancientGold : Color.parchment)
+                            .frame(width: 34, height: 34)
+                            .background(.ultraThinMaterial, in: Circle())
+                            .overlay(
+                                Circle()
+                                    .stroke(Color.ancientGold.opacity(0.55), lineWidth: 1)
+                            )
+                    }
+                    .buttonStyle(.plain)
+                }
+                .padding(.trailing, 16)
+                .padding(.bottom, 16)
             }
         }
         .overlay(

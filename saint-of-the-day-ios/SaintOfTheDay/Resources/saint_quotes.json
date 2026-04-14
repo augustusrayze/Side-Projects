@@ -1,0 +1,238 @@
+[
+  {
+    "canonicalName": "Dionysius of Corinth",
+    "aliases": [
+      "St. Dionysius, Bishop of Corinth",
+      "Saint Dionysius of Corinth",
+      "Bishop of Corinth"
+    ],
+    "quote": "From the beginning, it is your custom to bestow your alms in all places, and to furnish subsistence to many churches.",
+    "sourceTitle": "Letter to Pope Soter, quoted by Eusebius in Ecclesiastical History IV.23",
+    "sourceURL": "https://www.newadvent.org/fathers/250104.htm",
+    "provenance": "primary_witness",
+    "confidence": "high",
+    "notes": "Preserved by Eusebius from Dionysius's correspondence."
+  },
+  {
+    "canonicalName": "Liborius of Le Mans",
+    "aliases": [
+      "Saint Liborius of Le Mans",
+      "St. Liborius of Le Mans",
+      "Liborius",
+      "Liborius of Le Mans (died 397)"
+    ],
+    "quote": "Lord, if your people still need me, I am ready for the task; your will be done.",
+    "sourceTitle": "Traditional saying attributed to Saint Liborius",
+    "sourceURL": null,
+    "provenance": "traditional_attribution",
+    "confidence": "medium",
+    "notes": "Traditional devotional attribution retained for local feast-day coverage."
+  },
+  {
+    "canonicalName": "Saint Magdalene of Canossa",
+    "aliases": [
+      "Magdalene of Canossa",
+      "St. Magdalene of Canossa",
+      "Magdalene Gabriela of Canossa"
+    ],
+    "quote": "Those who love are never tired, since love knows no burden.",
+    "sourceTitle": "Canossian Sisters profile and sayings collection",
+    "sourceURL": "https://static1.squarespace.com/static/5acea6725417fc059ddcc33f/t/649b94f9c076667b6d614844/1687917819358/7%2BCanossian%2BSrs_%2BFinal.pdf",
+    "provenance": "secondary_catholic",
+    "confidence": "high",
+    "notes": "April 10 saint-of-the-day quote sourced from Canossian material."
+  },
+  {
+    "canonicalName": "Saint Augustine of Hippo",
+    "aliases": [
+      "St. Augustine",
+      "Saint Augustine",
+      "Augustine of Hippo",
+      "St. Augustine of Hippo"
+    ],
+    "quote": "You have made us for yourself, O Lord, and our hearts are restless until they rest in you.",
+    "sourceTitle": "Confessions, Book I, Chapter 1",
+    "sourceURL": "https://www.newadvent.org/fathers/110101.htm",
+    "provenance": "primary",
+    "confidence": "high",
+    "notes": "Opening of Augustine's Confessions. Translation from standard English rendering of the Latin."
+  },
+  {
+    "canonicalName": "Saint Thomas Aquinas",
+    "aliases": [
+      "St. Thomas Aquinas",
+      "Thomas Aquinas",
+      "The Angelic Doctor",
+      "Doctor Angelicus"
+    ],
+    "quote": "To one who has faith, no explanation is necessary. To one without faith, no explanation is possible.",
+    "sourceTitle": "Summa Theologica",
+    "sourceURL": "https://www.newadvent.org/summa/",
+    "provenance": "traditional_attribution",
+    "confidence": "medium",
+    "notes": "Widely attributed to Aquinas but exact locus in his writings is disputed. Reflects his theological method but direct sourcing is weak."
+  },
+  {
+    "canonicalName": "Saint Francis of Assisi",
+    "aliases": [
+      "St. Francis of Assisi",
+      "Saint Francis",
+      "St. Francis",
+      "Francis of Assisi",
+      "Il Poverello"
+    ],
+    "quote": "Lord, make me an instrument of your peace.",
+    "sourceTitle": "Peace Prayer traditionally attributed to St. Francis",
+    "sourceURL": null,
+    "provenance": "traditional_attribution",
+    "confidence": "low",
+    "notes": "This prayer first appeared in a French magazine in 1912 and is not found in Francis's own writings. Universally associated with him in Catholic devotion but historically not his composition."
+  },
+  {
+    "canonicalName": "Saint Thérèse of Lisieux",
+    "aliases": [
+      "St. Thérèse of Lisieux",
+      "Saint Therese of Lisieux",
+      "St. Therese of Lisieux",
+      "The Little Flower",
+      "St. Thérèse of the Child Jesus"
+    ],
+    "quote": "My vocation is love! In the heart of the Church, my Mother, I will be love.",
+    "sourceTitle": "Story of a Soul (Manuscript B)",
+    "sourceURL": "https://www.archives-carmel-lisieux.fr/english/carmel/index.php/ms-b",
+    "provenance": "primary",
+    "confidence": "high",
+    "notes": "From Thérèse's autobiography, Manuscript B. Translated from French."
+  },
+  {
+    "canonicalName": "Saint Teresa of Ávila",
+    "aliases": [
+      "St. Teresa of Avila",
+      "Saint Teresa of Avila",
+      "St. Teresa of Ávila",
+      "Teresa of Jesus",
+      "La Santa"
+    ],
+    "quote": "Let nothing disturb you, let nothing frighten you. All things are passing; God never changes. Patience obtains all things. Whoever has God lacks nothing. God alone suffices.",
+    "sourceTitle": "Bookmark prayer found in her breviary",
+    "sourceURL": null,
+    "provenance": "primary_witness",
+    "confidence": "high",
+    "notes": "Found written in Teresa's breviary after her death. Translated from Spanish. One of her most widely reproduced texts."
+  },
+  {
+    "canonicalName": "Saint John of the Cross",
+    "aliases": [
+      "St. John of the Cross",
+      "San Juan de la Cruz",
+      "John of the Cross"
+    ],
+    "quote": "In the evening of life, we will be judged on love alone.",
+    "sourceTitle": "Sayings of Light and Love, 57",
+    "sourceURL": "https://www.newadvent.org/library/john_cross.htm",
+    "provenance": "primary",
+    "confidence": "high",
+    "notes": "From John's collected Sayings of Light and Love. Translated from Spanish."
+  },
+  {
+    "canonicalName": "Saint Ignatius of Loyola",
+    "aliases": [
+      "St. Ignatius of Loyola",
+      "Ignatius of Loyola",
+      "Iñigo de Loyola"
+    ],
+    "quote": "Take, Lord, and receive all my liberty, my memory, my understanding, and my entire will.",
+    "sourceTitle": "Spiritual Exercises, Contemplation to Attain Love",
+    "sourceURL": "https://www.sacred-texts.com/chr/seil/index.htm",
+    "provenance": "primary",
+    "confidence": "high",
+    "notes": "The Suscipe prayer from the Spiritual Exercises. Translated from Spanish/Latin."
+  },
+  {
+    "canonicalName": "Saint Patrick",
+    "aliases": [
+      "St. Patrick",
+      "Saint Patrick of Ireland",
+      "Patricius"
+    ],
+    "quote": "I arise today through a mighty strength, the invocation of the Trinity.",
+    "sourceTitle": "St. Patrick's Breastplate (Lorica)",
+    "sourceURL": "https://www.newadvent.org/cathen/11554a.htm",
+    "provenance": "traditional_attribution",
+    "confidence": "medium",
+    "notes": "The Lorica is traditionally attributed to Patrick but likely dates to the 7th or 8th century. Deeply embedded in Irish Catholic tradition."
+  },
+  {
+    "canonicalName": "Saint Benedict of Nursia",
+    "aliases": [
+      "St. Benedict",
+      "Saint Benedict",
+      "Benedict of Nursia"
+    ],
+    "quote": "Prefer nothing whatever to Christ.",
+    "sourceTitle": "The Rule of Saint Benedict, Chapter 72",
+    "sourceURL": "https://www.newadvent.org/library/benrule.htm",
+    "provenance": "primary",
+    "confidence": "high",
+    "notes": "From the Rule of St. Benedict. Translated from Latin. Also echoed in Chapter 4."
+  },
+  {
+    "canonicalName": "Saint Catherine of Siena",
+    "aliases": [
+      "St. Catherine of Siena",
+      "Catherine of Siena",
+      "Caterina da Siena"
+    ],
+    "quote": "Be who God meant you to be and you will set the world on fire.",
+    "sourceTitle": "The Dialogue of Divine Providence",
+    "sourceURL": null,
+    "provenance": "traditional_attribution",
+    "confidence": "medium",
+    "notes": "Widely attributed to Catherine but the exact wording is a modern paraphrase. Her Dialogue contains similar themes but this precise phrasing is not directly sourced."
+  },
+  {
+    "canonicalName": "Saint Francis de Sales",
+    "aliases": [
+      "St. Francis de Sales",
+      "Francis de Sales",
+      "François de Sales"
+    ],
+    "quote": "Have patience with all things, but first of all with yourself.",
+    "sourceTitle": "Letters of Spiritual Direction",
+    "sourceURL": null,
+    "provenance": "primary",
+    "confidence": "high",
+    "notes": "From Francis de Sales's spiritual correspondence. Translated from French."
+  },
+  {
+    "canonicalName": "Saint John Vianney",
+    "aliases": [
+      "St. John Vianney",
+      "The Curé of Ars",
+      "Jean-Marie Vianney",
+      "St. Jean Vianney"
+    ],
+    "quote": "Private prayer is like straw scattered here and there: if you set it on fire, it makes a lot of little flames. But gather these straws into a bundle and light them, and you get a mighty fire.",
+    "sourceTitle": "Catechetical Instructions of St. John Vianney",
+    "sourceURL": null,
+    "provenance": "primary_witness",
+    "confidence": "high",
+    "notes": "Recorded by witnesses from his catechetical instructions. Translated from French."
+  },
+  {
+    "canonicalName": "Saint Padre Pio",
+    "aliases": [
+      "St. Padre Pio",
+      "Saint Pio of Pietrelcina",
+      "Padre Pio",
+      "St. Pio of Pietrelcina",
+      "Francesco Forgione"
+    ],
+    "quote": "Pray, hope, and don't worry.",
+    "sourceTitle": "Letters of Padre Pio",
+    "sourceURL": "https://www.padrepio.catholicwebservices.com/",
+    "provenance": "primary",
+    "confidence": "high",
+    "notes": "Frequently repeated counsel found in Padre Pio's correspondence."
+  }
+]

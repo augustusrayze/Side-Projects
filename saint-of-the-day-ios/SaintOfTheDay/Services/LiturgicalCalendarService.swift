@@ -5,11 +5,15 @@ final class LiturgicalCalendarService {
     static let shared = LiturgicalCalendarService()
     private init() {}
 
+    private let baseURL = URL(string: "https://bible.usccb.org")!
+
     // MARK: - Public API
 
     func fetchCalendar(for year: Int) async throws -> [LiturgicalDay] {
-        let key = "litcal-\(year).json"
-        if let cached = loadFromCache(key: key) { return cached }
+        let key = "litcal-v2-\(year).json"
+        if let cached = loadFromCache(key: key), !cached.isEmpty {
+            return cached
+        }
 
         let days = try await fetchFromNetwork(year: year)
         saveToCache(days, key: key)
@@ -18,7 +22,6 @@ final class LiturgicalCalendarService {
 
     func currentSeason(from days: [LiturgicalDay]) -> String {
         let today = Calendar.current.startOfDay(for: Date())
-        // Find the nearest day at or before today with a season-level entry
         let seasons = ["Advent", "Christmas", "Ordinary Time", "Lent", "Easter"]
         for day in days.sorted(by: { $0.date < $1.date }).reversed() {
             if day.date <= today {
@@ -31,62 +34,153 @@ final class LiturgicalCalendarService {
     }
 
     // MARK: - Network
-    // litcal API: https://litcal.johnromanodorazio.com/api/v3/LitCal?year=YYYY&Locale=EN
 
     private func fetchFromNetwork(year: Int) async throws -> [LiturgicalDay] {
-        guard let url = URL(string: "https://litcal.johnromanodorazio.com/api/v3/LitCal?year=\(year)&Locale=EN") else {
-            throw URLError(.badURL)
-        }
+        var days: [LiturgicalDay] = []
+        var seenKeys: Set<String> = []
 
-        let (data, response) = try await URLSession.shared.data(from: url)
-        guard let http = response as? HTTPURLResponse, http.statusCode == 200 else {
-            throw URLError(.badServerResponse)
-        }
-
-        return try parseLitCal(data: data)
-    }
-
-    // MARK: - litcal JSON Parsing
-    // Response: { "LitCal": { "EVENT_KEY": { "name", "color", "grade", "date" (unix timestamp) } } }
-
-    private func parseLitCal(data: Data) throws -> [LiturgicalDay] {
-        guard let root = try JSONSerialization.jsonObject(with: data) as? [String: Any],
-              let litcal = root["LitCal"] as? [String: [String: Any]] else {
-            throw URLError(.cannotParseResponse)
+        // USCCB returns 10 upcoming readings per page. Six pages gives the app's 60-day calendar window.
+        for page in 0..<6 {
+            let pageDays = try await fetchListingPage(page: page)
+            for day in pageDays where Calendar.current.component(.year, from: day.date) == year {
+                let key = "\(day.date.timeIntervalSince1970)-\(day.name)"
+                if seenKeys.insert(key).inserted {
+                    days.append(day)
+                }
+            }
         }
 
         let today = Calendar.current.startOfDay(for: Date())
         let cutoff = Calendar.current.date(byAdding: .day, value: 60, to: today)!
+        let filtered = days
+            .filter { $0.date >= today && $0.date <= cutoff }
+            .sorted { $0.date < $1.date }
 
-        var days: [LiturgicalDay] = []
-
-        for (_, event) in litcal {
-            guard let timestamp = event["date"] as? TimeInterval,
-                  let name = event["name"] as? String else { continue }
-
-            let date = Date(timeIntervalSince1970: timestamp)
-            let dayStart = Calendar.current.startOfDay(for: date)
-
-            guard dayStart >= today && dayStart <= cutoff else { continue }
-
-            let colorArray = event["color"] as? [String] ?? []
-            let color = colorArray.first ?? "green"
-            let grade = event["grade"] as? Int ?? 0
-
-            // grade: 0=Commemoratio, 1=Feria, 2=Memorial, 3=OptionalMemorial, 4=Feast, 5=Feast of the Lord, 6=Solemnity
-            let isSolemnity = grade >= 6
-            let isFeast = grade >= 4
-
-            days.append(LiturgicalDay(
-                date: dayStart,
-                name: name,
-                liturgicalColor: color,
-                isSolemnity: isSolemnity,
-                isFeast: isFeast
-            ))
+        guard !filtered.isEmpty else {
+            throw URLError(.cannotParseResponse)
         }
 
-        return days.sorted { $0.date < $1.date }
+        return filtered
+    }
+
+    private func fetchListingPage(page: Int) async throws -> [LiturgicalDay] {
+        var components = URLComponents(url: baseURL.appending(path: "readings"), resolvingAgainstBaseURL: false)!
+        components.queryItems = [
+            URLQueryItem(name: "_wrapper_format", value: "html"),
+            URLQueryItem(name: "page", value: String(page))
+        ]
+
+        guard let url = components.url else { throw URLError(.badURL) }
+        var request = URLRequest(url: url)
+        request.setValue("Mozilla/5.0", forHTTPHeaderField: "User-Agent")
+
+        let (data, response) = try await URLSession.shared.data(for: request)
+        guard let http = response as? HTTPURLResponse, http.statusCode == 200 else {
+            throw URLError(.badServerResponse)
+        }
+
+        guard let html = String(data: data, encoding: .utf8) else {
+            throw URLError(.cannotDecodeContentData)
+        }
+
+        return parseUSCCBListing(html: html)
+    }
+
+    // MARK: - USCCB HTML Parsing
+
+    private func parseUSCCBListing(html: String) -> [LiturgicalDay] {
+        let pattern = #"<li\s+class="teaser">.*?<a\s+href="([^"]+)"\s+data-colors="([^"]*)">.*?<span[^>]*>(.*?)</span>.*?</a>\s*</li>"#
+        guard let regex = try? NSRegularExpression(
+            pattern: pattern,
+            options: [.caseInsensitive, .dotMatchesLineSeparators]
+        ) else {
+            return []
+        }
+
+        let nsRange = NSRange(html.startIndex..<html.endIndex, in: html)
+        return regex.matches(in: html, range: nsRange).compactMap { match in
+            guard match.numberOfRanges >= 4,
+                  let hrefRange = Range(match.range(at: 1), in: html),
+                  let colorRange = Range(match.range(at: 2), in: html),
+                  let nameRange = Range(match.range(at: 3), in: html),
+                  let date = dateFromUSCCBPath(String(html[hrefRange])) else {
+                return nil
+            }
+
+            let name = cleanText(String(html[nameRange]))
+            guard !name.isEmpty else { return nil }
+
+            let color = normalizedColor(String(html[colorRange]))
+            return LiturgicalDay(
+                date: Calendar.current.startOfDay(for: date),
+                name: name,
+                liturgicalColor: color,
+                isSolemnity: isSolemnity(name),
+                isFeast: isFeast(name)
+            )
+        }
+    }
+
+    private func dateFromUSCCBPath(_ path: String) -> Date? {
+        guard let regex = try? NSRegularExpression(pattern: #"/(\d{2})(\d{2})(\d{2})\.cfm"#) else {
+            return nil
+        }
+
+        let nsRange = NSRange(path.startIndex..<path.endIndex, in: path)
+        guard let match = regex.firstMatch(in: path, range: nsRange),
+              match.numberOfRanges == 4,
+              let monthRange = Range(match.range(at: 1), in: path),
+              let dayRange = Range(match.range(at: 2), in: path),
+              let yearRange = Range(match.range(at: 3), in: path),
+              let month = Int(path[monthRange]),
+              let day = Int(path[dayRange]),
+              let twoDigitYear = Int(path[yearRange]) else {
+            return nil
+        }
+
+        var components = DateComponents()
+        components.calendar = Calendar.current
+        components.year = 2000 + twoDigitYear
+        components.month = month
+        components.day = day
+        return components.date
+    }
+
+    private func normalizedColor(_ colors: String) -> String {
+        let first = colors
+            .split { $0 == "," || $0 == " " }
+            .first
+            .map(String.init) ?? "green"
+        return first.lowercased()
+    }
+
+    private func isSolemnity(_ name: String) -> Bool {
+        name.localizedCaseInsensitiveContains("Solemnity")
+    }
+
+    private func isFeast(_ name: String) -> Bool {
+        name.localizedCaseInsensitiveContains("Feast")
+            || name.localizedCaseInsensitiveContains("Solemnity")
+            || name.localizedCaseInsensitiveContains("Sunday")
+    }
+
+    private func cleanText(_ html: String) -> String {
+        decodeHTMLEntities(html)
+            .replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression)
+            .replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    private func decodeHTMLEntities(_ text: String) -> String {
+        text
+            .replacingOccurrences(of: "&nbsp;", with: " ")
+            .replacingOccurrences(of: "&#160;", with: " ")
+            .replacingOccurrences(of: "&amp;", with: "&")
+            .replacingOccurrences(of: "&lt;", with: "<")
+            .replacingOccurrences(of: "&gt;", with: ">")
+            .replacingOccurrences(of: "&quot;", with: "\"")
+            .replacingOccurrences(of: "&#39;", with: "'")
+            .replacingOccurrences(of: "&rsquo;", with: "'")
     }
 
     // MARK: - Cache (24-hour expiry)

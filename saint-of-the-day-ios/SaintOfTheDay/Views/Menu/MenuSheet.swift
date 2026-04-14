@@ -4,12 +4,12 @@ struct MenuSheet: View {
     let saint: Saint?
     @AppStorage("appColorScheme") private var storedScheme: String = "system"
     @Environment(\.dismiss) private var dismiss
+    @State private var selectedDetent: PresentationDetent = .fraction(0.72)
 
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 0) {
-                    // Header
                     Text("Sacred Resources")
                         .font(.saintHeading)
                         .foregroundStyle(Color.inkBrown)
@@ -18,22 +18,21 @@ struct MenuSheet: View {
                         .padding(.top, 28)
                         .padding(.bottom, 16)
 
-                    GoldDivider()
+                    MenuGoldDivider()
 
-                    // Content rows
                     VStack(spacing: 0) {
                         NavigationLink {
-                            DailyPrayerView()
+                            PrayerLibraryView()
                         } label: {
                             MenuRow(
                                 icon: "book.closed.fill",
-                                label: "Daily Prayer",
+                                label: "Prayer Library",
                                 color: Color.frescoRed
                             )
                         }
                         .buttonStyle(.plain)
 
-                        GoldDivider().padding(.leading, 64)
+                        MenuGoldDivider().padding(.leading, 64)
 
                         NavigationLink {
                             DailyReadingsView()
@@ -46,7 +45,7 @@ struct MenuSheet: View {
                         }
                         .buttonStyle(.plain)
 
-                        GoldDivider().padding(.leading, 64)
+                        MenuGoldDivider().padding(.leading, 64)
 
                         NavigationLink {
                             LiturgicalCalendarView()
@@ -58,11 +57,23 @@ struct MenuSheet: View {
                             )
                         }
                         .buttonStyle(.plain)
+
+                        MenuGoldDivider().padding(.leading, 64)
+
+                        NavigationLink {
+                            GuidedRosaryMeditationsView()
+                        } label: {
+                            MenuRow(
+                                icon: "sparkles",
+                                label: "Guided Rosary Meditations",
+                                color: Color.frescoRed
+                            )
+                        }
+                        .buttonStyle(.plain)
                     }
 
-                    GoldDivider()
+                    MenuGoldDivider()
 
-                    // Share row
                     if let saint, let shareImage = renderedShareCard(for: saint) {
                         ShareLink(
                             item: shareImage,
@@ -77,9 +88,8 @@ struct MenuSheet: View {
                         }
                         .buttonStyle(.plain)
 
-                        GoldDivider()
+                        MenuGoldDivider()
                     } else if saint != nil {
-                        // Fallback to text share if rendering fails
                         ShareLink(item: shareText(for: saint!)) {
                             MenuRow(
                                 icon: "square.and.arrow.up",
@@ -90,13 +100,10 @@ struct MenuSheet: View {
                         }
                         .buttonStyle(.plain)
 
-                        GoldDivider()
+                        MenuGoldDivider()
                     }
 
-                    // Appearance row
-                    AppearanceRow(storedScheme: $storedScheme)
-
-                    GoldDivider()
+                    settingsSection
 
                     Spacer(minLength: 40)
                 }
@@ -115,7 +122,7 @@ struct MenuSheet: View {
                 }
             }
         }
-        .presentationDetents([.medium, .large])
+        .presentationDetents([.fraction(0.72), .large], selection: $selectedDetent)
         .presentationDragIndicator(.visible)
         .presentationBackground(Color.parchment)
     }
@@ -139,6 +146,30 @@ struct MenuSheet: View {
 }
 
 // MARK: - Supporting Views
+
+extension MenuSheet {
+    private var settingsSection: some View {
+        HStack(spacing: 14) {
+            NavigationLink {
+                SettingsView()
+            } label: {
+                SettingsCircleButton(icon: "gearshape.fill", tint: Color.inkBrown)
+            }
+            .buttonStyle(.plain)
+
+            Picker("Appearance", selection: $storedScheme) {
+                Text("Light").tag("light")
+                Text("System").tag("system")
+                Text("Dark").tag("dark")
+            }
+            .pickerStyle(.segmented)
+            .tint(Color.ancientGold)
+        }
+        .padding(.horizontal, 24)
+        .padding(.top, 18)
+        .padding(.bottom, 8)
+    }
+}
 
 private struct MenuRow: View {
     let icon: String
@@ -175,40 +206,28 @@ private struct MenuRow: View {
     }
 }
 
-private struct AppearanceRow: View {
-    @Binding var storedScheme: String
+private struct SettingsCircleButton: View {
+    let icon: String
+    let tint: Color
 
     var body: some View {
-        HStack(spacing: 16) {
-            ZStack {
-                RoundedRectangle(cornerRadius: 10)
-                    .fill(Color.inkBrown.opacity(0.12))
-                    .frame(width: 40, height: 40)
-                Image(systemName: "moon.stars.fill")
-                    .font(.system(size: 17, weight: .medium))
-                    .foregroundStyle(Color.inkBrown)
-            }
+        ZStack {
+            Circle()
+                .fill(tint.opacity(0.12))
+                .frame(width: 44, height: 44)
+                .overlay(
+                    Circle()
+                        .stroke(Color.ancientGold.opacity(0.22), lineWidth: 0.75)
+                )
 
-            Text("Appearance")
-                .font(.saintBody)
-                .foregroundStyle(Color.inkBrown)
-
-            Spacer()
-
-            Picker("Appearance", selection: $storedScheme) {
-                Text("Light").tag("light")
-                Text("System").tag("system")
-                Text("Dark").tag("dark")
-            }
-            .pickerStyle(.segmented)
-            .frame(width: 160)
+            Image(systemName: icon)
+                .font(.system(size: 17, weight: .medium))
+                .foregroundStyle(tint)
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 14)
     }
 }
 
-private struct GoldDivider: View {
+private struct MenuGoldDivider: View {
     var body: some View {
         Divider()
             .overlay(Color.ancientGold.opacity(0.25))

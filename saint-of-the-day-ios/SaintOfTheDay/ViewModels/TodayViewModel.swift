@@ -6,16 +6,17 @@ final class TodayViewModel {
 
     // MARK: - Flip State
     var isShowingYesterday: Bool = false
+    private(set) var selectedDate: Date
 
     // MARK: - Repositories
-    let todayRepo: SaintRepository
-    let yesterdayRepo: SaintRepository
+    private(set) var todayRepo: SaintRepository
+    private(set) var yesterdayRepo: SaintRepository
 
     init() {
-        let today = Date()
-        let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: today)!
+        let today = Calendar.current.startOfDay(for: Date())
+        self.selectedDate = today
         self.todayRepo = SaintRepository(date: today)
-        self.yesterdayRepo = SaintRepository(date: yesterday)
+        self.yesterdayRepo = SaintRepository(date: Calendar.current.date(byAdding: .day, value: -1, to: today)!)
     }
 
     // MARK: - Today
@@ -31,6 +32,9 @@ final class TodayViewModel {
         if case .failed(let e) = todayRepo.state { return e.localizedDescription }
         return nil
     }
+    var todayDateLabel: String {
+        Calendar.current.isDateInToday(selectedDate) ? "Today" : formattedDate(selectedDate)
+    }
 
     // MARK: - Yesterday
     var yesterdaySaint: Saint? {
@@ -45,28 +49,47 @@ final class TodayViewModel {
         if case .failed(let e) = yesterdayRepo.state { return e.localizedDescription }
         return nil
     }
+    var previousDateLabel: String {
+        let previousDate = Calendar.current.date(byAdding: .day, value: -1, to: selectedDate) ?? selectedDate
+        return Calendar.current.isDateInToday(selectedDate) ? "Yesterday" : formattedDate(previousDate)
+    }
 
     // MARK: - Actions
-    func loadToday() async {
+    func loadCurrentDate() async {
         await todayRepo.fetchIfNeeded()
     }
 
-    func refreshToday() async {
+    func refreshCurrentDate() async {
         await todayRepo.refresh()
     }
 
-    func loadYesterdayIfNeeded() async {
+    func loadPreviousDateIfNeeded() async {
         await yesterdayRepo.fetchIfNeeded()
     }
 
-    func retryYesterday() async {
+    func refreshPreviousDate() async {
         await yesterdayRepo.refresh()
     }
 
-    func flip() {
-        isShowingYesterday.toggle()
-        if isShowingYesterday {
-            Task { await loadYesterdayIfNeeded() }
-        }
+    func selectDate(_ date: Date) async {
+        let normalizedDate = Calendar.current.startOfDay(for: date)
+        guard !Calendar.current.isDate(normalizedDate, inSameDayAs: selectedDate) else { return }
+        selectedDate = normalizedDate
+        isShowingYesterday = false
+        configureRepositories(for: normalizedDate)
+        await loadCurrentDate()
+    }
+
+    private func configureRepositories(for date: Date) {
+        todayRepo = SaintRepository(date: date)
+        yesterdayRepo = SaintRepository(
+            date: Calendar.current.date(byAdding: .day, value: -1, to: date) ?? date
+        )
+    }
+
+    private func formattedDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d"
+        return formatter.string(from: date)
     }
 }

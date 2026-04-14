@@ -24,7 +24,7 @@ final class CacheService {
         let dir = FileManager.default.urls(for: .cachesDirectory, in: .userDomainMask)[0]
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
-        let filename = "saint-\(formatter.string(from: date)).json"
+        let filename = "saint-v7-\(formatter.string(from: date)).json"
         return dir.appendingPathComponent(filename)
     }
 }

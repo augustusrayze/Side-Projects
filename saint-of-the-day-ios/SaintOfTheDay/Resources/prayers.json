@@ -1,62 +1,1646 @@
 [
   {
-    "id": "morning-offering",
-    "name": "Morning Offering",
+    "id": "essential-our-father",
+    "title": "Our Father",
+    "text": "Our Father, who art in heaven, hallowed be thy name; thy kingdom come; thy will be done on earth as it is in heaven. Give us this day our daily bread; and forgive us our trespasses, as we forgive those who trespass against us; and lead us not into temptation, but deliver us from evil. Amen.",
+    "occasion": "Any Time",
+    "category": "Essential Prayers",
+    "summary": "The prayer taught by Jesus and the foundation of Christian prayer.",
+    "sourceTitle": "USCCB — Basic Prayers",
+    "sourceURL": "https://www.usccb.org/prayer-and-worship/prayers-and-devotions/prayers/basic-prayers",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Jesus"
+    ],
+    "tags": [
+      "essential",
+      "our father",
+      "core prayer"
+    ]
+  },
+  {
+    "id": "essential-hail-mary",
+    "title": "Hail Mary",
+    "text": "Hail, Mary, full of grace, the Lord is with thee. Blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",
+    "occasion": "Any Time",
+    "category": "Essential Prayers",
+    "summary": "The Church's foundational Marian prayer asking the Blessed Virgin Mary to intercede for us.",
+    "sourceTitle": "USCCB — Hail Mary",
+    "sourceURL": "https://www.usccb.org/prayers/hail-mary",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Virgin Mary",
+      "Mother of God"
+    ],
+    "tags": [
+      "essential",
+      "marian",
+      "core prayer"
+    ]
+  },
+  {
+    "id": "essential-glory-be",
+    "title": "Glory Be",
+    "text": "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen.",
+    "occasion": "Any Time",
+    "category": "Essential Prayers",
+    "summary": "A short doxology of praise to the Holy Trinity prayed throughout Catholic devotion.",
+    "sourceTitle": "USCCB — Basic Prayers",
+    "sourceURL": "https://www.usccb.org/prayer-and-worship/prayers-and-devotions/prayers/basic-prayers",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Holy Trinity"
+    ],
+    "tags": [
+      "essential",
+      "trinity",
+      "doxology"
+    ]
+  },
+  {
+    "id": "essential-apostles-creed",
+    "title": "Apostles' Creed",
+    "text": "I believe in God, the Father almighty, Creator of heaven and earth, and in Jesus Christ, His only Son, our Lord, Who was conceived by the Holy Spirit, born of the Virgin Mary, suffered under Pontius Pilate, was crucified, died and was buried. He descended into hell; the third day He rose again from the dead; He ascended into heaven, and sits at the right hand of God the Father almighty; from thence He shall come to judge the living and the dead. I believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body and life everlasting. Amen.",
+    "occasion": "Profession of Faith",
+    "category": "Essential Prayers",
+    "summary": "The ancient baptismal creed professing the core truths of the Christian faith.",
+    "sourceTitle": "USCCB — Basic Prayers",
+    "sourceURL": "https://www.usccb.org/prayer-and-worship/prayers-and-devotions/prayers/basic-prayers",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Jesus",
+      "Holy Spirit"
+    ],
+    "tags": [
+      "essential",
+      "creed",
+      "profession of faith"
+    ]
+  },
+  {
+    "id": "essential-nicene-creed",
+    "title": "Nicene Creed",
+    "text": "I believe in one God, the Father almighty, maker of heaven and earth, of all things visible and invisible. I believe in one Lord Jesus Christ, the Only Begotten Son of God, born of the Father before all ages. God from God, Light from Light, true God from true God, begotten, not made, consubstantial with the Father; through him all things were made. For us men and for our salvation he came down from heaven, and by the Holy Spirit was incarnate of the Virgin Mary, and became man. For our sake he was crucified under Pontius Pilate, he suffered death and was buried, and rose again on the third day in accordance with the Scriptures. He ascended into heaven and is seated at the right hand of the Father. He will come again in glory to judge the living and the dead and his kingdom will have no end. I believe in the Holy Spirit, the Lord, the giver of life, who proceeds from the Father and the Son, who with the Father and the Son is adored and glorified, who has spoken through the prophets. I believe in one, holy, catholic and apostolic Church. I confess one Baptism for the forgiveness of sins and I look forward to the resurrection of the dead and the life of the world to come. Amen.",
+    "occasion": "Profession of Faith",
+    "category": "Essential Prayers",
+    "summary": "The Church's principal creed used in the sacred liturgy and the universal profession of Catholic faith.",
+    "sourceTitle": "USCCB — Nicene Creed",
+    "sourceURL": "https://www.usccb.org/prayers/nicene-creed",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Jesus",
+      "Holy Spirit",
+      "Virgin Mary"
+    ],
+    "tags": [
+      "essential",
+      "creed",
+      "profession of faith"
+    ]
+  },
+  {
+    "id": "essential-morning-offering",
+    "title": "Morning Offering",
+    "text": "O Jesus, through the Immaculate Heart of Mary, I offer you my prayers, works, joys and sufferings of this day for all the intentions of your Sacred Heart, in union with the Holy Sacrifice of the Mass throughout the world, for the salvation of souls, the reparation for sins, the reunion of all Christians, and in particular for the intentions of the Holy Father this month. Amen.",
     "occasion": "Morning",
-    "text": "O Jesus, through the Immaculate Heart of Mary, I offer You my prayers, works, joys and sufferings of this day for all the intentions of Your Sacred Heart, in union with the Holy Sacrifice of the Mass throughout the world, in reparation for my sins, for the intentions of all my relatives and friends, and in particular for the intentions of the Holy Father. Amen."
+    "category": "Essential Prayers",
+    "summary": "A daily offering of the whole day to Christ through the Immaculate Heart of Mary.",
+    "sourceTitle": "USCCB — Morning Offering",
+    "sourceURL": "https://www.usccb.org/prayers/morning-offering-0",
+    "weekdays": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "months": null,
+    "saintAliases": [
+      "Mary",
+      "Immaculate Heart of Mary",
+      "Sacred Heart of Jesus"
+    ],
+    "tags": [
+      "essential",
+      "morning",
+      "offering"
+    ]
   },
   {
-    "id": "angelus",
-    "name": "The Angelus",
-    "occasion": "Midday",
-    "text": "The Angel of the Lord declared to Mary,\nAnd she conceived of the Holy Spirit.\n\nHail Mary, full of grace, the Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.\n\nBehold the handmaid of the Lord,\nBe it done unto me according to Thy word.\n\nHail Mary…\n\nAnd the Word was made flesh,\nAnd dwelt among us.\n\nHail Mary…\n\nPray for us, O Holy Mother of God,\nThat we may be made worthy of the promises of Christ.\n\nLet us pray: Pour forth, we beseech Thee, O Lord, Thy grace into our hearts; that we, to whom the Incarnation of Christ, Thy Son, was made known by the message of an angel, may by His Passion and Cross be brought to the glory of His Resurrection, through the same Christ Our Lord. Amen."
+    "id": "essential-prayer-before-meals",
+    "title": "Prayer Before Meals",
+    "text": "Bless us, O Lord, and these thy gifts, which we are about to receive from thy bounty, through Christ our Lord. Amen.",
+    "occasion": "Before Meals",
+    "category": "Essential Prayers",
+    "summary": "The traditional Catholic blessing before meals, thanking God for his daily providence.",
+    "sourceTitle": "USCCB — Catholic Household Blessings and Prayers",
+    "sourceURL": "https://www.usccb.org/resources/Catholics%20and%20United%20Methodists%20Together%3A%20Shared%20Prayers%20and%20Resources.pdf",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "essential",
+      "meals",
+      "blessing"
+    ]
   },
   {
-    "id": "act-of-contrition",
-    "name": "Act of Contrition",
-    "occasion": "Anytime",
-    "text": "O my God, I am heartily sorry for having offended Thee, and I detest all my sins because of Thy just punishments, but most of all because they offend Thee, my God, Who art all-good and deserving of all my love. I firmly resolve, with the help of Thy grace, to sin no more and to avoid the near occasions of sin. Amen."
+    "id": "essential-prayer-after-meals",
+    "title": "Prayer After Meals",
+    "text": "We give thee thanks, almighty God, for all thy benefits, who livest and reignest world without end. Amen.",
+    "occasion": "After Meals",
+    "category": "Essential Prayers",
+    "summary": "The traditional Catholic thanksgiving after meals, acknowledging God's daily gifts.",
+    "sourceTitle": "EWTN — Basic Catholic Prayers",
+    "sourceURL": "https://www.ewtn.com/catholicism/devotions/basic-catholic-prayers-70",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "essential",
+      "meals",
+      "thanksgiving"
+    ]
   },
   {
-    "id": "act-of-faith",
-    "name": "Act of Faith",
-    "occasion": "Anytime",
-    "text": "O my God, I firmly believe that Thou art one God in three divine Persons, Father, Son, and Holy Spirit. I believe that Thy divine Son became man and died for our sins and that He will come to judge the living and the dead. I believe these and all the truths which the Holy Catholic Church teaches, because Thou hast revealed them, Who canst neither deceive nor be deceived. Amen."
+    "id": "essential-evening-prayer",
+    "title": "Evening Prayer",
+    "text": "O my God, at the end of this day I thank you most humbly for all the graces I have received from you. I am sorry for all the sins I have committed against you. Forgive me, O my God, and graciously protect me this night. Blessed Virgin Mary, my dear heavenly Mother, take me under your protection. Saint Joseph, my dear guardian angel, and all you saints of God, pray for me. Sweet Jesus, have pity on all poor sinners, and save them from hell. Have mercy on the suffering souls in purgatory.",
+    "occasion": "Evening",
+    "category": "Essential Prayers",
+    "summary": "A traditional night prayer of thanksgiving, repentance, and entrustment to God's protection.",
+    "sourceTitle": "EWTN — Basic Catholic Prayers",
+    "sourceURL": "https://www.ewtn.com/catholicism/devotions/basic-catholic-prayers-70",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Mary",
+      "Joseph",
+      "Guardian Angel"
+    ],
+    "tags": [
+      "essential",
+      "evening",
+      "night prayer"
+    ]
   },
   {
-    "id": "act-of-hope",
-    "name": "Act of Hope",
-    "occasion": "Anytime",
-    "text": "O my God, relying on Thy almighty power and infinite mercy and promises, I hope to obtain pardon of my sins, the help of Thy grace, and life everlasting, through the merits of Jesus Christ, my Lord and Redeemer. Amen."
+    "id": "essential-prayer-before-reading-scripture",
+    "title": "Prayer Before Reading Scripture",
+    "text": "Lord our God, we bless you. As we come together to ponder the Scriptures, we ask you in your kindness to fill us with the knowledge of your will so that, pleasing you in all things, we may grow in every good work. We ask this through Christ our Lord. Amen.",
+    "occasion": "Before Reading Scripture",
+    "category": "Essential Prayers",
+    "summary": "A brief prayer asking God for understanding and fruitfulness before reading Sacred Scripture.",
+    "sourceTitle": "USCCB — Prayer When Gathering to Meet or Study",
+    "sourceURL": "https://www.usccb.org/prayers/prayer-when-gathering-meet-or-study",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "essential",
+      "scripture",
+      "study"
+    ]
   },
   {
-    "id": "act-of-love",
-    "name": "Act of Love",
-    "occasion": "Anytime",
-    "text": "O my God, I love Thee above all things, with my whole heart and soul, because Thou art all-good and worthy of all love. I love my neighbor as myself for the love of Thee. I forgive all who have injured me and ask pardon of all whom I have injured. Amen."
+    "id": "essential-prayer-after-reading-scripture",
+    "title": "Prayer After Reading Scripture",
+    "text": "Lord God, may your word which I have heard dwell in my heart and bear fruit in my life. By the power of the Holy Spirit, lead me to live what I have received, for your glory and the good of your people. Through Christ our Lord. Amen.",
+    "occasion": "After Reading Scripture",
+    "category": "Essential Prayers",
+    "summary": "A short prayer asking that the Word of God take root and bear fruit in daily life.",
+    "sourceTitle": "USCCB — Understanding the Bible",
+    "sourceURL": "https://www.usccb.org/bible/understanding-the-bible",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "essential",
+      "scripture",
+      "word of god"
+    ]
+  },
+  {
+    "id": "essential-act-of-thanksgiving",
+    "title": "Act of Thanksgiving",
+    "text": "O Lord, I thank you for all the graces and benefits you have bestowed upon me, especially for the gift of faith, for your abiding presence, and for the hope of eternal life. Receive my gratitude, deepen my love, and make me faithful in your service all the days of my life. Amen.",
+    "occasion": "Any Time",
+    "category": "Essential Prayers",
+    "summary": "A brief prayer of gratitude for God's gifts, grace, and faithful presence.",
+    "sourceTitle": "EWTN — Basic Catholic Prayers",
+    "sourceURL": "https://www.ewtn.com/catholicism/devotions/basic-catholic-prayers-70",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "essential",
+      "thanksgiving",
+      "gratitude"
+    ]
+  },
+  {
+    "id": "essential-act-of-faith",
+    "title": "Act of Faith",
+    "text": "O my God, I firmly believe that you are one God in three divine Persons, Father, Son, and Holy Spirit. I believe that your divine Son became man and died for our sins and that he will come to judge the living and the dead. I believe these and all the truths which the holy Catholic Church teaches because you have revealed them who are eternal truth and wisdom, who can neither deceive nor be deceived. In this faith I intend to live and die. Amen.",
+    "occasion": "Any Time",
+    "category": "Essential Prayers",
+    "summary": "A classic profession of belief in God and in all that the Church teaches by divine revelation.",
+    "sourceTitle": "USCCB — Act of Faith, Hope, and Love",
+    "sourceURL": "https://www.usccb.org/prayers/act-faith-hope-and-love",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Holy Trinity",
+      "Jesus",
+      "Holy Spirit"
+    ],
+    "tags": [
+      "essential",
+      "faith",
+      "theological virtue"
+    ]
+  },
+  {
+    "id": "essential-act-of-hope",
+    "title": "Act of Hope",
+    "text": "O my God, relying on your almighty power and infinite mercy and promises, I hope to obtain pardon of my sins, the help of your grace, and life everlasting, through the merits of Jesus Christ, my Lord and Redeemer. Amen.",
+    "occasion": "Any Time",
+    "category": "Essential Prayers",
+    "summary": "A classic prayer of confident trust in God's mercy, grace, and promise of eternal life.",
+    "sourceTitle": "USCCB — Act of Faith, Hope, and Love",
+    "sourceURL": "https://www.usccb.org/prayers/act-faith-hope-and-love",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Jesus"
+    ],
+    "tags": [
+      "essential",
+      "hope",
+      "theological virtue"
+    ]
+  },
+  {
+    "id": "essential-act-of-charity",
+    "title": "Act of Charity",
+    "text": "O my God, I love you above all things, with my whole heart and soul, because you are all-good and worthy of all love. I love my neighbor as myself for the love of you. I forgive all who have injured me and ask pardon of all whom I have injured. Amen.",
+    "occasion": "Any Time",
+    "category": "Essential Prayers",
+    "summary": "A prayer ordering the heart toward love of God and love of neighbor for God's sake.",
+    "sourceTitle": "USCCB — Act of Faith, Hope, and Love",
+    "sourceURL": "https://www.usccb.org/prayers/act-faith-hope-and-love",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "essential",
+      "charity",
+      "theological virtue"
+    ]
+  },
+  {
+    "id": "essential-act-of-contrition",
+    "title": "Act of Contrition",
+    "text": "O my God, I am heartily sorry for having offended thee, and I detest all my sins because I dread the loss of heaven and the pains of hell, but most of all because they offend thee, my God, who art all-good and deserving of all my love. I firmly resolve, with the help of thy grace, to confess my sins, to do penance, and to amend my life. Amen.",
+    "occasion": "Repentance",
+    "category": "Essential Prayers",
+    "summary": "A foundational prayer of sorrow for sin and resolve to amend one's life with God's grace.",
+    "sourceTitle": "USCCB — Act of Contrition",
+    "sourceURL": "https://www.usccb.org/prayers/act-contrition",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "essential",
+      "contrition",
+      "repentance"
+    ]
+  },
+  {
+    "id": "essential-guardian-angel-prayer",
+    "title": "Guardian Angel Prayer",
+    "text": "Angel of God, my guardian dear, to whom God's love commits me here, ever this day be at my side, to light and guard, to rule and guide. Amen.",
+    "occasion": "Any Time",
+    "category": "Essential Prayers",
+    "summary": "The classic short prayer asking one's guardian angel for light, guidance, and protection.",
+    "sourceTitle": "USCCB — Prayer to Your Guardian Angel",
+    "sourceURL": "https://www.usccb.org/prayers/prayer-your-guardian-angel",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Guardian Angel",
+      "Angels"
+    ],
+    "tags": [
+      "essential",
+      "guardian angel",
+      "protection"
+    ]
+  },
+  {
+    "id": "essential-prayer-to-saint-michael-the-archangel",
+    "title": "Prayer to Saint Michael the Archangel",
+    "text": "Saint Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil; may God rebuke him, we humbly pray; and do thou, O Prince of the heavenly hosts, by the power of God, cast into hell Satan and all the evil spirits who prowl through the world seeking the ruin of souls. Amen.",
+    "occasion": "Protection",
+    "category": "Essential Prayers",
+    "summary": "The traditional prayer invoking Saint Michael for defense against evil and spiritual warfare.",
+    "sourceTitle": "USCCB — A Soldier's Prayers",
+    "sourceURL": "https://www.usccb.org/prayer/pdf/33433/en",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Michael",
+      "Saint Michael",
+      "Archangel"
+    ],
+    "tags": [
+      "essential",
+      "saint michael",
+      "protection"
+    ]
+  },
+  {
+    "id": "essential-prayer-for-protection",
+    "title": "Prayer for Protection",
+    "text": "Christ with me, Christ before me, Christ behind me, Christ in me, Christ beneath me, Christ above me, Christ on my right, Christ on my left, Christ when I lie down, Christ when I sit down, Christ when I arise, Christ in the heart of everyone who thinks of me, Christ in the mouth of everyone who speaks of me, Christ in every eye that sees me, Christ in every ear that hears me. Amen.",
+    "occasion": "Protection",
+    "category": "Essential Prayers",
+    "summary": "A short prayer of protection centered on Christ's presence on every side.",
+    "sourceTitle": "New Advent — St. Patrick's Breastplate",
+    "sourceURL": "https://www.newadvent.org/cathen/11554a.htm",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Christ",
+      "Jesus",
+      "Patrick"
+    ],
+    "tags": [
+      "essential",
+      "protection",
+      "christ"
+    ]
+  },
+  {
+    "id": "essential-come-holy-spirit",
+    "title": "Come, Holy Spirit",
+    "text": "Come, Holy Spirit, fill the hearts of your faithful and kindle in them the fire of your love. Send forth your Spirit and they shall be created. And you shall renew the face of the earth.\n\nLet us pray. O God, who have taught the hearts of the faithful by the light of the Holy Spirit, grant that in the same Spirit we may be truly wise and ever rejoice in his consolation. Through Christ our Lord. Amen.",
+    "occasion": "Before Study or Discernment",
+    "category": "Essential Prayers",
+    "summary": "The traditional invocation of the Holy Spirit for wisdom, renewal, and holy guidance.",
+    "sourceTitle": "USCCB — Prayer to the Holy Spirit",
+    "sourceURL": "https://www.usccb.org/prayers/prayer-holy-spirit",
+    "weekdays": [
+      2
+    ],
+    "months": null,
+    "saintAliases": [
+      "Holy Spirit",
+      "Pentecost"
+    ],
+    "tags": [
+      "essential",
+      "holy spirit",
+      "discernment"
+    ]
+  },
+  {
+    "id": "morning-offering-traditional",
+    "title": "Morning Offering (Traditional)",
+    "text": "O Jesus, through the Immaculate Heart of Mary, I offer You my prayers, works, joys and sufferings of this day for all the intentions of Your Sacred Heart, in union with the Holy Sacrifice of the Mass throughout the world, in reparation for my sins, for the intentions of all my relatives and friends, and in particular for the intentions of the Holy Father. Amen.",
+    "occasion": "Morning",
+    "category": "Daily Offering",
+    "summary": "A classic morning offering placing the entire day into Christ's hands.",
+    "sourceTitle": "EWTN — The Morning Offering",
+    "sourceURL": "https://www.ewtn.com/catholicism/devotions/morning-offering-394",
+    "weekdays": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "daily offering",
+      "morning",
+      "sacred heart"
+    ]
+  },
+  {
+    "id": "morning-offering-sacred-heart-apostleship",
+    "title": "Morning Offering (Sacred Heart / Apostleship of Prayer version)",
+    "text": "O Jesus, through the Immaculate Heart of Mary, I offer You my prayers, works, joys, and sufferings of this day in union with the Holy Sacrifice of the Mass throughout the world. I offer them for all the intentions of Your Sacred Heart: the salvation of souls, reparation for sin, and the reunion of all Christians. I offer them for the intentions of our bishops and of all Apostles of Prayer, and in particular for those recommended by our Holy Father this month. Amen.",
+    "occasion": "Morning",
+    "category": "Daily Offering",
+    "summary": "The Apostleship of Prayer's daily offering of the day to the Sacred Heart of Jesus.",
+    "sourceTitle": "USCCB — Morning Offering",
+    "sourceURL": "https://www.usccb.org/prayer/pdf/33357/en",
+    "weekdays": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "daily offering",
+      "morning",
+      "apostleship of prayer"
+    ]
+  },
+  {
+    "id": "daily-offering-to-jesus-christ",
+    "title": "Daily Offering to Jesus Christ",
+    "text": "God, our Father, I offer You my day. I offer You my prayers, thoughts, words, actions, joys and sufferings in union with Your Son Jesus Christ who continues to offer Himself in the Eucharist for the salvation of the world. May the Holy Spirit who guided Jesus be my guide and my strength today so that I may witness to Your love. With Mary, the Mother of the Lord and of the Church, I pray especially for this month’s intention as proposed by the Holy Father. Amen.",
+    "occasion": "Morning",
+    "category": "Daily Offering",
+    "summary": "A daily self-offering uniting every thought, word, action, joy, and suffering to Christ's Eucharistic offering.",
+    "sourceTitle": "Pope's Worldwide Prayer Network — The Daily Offering",
+    "sourceURL": "https://popesprayerusa.net/morning-offering/",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "daily offering",
+      "jesus",
+      "eucharist"
+    ]
+  },
+  {
+    "id": "offering-of-the-day-to-the-sacred-heart",
+    "title": "Offering of the Day to the Sacred Heart",
+    "text": "Sacred Heart of Jesus, I offer You my heart, through the Immaculate Heart of Mary, for Your intentions and of the Holy Father.",
+    "occasion": "Morning",
+    "category": "Daily Offering",
+    "summary": "A brief daily self-offering to the Sacred Heart through the Immaculate Heart of Mary.",
+    "sourceTitle": "Pope's Prayer Network USA-Canada — Apostleship of Prayer Membership Card",
+    "sourceURL": "https://popesprayerusa.net/wp-content/uploads/2024/09/St.-Therese-of-Lisieux-Membership-Card-Apostleship-of-Prayer.pdf",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Mary",
+      "Immaculate Heart of Mary"
+    ],
+    "tags": [
+      "daily offering",
+      "sacred heart",
+      "mary"
+    ]
+  },
+  {
+    "id": "daily-offering-for-the-holy-souls-in-purgatory",
+    "title": "Daily Offering for the Holy Souls in Purgatory",
+    "text": "Every day, I offer any pain or anxiety I endure in union with the Sacred Heart of Jesus and the Immaculate Heart of Mary for the Poor Souls in Purgatory, especially the most neglected; for an increase in priestly, diaconal, and religious vocations; and for the conversion of sinners.",
+    "occasion": "Daily Intercession",
+    "category": "Daily Offering",
+    "summary": "A daily offering of suffering and anxiety for the poor souls in purgatory and the needs of the Church.",
+    "sourceTitle": "The Divine Mercy — Our Duty of Mercy",
+    "sourceURL": "https://www.thedivinemercy.org/articles/our-duty-mercy",
+    "weekdays": null,
+    "months": [
+      11
+    ],
+    "saintAliases": [
+      "Mary",
+      "Sacred Heart of Jesus"
+    ],
+    "tags": [
+      "daily offering",
+      "purgatory",
+      "holy souls"
+    ]
+  },
+  {
+    "id": "prayer-before-work",
+    "title": "Prayer Before Work",
+    "text": "O Lord Jesus Christ, Only-begotten Son of your eternal Father: You have said with your holy lips: \"Without Me, you can do nothing.\" My Lord, I embrace your words with my heart and soul, and bow before your goodness and say: Help me, your unworthy servant, to complete this, my present undertaking, in the name of the Father and of the Son, and of the Holy Spirit. Amen.",
+    "occasion": "Before Work",
+    "category": "Daily Offering",
+    "summary": "A brief prayer asking Christ to guide, strengthen, and complete the work set before us.",
+    "sourceTitle": "EWTN — Byzantine Catholic Prayers",
+    "sourceURL": "https://www.ewtn.com/catholicism/library/byzantine-catholic-prayers-11830",
+    "weekdays": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "daily offering",
+      "work",
+      "labor"
+    ]
+  },
+  {
+    "id": "prayer-after-work",
+    "title": "Prayer After Work",
+    "text": "O Most sweet Jesus, You are the fulfillment of all blessings. Fill my soul with joy and gladness and save me. Grant that your Name be glorified: for not to us, but to your Name are forever due honor, glory, and adoration. Amen.",
+    "occasion": "After Work",
+    "category": "Daily Offering",
+    "summary": "A concluding prayer of gratitude, joy, and praise after the labor of the day.",
+    "sourceTitle": "EWTN — Byzantine Catholic Prayers",
+    "sourceURL": "https://www.ewtn.com/catholicism/library/byzantine-catholic-prayers-11830",
+    "weekdays": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "daily offering",
+      "work",
+      "thanksgiving"
+    ]
+  },
+  {
+    "id": "offering-of-suffering",
+    "title": "Offering of Suffering",
+    "text": "I also offer my sufferings so that God's plan may be completed and his Word spread among the peoples. I, in turn, am close to all who are tried by suffering at this time. I pray for each one of them.",
+    "occasion": "Times of Trial",
+    "category": "Daily Offering",
+    "summary": "A brief offering that unites personal suffering to Christ's mission for the good of the Church and the world.",
+    "sourceTitle": "EWTN — Last Messages of the Holy Father (John Paul II, Way of the Cross 2005)",
+    "sourceURL": "https://www.ewtn.com/catholicism/library/last-messages-of-the-holy-father-8274",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "John Paul II"
+    ],
+    "tags": [
+      "daily offering",
+      "suffering",
+      "redemptive suffering"
+    ]
+  },
+  {
+    "id": "offering-of-joys-and-labors",
+    "title": "Offering of Joys and Labors",
+    "text": "Good Father, I know you are with me. Here I am on this new day. Place my heart once more next to the Heart of your Son Jesus, who is giving himself for me and who comes to me in the Eucharist. May your Holy Spirit make me his friend and apostle, available for his mission of compassion. I place in your hands my joys and hopes, my works and sufferings, everything that I am and have, in communion with my brothers and sisters of this Worldwide Prayer Network. With Mary, I offer you my day for the mission of the Church and for the prayer intentions of the Pope and my Bishop for this month. Amen.",
+    "occasion": "Morning",
+    "category": "Daily Offering",
+    "summary": "A contemporary daily offering placing joys, hopes, works, and sufferings into the Father's hands for the Church's mission.",
+    "sourceTitle": "Pope's Worldwide Prayer Network — Offering Prayer",
+    "sourceURL": "https://www.popesprayer.va/offering-prayer/",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Mary"
+    ],
+    "tags": [
+      "daily offering",
+      "joys",
+      "labors"
+    ]
+  },
+  {
+    "id": "daily-surrender-prayer-suscipe",
+    "title": "Daily Surrender Prayer (Take, Lord, and receive...)",
+    "text": "Take Lord, and receive all my liberty, my memory, my understanding, and my entire will, all that I have and possess. Thou hast given all to me. To Thee, O Lord, I return it. All is Thine, dispose of it wholly according to Thy will. Give me Thy love and thy grace, for this is sufficient for me.",
+    "occasion": "Surrender",
+    "category": "Daily Offering",
+    "summary": "Saint Ignatius Loyola's radical prayer of total self-offering to God's will.",
+    "sourceTitle": "Ignatian Spirituality — Suscipe, the Radical Prayer",
+    "sourceURL": "https://www.ignatianspirituality.com/ignatian-prayer/prayers-by-st-ignatius-and-others/suscipe-the-radical-prayer/",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Ignatius of Loyola",
+      "Saint Ignatius"
+    ],
+    "tags": [
+      "daily offering",
+      "surrender",
+      "ignatian"
+    ]
+  },
+  {
+    "id": "prayer-of-abandonment-charles-de-foucauld",
+    "title": "Prayer of Abandonment",
+    "text": "Father, I abandon myself into your hands; do with me what you will. Whatever you may do, I thank you: I am ready for all, I accept all. Let only your will be done in me, and in all your creatures - I wish no more than this, O Lord. Into your hands I commend my soul: I offer it to you with all the love of my heart, for I love you, Lord, and so need to give myself, to surrender myself into your hands without reserve, and with boundless confidence, for you are my Father.",
+    "occasion": "Abandonment",
+    "category": "Daily Offering",
+    "summary": "Blessed Charles de Foucauld's prayer of complete surrender into the Father's hands.",
+    "sourceTitle": "EWTN — Prayer of Abandonment",
+    "sourceURL": "https://www.ewtn.com/catholicism/devotions/prayer-of-abandonment-361",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Charles de Foucauld",
+      "Blessed Charles de Foucauld",
+      "Saint Charles de Foucauld"
+    ],
+    "tags": [
+      "daily offering",
+      "abandonment",
+      "trust"
+    ]
+  },
+  {
+    "id": "act-of-offering-ones-will-to-god",
+    "title": "Act of Offering One's Will to God",
+    "text": "Here I am, Lord, today let your will be done in me.",
+    "occasion": "Daily Renewal",
+    "category": "Daily Offering",
+    "summary": "A short daily act placing the will under God's fatherly providence.",
+    "sourceTitle": "Vatican — Angelus, 8 December 2018",
+    "sourceURL": "https://www.vatican.va/content/francesco/en/angelus/2018/documents/papa-francesco_angelus_20181208.html",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "daily offering",
+      "divine will",
+      "short prayer"
+    ]
+  },
+  {
+    "id": "daily-renewal-of-baptismal-promises-short-form",
+    "title": "Daily Renewal of Baptismal Promises (short form)",
+    "text": "Do you believe in God the Father Almighty, creator of heaven and earth? I do. Do you believe in Jesus Christ, his only Son, our Lord, who was born of the Virgin Mary, was crucified, died, and was buried, rose from the dead, and is now seated at the right hand of the Father? I do. Do you believe in the Holy Spirit, the holy Catholic Church, the communion of saints, the forgiveness of sins, the resurrection of the body, and life everlasting? I do. This is our faith. This is the faith of the Church. We are proud to profess it in Christ Jesus our Lord. Amen.",
+    "occasion": "Profession of Faith",
+    "category": "Daily Offering",
+    "summary": "A concise renewal of baptismal faith and identity drawn from the Church's liturgical profession of faith.",
+    "sourceTitle": "Vatican — Celebration of the Eucharist, Nationals Park (April 17, 2008)",
+    "sourceURL": "https://www.vatican.va/news_services/liturgy/libretti/2008/messale_USA.pdf",
+    "weekdays": [
+      1
+    ],
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "daily offering",
+      "baptism",
+      "profession of faith"
+    ]
+  },
+  {
+    "id": "litany-for-poor-souls-in-purgatory",
+    "title": "Litany for Poor Souls in Purgatory",
+    "text": "Lord, have mercy on them.\nChrist, have mercy on them.\nLord, have mercy on them.\nChrist, hear us.\nChrist, graciously hear us.\n\nGod the Father of Heaven, have mercy on the souls in purgatory.\nGod the Son, Redeemer of the world, have mercy on the souls in purgatory.\nGod the Holy Spirit, have mercy on the souls in purgatory.\nHoly Trinity, one God, have mercy on the souls in purgatory.\n\nHoly Mary, pray for them.\nHoly Mother of God, pray for them.\nHoly Angels and Archangels, pray for them.\nSaint Joseph, pray for them.\nSaints and holy women and men of God, pray for them.\n\nBe merciful, spare them, O Lord.\nBe merciful, graciously hear them, O Lord.\nFrom all evil, O Lord, deliver them.\nFrom Your wrath, O Lord, deliver them.\nFrom the severity of Your justice, O Lord, deliver them.\nFrom the pains of purgatory, O Lord, deliver them.\nFrom every suffering, O Lord, deliver them.\nThrough Your Birth, O Lord, deliver them.\nThrough Your Cross and Passion, O Lord, deliver them.\nThrough Your Death and Burial, O Lord, deliver them.\nThrough Your glorious Resurrection, O Lord, deliver them.\nThrough Your wonderful Ascension, O Lord, deliver them.\nThrough the coming of the Holy Spirit, O Lord, deliver them.\n\nWe sinners, beseech You, hear us.\nThat You would pardon their sins and failings, we beseech You, hear us.\nThat You would soon lead them into light, refreshment, and peace, we beseech You, hear us.\nThat You would comfort those who pray for the departed, we beseech You, hear us.\nThat You would grant us the grace to remember the dead with charity and perseverance, we beseech You, hear us.\n\nLamb of God, who take away the sins of the world, grant them rest, O Lord.\nLamb of God, who take away the sins of the world, grant them rest, O Lord.\nLamb of God, who take away the sins of the world, grant them eternal rest, O Lord.\n\nV/. Eternal rest grant unto them, O Lord.\nR/. And let perpetual light shine upon them.\n\nLet us pray.\nO God, Creator and Redeemer of all the faithful, grant to the souls of Your servants departed the remission of all their sins, that through the help of our loving prayers they may obtain the pardon they have always desired. Through Christ our Lord. Amen.",
+    "occasion": "For the Faithful Departed",
+    "category": "Litanies",
+    "summary": "A traditional litany imploring mercy, light, and rest for the poor souls in purgatory.",
+    "sourceTitle": "FSSP — Litany for the Holy Souls in Purgatory",
+    "sourceURL": "https://fssp.com/litany-for-the-holy-souls-in-purgatory/",
+    "weekdays": null,
+    "months": [
+      11
+    ],
+    "saintAliases": [
+      "Holy Souls",
+      "Poor Souls in Purgatory",
+      "Faithful Departed"
+    ],
+    "tags": [
+      "litany",
+      "purgatory",
+      "holy souls"
+    ]
+  },
+  {
+    "id": "litany-of-divine-mercy",
+    "title": "Litany of Divine Mercy",
+    "text": "Divine Mercy, gushing forth from the bosom of the Father,\nI trust in You.\nDivine Mercy, greatest attribute of God,\nI trust in You.\nDivine Mercy, incomprehensible mystery,\nI trust in You.\nDivine Mercy, fountain gushing forth from the mystery of the Most Blessed Trinity,\nI trust in You.\nDivine Mercy, unfathomed by any intellect, human or angelic,\nI trust in You.\nDivine Mercy, from which wells forth all life and happiness,\nI trust in You.\nDivine Mercy, better than the heavens,\nI trust in You.\nDivine Mercy, source of miracles and wonders,\nI trust in You.\nDivine Mercy, encompassing the whole universe,\nI trust in You.\nDivine Mercy, descending to earth in the Person of the Incarnate Word,\nI trust in You.\nDivine Mercy, which flowed out from the open wound of the Heart of Jesus,\nI trust in You.\nDivine Mercy, enclosed in the Heart of Jesus for us, and especially for sinners,\nI trust in You.\nDivine Mercy, unfathomed in the institution of the Sacred Host,\nI trust in You.\nDivine Mercy, in the founding of the Holy Church,\nI trust in You.\nDivine Mercy, in the Sacrament of Holy Baptism,\nI trust in You.\nDivine Mercy, in our justification through Jesus Christ,\nI trust in You.\nDivine Mercy, accompanying us through our whole life,\nI trust in You.\nDivine Mercy, embracing us especially at the hour of death,\nI trust in You.\nDivine Mercy, endowing us with immortal life,\nI trust in You.\nDivine Mercy, accompanying us every moment of our life,\nI trust in You.\nDivine Mercy, shielding us from the fire of hell,\nI trust in You.\nDivine Mercy, in the conversion of hardened sinners,\nI trust in You.\nDivine Mercy, astonishment for Angels, incomprehensible to Saints,\nI trust in You.\nDivine Mercy, unfathomed in all the mysteries of God,\nI trust in You.\nDivine Mercy, lifting us out of every misery,\nI trust in You.\nDivine Mercy, source of our happiness and joy,\nI trust in You.\nDivine Mercy, in calling us forth from nothingness to existence,\nI trust in You.\nDivine Mercy, embracing all the works of His hands,\nI trust in You.\nDivine Mercy, crown of all God's handiwork,\nI trust in You.\nDivine Mercy, in which we are all immersed,\nI trust in You.\nDivine Mercy, sweet relief for anguished hearts,\nI trust in You.\nDivine Mercy, only hope of despairing souls,\nI trust in You.\nDivine Mercy, repose of hearts, peace amidst fear,\nI trust in You.\nDivine Mercy, delight and ecstasy of holy souls,\nI trust in You.\nDivine Mercy, inspiring hope against all hope,\nI trust in You.\n\nLet us pray.\nEternal God, in whom mercy is endless and the treasury of compassion inexhaustible, look kindly upon us and increase Your mercy in us, that in difficult moments we might not despair nor become despondent, but with great confidence submit ourselves to Your holy will, which is Love and Mercy itself. Amen.",
+    "occasion": "Divine Mercy Devotion",
+    "category": "Litanies",
+    "summary": "Saint Faustina's litany praising the inexhaustible mercy revealed in Jesus Christ.",
+    "sourceTitle": "EWTN — Litany to the Divine Mercy",
+    "sourceURL": "https://www.ewtn.com/catholicism/devotions/litany-to-the-divine-mercy-263",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Jesus",
+      "Divine Mercy",
+      "Faustina"
+    ],
+    "tags": [
+      "litany",
+      "divine mercy",
+      "jesus"
+    ]
+  },
+  {
+    "id": "litany-of-the-holy-rosary",
+    "title": "Litany of the Holy Rosary",
+    "text": "Lord, have mercy.\nChrist, have mercy.\nLord, have mercy.\nChrist, hear us.\nChrist, graciously hear us.\n\nGod the Father of Heaven, have mercy on us.\nGod the Son, Redeemer of the world, have mercy on us.\nGod the Holy Spirit, have mercy on us.\nHoly Trinity, one God, have mercy on us.\n\nHoly Mary, pray for us.\nHoly Mother of God, pray for us.\nHoly Virgin of virgins, pray for us.\nMother of Christ, pray for us.\nMother of divine grace, pray for us.\nMother most pure, pray for us.\nMother most chaste, pray for us.\nMother inviolate, pray for us.\nMother undefiled, pray for us.\nMother most amiable, pray for us.\nMother most admirable, pray for us.\nMother of good counsel, pray for us.\nMother of our Creator, pray for us.\nMother of our Savior, pray for us.\nVirgin most prudent, pray for us.\nVirgin most venerable, pray for us.\nVirgin most renowned, pray for us.\nVirgin most powerful, pray for us.\nVirgin most merciful, pray for us.\nVirgin most faithful, pray for us.\nMirror of justice, pray for us.\nSeat of wisdom, pray for us.\nCause of our joy, pray for us.\nSpiritual vessel, pray for us.\nVessel of honor, pray for us.\nSingular vessel of devotion, pray for us.\nMystical rose, pray for us.\nTower of David, pray for us.\nTower of ivory, pray for us.\nHouse of gold, pray for us.\nArk of the covenant, pray for us.\nGate of heaven, pray for us.\nMorning star, pray for us.\nHealth of the sick, pray for us.\nRefuge of sinners, pray for us.\nComforter of the afflicted, pray for us.\nHelp of Christians, pray for us.\nQueen of Angels, pray for us.\nQueen of Patriarchs, pray for us.\nQueen of Prophets, pray for us.\nQueen of Apostles, pray for us.\nQueen of Martyrs, pray for us.\nQueen of Confessors, pray for us.\nQueen of Virgins, pray for us.\nQueen of all Saints, pray for us.\nQueen conceived without original sin, pray for us.\nQueen assumed into heaven, pray for us.\nQueen of the most holy Rosary, pray for us.\nQueen of families, pray for us.\nQueen of peace, pray for us.\n\nLamb of God, who take away the sins of the world, spare us, O Lord.\nLamb of God, who take away the sins of the world, graciously hear us, O Lord.\nLamb of God, who take away the sins of the world, have mercy on us.\n\nPray for us, O holy Mother of God.\nThat we may be made worthy of the promises of Christ.\n\nLet us pray.\nO God, whose Only Begotten Son, by His life, death, and Resurrection, has purchased for us the rewards of eternal life, grant, we beseech You, that meditating upon these mysteries of the most holy Rosary of the Blessed Virgin Mary, we may imitate what they contain and obtain what they promise, through the same Christ our Lord. Amen.",
+    "occasion": "Rosary",
+    "category": "Litanies",
+    "summary": "A rosary-form litany honoring the Blessed Virgin under the titles commonly prayed with the Holy Rosary.",
+    "sourceTitle": "EscriváWorks — The Holy Rosary: Litany",
+    "sourceURL": "https://escrivaworks.org/book/the_holy_rosary.htm",
+    "weekdays": null,
+    "months": [
+      10
+    ],
+    "saintAliases": [
+      "Mary",
+      "Our Lady of the Rosary",
+      "Blessed Virgin Mary"
+    ],
+    "tags": [
+      "litany",
+      "rosary",
+      "mary"
+    ]
+  },
+  {
+    "id": "litany-of-humility",
+    "title": "Litany of Humility",
+    "text": "O Jesus, meek and humble of heart,\nHear me.\n\nFrom the desire of being esteemed,\nDeliver me, O Jesus.\nFrom the desire of being loved,\nDeliver me, O Jesus.\nFrom the desire of being extolled,\nDeliver me, O Jesus.\nFrom the desire of being honored,\nDeliver me, O Jesus.\nFrom the desire of being praised,\nDeliver me, O Jesus.\nFrom the desire of being preferred to others,\nDeliver me, O Jesus.\nFrom the desire of being consulted,\nDeliver me, O Jesus.\nFrom the desire of being approved,\nDeliver me, O Jesus.\n\nFrom the fear of being humiliated,\nDeliver me, O Jesus.\nFrom the fear of being despised,\nDeliver me, O Jesus.\nFrom the fear of suffering rebukes,\nDeliver me, O Jesus.\nFrom the fear of being calumniated,\nDeliver me, O Jesus.\nFrom the fear of being forgotten,\nDeliver me, O Jesus.\nFrom the fear of being ridiculed,\nDeliver me, O Jesus.\nFrom the fear of being wronged,\nDeliver me, O Jesus.\nFrom the fear of being suspected,\nDeliver me, O Jesus.\n\nThat others may be loved more than I,\nJesus, grant me the grace to desire it.\nThat others may be esteemed more than I,\nJesus, grant me the grace to desire it.\nThat, in the opinion of the world, others may increase and I may decrease,\nJesus, grant me the grace to desire it.\nThat others may be chosen and I set aside,\nJesus, grant me the grace to desire it.\nThat others may be praised and I go unnoticed,\nJesus, grant me the grace to desire it.\nThat others may be preferred to me in everything,\nJesus, grant me the grace to desire it.\nThat others may become holier than I, provided that I may become as holy as I should,\nJesus, grant me the grace to desire it. Amen.",
+    "occasion": "Examination and Growth in Virtue",
+    "category": "Litanies",
+    "summary": "Cardinal Merry del Val's searching prayer for freedom from pride and growth in true humility.",
+    "sourceTitle": "EWTN — Litany of Humility",
+    "sourceURL": "https://www.ewtn.com/catholicism/devotions/litany-of-humility-245",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Jesus"
+    ],
+    "tags": [
+      "litany",
+      "humility",
+      "virtue"
+    ]
+  },
+  {
+    "id": "litany-of-intercession-our-lady-of-mount-carmel",
+    "title": "Litany of Intercession to Our Lady of Mount Carmel",
+    "text": "Lord, have mercy.\nChrist, have mercy.\nLord, have mercy.\n\nOur Lady of Mount Carmel, pray for us.\nVirgin most faithful, pray for us.\nMirror of justice, pray for us.\nSeat of wisdom, pray for us.\nCause of our joy, pray for us.\nSpiritual vessel, pray for us.\nVessel of honor, pray for us.\nSingular vessel of devotion, pray for us.\nMystical rose, pray for us.\nTower of David, pray for us.\nTower of ivory, pray for us.\nHouse of gold, pray for us.\nArk of the covenant, pray for us.\nGate of heaven, pray for us.\nMorning star, pray for us.\nHealth of the sick, pray for us.\nRefuge of sinners, pray for us.\nComforter of the afflicted, pray for us.\nHelp of Christians, pray for us.\nMother and beauty of Carmel, pray for us.\nProtectress of all who wear the Scapular, pray for us.\nHope of the dying, pray for us.\nQueen and splendor of Carmel, pray for us.\n\nLamb of God, who take away the sins of the world, spare us, O Lord.\nLamb of God, who take away the sins of the world, graciously hear us, O Lord.\nLamb of God, who take away the sins of the world, have mercy on us.\n\nPray for us, O glorious Mother and ornament of Carmel.\nThat we may be made worthy of the promises of Christ.\n\nLet us pray.\nO God, who has honored the Order of Carmel with the singular title of Your most Blessed Mother Mary, ever Virgin, mercifully grant that we who celebrate her memory and seek her protection may be worthy to come to the mountain which is Christ. Who lives and reigns forever and ever. Amen.",
+    "occasion": "Our Lady of Mount Carmel",
+    "category": "Litanies",
+    "summary": "A Carmelite litany seeking the maternal intercession of Our Lady under her title of Mount Carmel.",
+    "sourceTitle": "St. Jerome Parish Bulletin — Litany of Intercession to Our Lady of Mount Carmel",
+    "sourceURL": "https://www.stjeromeonline.org/uploads/9/0/7/4/90744951/2021-07-18.pdf",
+    "weekdays": null,
+    "months": [
+      7
+    ],
+    "saintAliases": [
+      "Mary",
+      "Our Lady of Mount Carmel",
+      "Blessed Virgin Mary"
+    ],
+    "tags": [
+      "litany",
+      "mount carmel",
+      "mary"
+    ]
+  },
+  {
+    "id": "litany-of-loreto",
+    "title": "Litany of Loreto",
+    "text": "Lord, have mercy on us.\nChrist, have mercy on us.\nLord, have mercy on us.\nChrist, hear us.\nChrist, graciously hear us.\nGod the Father of heaven, have mercy on us.\nGod the Son, Redeemer of the world, have mercy on us.\nGod the Holy Spirit, have mercy on us.\nHoly Trinity, one God, have mercy on us.\n\nHoly Mary, pray for us.\nHoly Mother of God, pray for us.\nHoly Virgin of virgins, pray for us.\nMother of Christ, pray for us.\nMother of divine grace, pray for us.\nMother most pure, pray for us.\nMother most chaste, pray for us.\nMother inviolate, pray for us.\nMother undefiled, pray for us.\nMother most amiable, pray for us.\nMother most admirable, pray for us.\nMother of good counsel, pray for us.\nMother of our Creator, pray for us.\nMother of our Savior, pray for us.\nVirgin most prudent, pray for us.\nVirgin most venerable, pray for us.\nVirgin most renowned, pray for us.\nVirgin most powerful, pray for us.\nVirgin most merciful, pray for us.\nVirgin most faithful, pray for us.\nMirror of justice, pray for us.\nSeat of wisdom, pray for us.\nCause of our joy, pray for us.\nSpiritual vessel, pray for us.\nVessel of honor, pray for us.\nSingular vessel of devotion, pray for us.\nMystical rose, pray for us.\nTower of David, pray for us.\nTower of ivory, pray for us.\nHouse of gold, pray for us.\nArk of the covenant, pray for us.\nGate of heaven, pray for us.\nMorning star, pray for us.\nHealth of the sick, pray for us.\nRefuge of sinners, pray for us.\nComforter of the afflicted, pray for us.\nHelp of Christians, pray for us.\nQueen of Angels, pray for us.\nQueen of Patriarchs, pray for us.\nQueen of Prophets, pray for us.\nQueen of Apostles, pray for us.\nQueen of Martyrs, pray for us.\nQueen of Confessors, pray for us.\nQueen of Virgins, pray for us.\nQueen of all Saints, pray for us.\nQueen conceived without original sin, pray for us.\nQueen assumed into heaven, pray for us.\nQueen of the most holy Rosary, pray for us.\nQueen of Peace, pray for us.\n\nLamb of God, who take away the sins of the world, spare us, O Lord.\nLamb of God, who take away the sins of the world, graciously hear us, O Lord.\nLamb of God, who take away the sins of the world, have mercy on us.\n\nPray for us, O holy Mother of God.\nThat we may be made worthy of the promises of Christ.\n\nLet us pray.\nGrant, we beseech You, O Lord God, that we Your servants may enjoy perpetual health of mind and body; and by the glorious intercession of blessed Mary, ever Virgin, may be delivered from present sadness, and enter into the joy of Your eternal gladness. Through Christ our Lord. Amen.",
+    "occasion": "Litany",
+    "category": "Litanies",
+    "summary": "The classic Marian litany invoking the Blessed Virgin Mary under many honored titles.",
+    "sourceTitle": "EWTN — The Litany of Loreto",
+    "sourceURL": "https://www.ewtn.com/catholicism/teachings/litany-of-loreto-12739",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Our Lady of Loreto",
+      "Virgin Mary"
+    ],
+    "tags": [
+      "litany",
+      "marian",
+      "intercession"
+    ]
+  },
+  {
+    "id": "litany-of-our-lady-of-walsingham",
+    "title": "Litany of Our Lady of Walsingham",
+    "text": "Our Lady of Walsingham, pray to the Lord for us.\nOur Lady of the Annunciation, pray to the Lord for us.\nOur Lady of the home at Nazareth, pray to the Lord for us.\nOur Lady of prompt obedience, pray to the Lord for us.\nOur Lady of hidden service, pray to the Lord for us.\nOur Lady of silence and prayer, pray to the Lord for us.\nOur Lady of joyful hope, pray to the Lord for us.\nOur Lady of the Word made flesh, pray to the Lord for us.\nOur Lady of the first Yes, pray to the Lord for us.\nOur Lady who leads us to Jesus, pray to the Lord for us.\nOur Lady of England, pray to the Lord for us.\nOur Lady, Help of all who seek your Son, pray to the Lord for us.\n\nLamb of God, who take away the sins of the world, spare us, O Lord.\nLamb of God, who take away the sins of the world, graciously hear us, O Lord.\nLamb of God, who take away the sins of the world, have mercy on us.\n\nLet us pray.\nAll holy and ever-living God, in giving us Jesus Christ to be our Saviour and Brother, You gave us Mary, His Mother, to be our Mother also; grant us, we pray, that we may be worthy of so great a Brother and so dear a Mother, and that through the prayers of Our Lady of Walsingham we may be faithful disciples of Your Son. Through the same Christ our Lord. Amen.",
+    "occasion": "Our Lady of Walsingham",
+    "category": "Litanies",
+    "summary": "A shrine litany invoking Our Lady of Walsingham as Mother, teacher, and guide to Christ.",
+    "sourceTitle": "Catholic National Shrine of Our Lady — Litany to Our Lady of Walsingham",
+    "sourceURL": "https://www.walsingham.org.uk/litany-to-our-lady-of-walsingham/",
+    "weekdays": null,
+    "months": [
+      9
+    ],
+    "saintAliases": [
+      "Mary",
+      "Our Lady of Walsingham",
+      "Blessed Virgin Mary"
+    ],
+    "tags": [
+      "litany",
+      "walsingham",
+      "mary"
+    ]
+  },
+  {
+    "id": "litany-of-prayers-for-priests",
+    "title": "Litany of Prayers for Priests",
+    "text": "Lord Jesus, eternal High Priest, hear us.\nLord Jesus, shepherd of souls, hear us.\nLord Jesus, who have called men to stand in Your place at the altar and in the confessional, hear us.\n\nFor priests who are faithful and fervent, we thank You, Lord.\nFor priests who are tired or discouraged, strengthen them, Lord.\nFor priests who suffer in body, mind, or spirit, sustain them, Lord.\nFor priests burdened by loneliness, comfort them, Lord.\nFor priests tempted by discouragement, preserve them, Lord.\nFor priests who preach the Gospel with courage, bless them, Lord.\nFor priests who bring sinners home through mercy, bless them, Lord.\nFor priests who care for the sick and dying, bless them, Lord.\nFor priests who form the young and guide families, bless them, Lord.\nFor priests who labor in hidden and difficult places, bless them, Lord.\nFor priests who have died, grant them eternal rest, Lord.\n\nGive to Your priests purity of heart.\nGive to Your priests zeal for souls.\nGive to Your priests fidelity to the Church.\nGive to Your priests love for the Eucharist.\nGive to Your priests devotion to Mary.\nGive to Your priests perseverance in holiness.\nRaise up many holy vocations for Your Church.\n\nLet us pray.\nO Jesus, eternal Priest, keep all Your priests within the shelter of Your Sacred Heart, where none may harm them. Keep unstained their anointed hands which daily touch Your Sacred Body. Keep unsullied their lips purpled with Your Precious Blood. Keep pure and unworldly their hearts sealed with the sublime mark of the priesthood. Let Your holy love surround and protect them from the world's contagion. Bless their labors with abundant fruit, and grant that the souls to whom they have ministered may be their joy and consolation here and their everlasting crown hereafter. Amen.",
+    "occasion": "For Priests and Vocations",
+    "category": "Litanies",
+    "summary": "A litany interceding for priests in their fidelity, holiness, and pastoral mission.",
+    "sourceTitle": "Foundation for Prayer for Priests — Prayer Resources",
+    "sourceURL": "https://www.foundationforpriests.org/home",
+    "weekdays": [
+      4
+    ],
+    "months": null,
+    "saintAliases": [
+      "Priests",
+      "Jesus"
+    ],
+    "tags": [
+      "litany",
+      "priests",
+      "vocations"
+    ]
+  },
+  {
+    "id": "litany-of-reparation",
+    "title": "Litany of Reparation",
+    "text": "Lord, have mercy.\nChrist, have mercy.\nLord, have mercy.\n\nFor indifference toward Your Eucharistic presence, Jesus, forgive us.\nFor lukewarm hearts and distracted worship, Jesus, forgive us.\nFor sacrilege and irreverence in Your churches, Jesus, forgive us.\nFor the neglect of Sunday worship, Jesus, forgive us.\nFor contempt of Your holy Name, Jesus, forgive us.\nFor public sins against truth, purity, justice, and charity, Jesus, forgive us.\nFor the sins of our nation and the scandals of Your people, Jesus, forgive us.\nFor the wounds we have caused in the Body of Christ, Jesus, forgive us.\nFor our failure to adore, thank, and love You as we ought, Jesus, forgive us.\n\nBy Your Sacred Heart, have mercy on us.\nBy Your Precious Blood, have mercy on us.\nBy Your holy Cross, have mercy on us.\nBy Your Eucharistic love, have mercy on us.\n\nWe adore You, O Christ, and we bless You.\nBecause by Your holy Cross You have redeemed the world.\n\nLet us pray.\nLord Jesus Christ, who in the Sacrament of Your love remain with us to the end of time, accept our acts of adoration and reparation for the coldness, neglect, and offenses committed against You. Purify our hearts, renew Your Church in holiness, and make us faithful adorers who console Your Heart and repair, by grace, what sin has wounded. You live and reign forever and ever. Amen.",
+    "occasion": "Reparation",
+    "category": "Litanies",
+    "summary": "A litany of sorrow and adoration offered in reparation for sins against Christ and His Eucharistic love.",
+    "sourceTitle": "Benedict XVI Institute — Reparation Prayers",
+    "sourceURL": "https://benedictinstitute.org/reparation/",
+    "weekdays": [
+      5
+    ],
+    "months": null,
+    "saintAliases": [
+      "Jesus",
+      "Sacred Heart of Jesus"
+    ],
+    "tags": [
+      "litany",
+      "reparation",
+      "eucharist"
+    ]
+  },
+  {
+    "id": "litany-of-st-isidore",
+    "title": "Litany of St. Isidore",
+    "text": "Lord, have mercy on us.\nChrist, have mercy on us.\nLord, have mercy on us.\n\nSt. Isidore, lover of honest labor, pray for us.\nSt. Isidore, faithful husband and father, pray for us.\nSt. Isidore, friend of the poor, pray for us.\nSt. Isidore, model of simplicity, pray for us.\nSt. Isidore, man of prayer in the midst of work, pray for us.\nSt. Isidore, patron of farmers and rural life, pray for us.\nSt. Isidore, who trusted God in drought and hardship, pray for us.\nSt. Isidore, who taught that labor may lead to holiness, pray for us.\n\nThat our work may be honest and fruitful, pray for us.\nThat the land may yield what is needed for all, pray for us.\nThat the poor may be fed and protected, pray for us.\nThat families may live in peace and gratitude, pray for us.\nThat we may seek first the Kingdom of God, pray for us.\n\nLet us pray.\nO God, by whose grace blessed Isidore the farmer attained holiness in humble labor, grant that we may follow his example by serving You faithfully in the duties of each day and by loving our neighbor in all we do. Through Christ our Lord. Amen.",
+    "occasion": "Work and Rural Life",
+    "category": "Litanies",
+    "summary": "A rural life litany seeking Saint Isidore's intercession for labor, land, and family.",
+    "sourceTitle": "EWTN — Rural Life Prayerbook",
+    "sourceURL": "https://www.ewtn.com/catholicism/library/rural-life-prayerbook-11881",
+    "weekdays": null,
+    "months": [
+      5
+    ],
+    "saintAliases": [
+      "Isidore",
+      "Saint Isidore",
+      "Isidore the Farmer"
+    ],
+    "tags": [
+      "litany",
+      "saint isidore",
+      "work"
+    ]
+  },
+  {
+    "id": "litany-of-st-joseph",
+    "title": "Litany of St. Joseph",
+    "text": "Lord, have mercy.\nChrist, have mercy.\nLord, have mercy.\nChrist, hear us.\nChrist, graciously hear us.\nGod the Father of Heaven, have mercy on us.\nGod the Son, Redeemer of the world, have mercy on us.\nGod the Holy Spirit, have mercy on us.\nHoly Trinity, one God, have mercy on us.\n\nHoly Mary, pray for us.\nSaint Joseph, pray for us.\nNoble son of the House of David, pray for us.\nLight of Patriarchs, pray for us.\nSpouse of the Mother of God, pray for us.\nChaste guardian of the Virgin, pray for us.\nFoster-father of the Son of God, pray for us.\nDiligent protector of Christ, pray for us.\nHead of the Holy Family, pray for us.\nJoseph most just, pray for us.\nJoseph most chaste, pray for us.\nJoseph most prudent, pray for us.\nJoseph most valiant, pray for us.\nJoseph most obedient, pray for us.\nJoseph most faithful, pray for us.\nMirror of patience, pray for us.\nLover of poverty, pray for us.\nModel of workers, pray for us.\nGlory of home life, pray for us.\nGuardian of virgins, pray for us.\nPillar of families, pray for us.\nSolace of the wretched, pray for us.\nHope of the sick, pray for us.\nPatron of the dying, pray for us.\nTerror of demons, pray for us.\nProtector of Holy Church, pray for us.\n\nLamb of God, who take away the sins of the world, spare us, O Lord.\nLamb of God, who take away the sins of the world, graciously hear us, O Lord.\nLamb of God, who take away the sins of the world, have mercy on us.\n\nHe made him the lord of his household.\nAnd prince over all his possessions.\n\nLet us pray.\nO God, who in Your loving providence chose blessed Joseph to be the spouse of Your most holy Mother, grant us the favor of having him for our intercessor in heaven whom on earth we venerate as our protector. You who live and reign forever and ever. Amen.",
+    "occasion": "Saint Joseph",
+    "category": "Litanies",
+    "summary": "The Church's official litany invoking Saint Joseph as guardian, worker, and protector of the universal Church.",
+    "sourceTitle": "USCCB — Litany of St. Joseph",
+    "sourceURL": "https://www.usccb.org/resources/litany-st-joseph",
+    "weekdays": null,
+    "months": [
+      3
+    ],
+    "saintAliases": [
+      "Joseph",
+      "Saint Joseph"
+    ],
+    "tags": [
+      "litany",
+      "saint joseph",
+      "family"
+    ]
+  },
+  {
+    "id": "litany-of-trust",
+    "title": "Litany of Trust",
+    "text": "From the belief that I have to earn Your love,\nDeliver me, Jesus.\nFrom the fear that I am unlovable,\nDeliver me, Jesus.\nFrom the false security that I have what it takes,\nDeliver me, Jesus.\nFrom the fear that trusting You will leave me more destitute,\nDeliver me, Jesus.\nFrom all suspicion of Your words and promises,\nDeliver me, Jesus.\nFrom the rebellion against childlike dependency on You,\nDeliver me, Jesus.\nFrom refusals and reluctances in accepting Your will,\nDeliver me, Jesus.\nFrom anxiety about the future,\nDeliver me, Jesus.\nFrom resentment or excessive preoccupation with the past,\nDeliver me, Jesus.\nFrom restless self-seeking in the present moment,\nDeliver me, Jesus.\nFrom disbelief in Your love and presence,\nDeliver me, Jesus.\nFrom the fear of being asked to give more than I have,\nDeliver me, Jesus.\nFrom the belief that my life has no meaning or worth,\nDeliver me, Jesus.\nFrom the fear of what love demands,\nDeliver me, Jesus.\nFrom discouragement,\nDeliver me, Jesus.\n\nThat You are continually holding me, sustaining me, loving me,\nJesus, I trust in You.\nThat Your love goes deeper than my sins and failings and transforms me,\nJesus, I trust in You.\nThat not knowing what tomorrow brings is an invitation to lean on You,\nJesus, I trust in You.\nThat You are with me in my suffering,\nJesus, I trust in You.\nThat my suffering, united to Your own, will bear fruit in this life and the next,\nJesus, I trust in You.\nThat You will not leave me orphan, that You are present in Your Church,\nJesus, I trust in You.\nThat Your plan is better than anything else,\nJesus, I trust in You.\nThat You always hear me and in Your goodness always respond to me,\nJesus, I trust in You.\nThat You give me the grace to accept forgiveness and to forgive others,\nJesus, I trust in You.\nThat You give me all the strength I need for what is asked,\nJesus, I trust in You.\nThat my life is a gift,\nJesus, I trust in You.\nThat You will teach me to trust You,\nJesus, I trust in You.\nThat You are my Lord and my God,\nJesus, I trust in You.\nThat I am Your beloved one,\nJesus, I trust in You. Amen.",
+    "occasion": "Trust and Surrender",
+    "category": "Litanies",
+    "summary": "A contemporary litany asking Jesus to free the heart from fear and teach it radical trust.",
+    "sourceTitle": "Sisters of Life — Litany of Trust",
+    "sourceURL": "https://sistersoflife.org/litany-of-trust/",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Jesus"
+    ],
+    "tags": [
+      "litany",
+      "trust",
+      "surrender"
+    ]
+  },
+  {
+    "id": "litany-of-the-blessed-sacrament",
+    "title": "Litany of the Blessed Sacrament",
+    "text": "Lord, have mercy.\nChrist, have mercy.\nLord, have mercy.\n\nJesus in the Most Blessed Sacrament, have mercy on us.\nJesus, true God and true Man in the Blessed Sacrament, have mercy on us.\nJesus, truly, really, and substantially present in the Blessed Sacrament, have mercy on us.\nJesus, bread of life in the Blessed Sacrament, have mercy on us.\nJesus, hidden God and Savior in the Blessed Sacrament, have mercy on us.\nJesus, perpetual sacrifice in the Blessed Sacrament, have mercy on us.\nJesus, holy victim in the Blessed Sacrament, have mercy on us.\nJesus, priest and altar in the Blessed Sacrament, have mercy on us.\nJesus, memorial of Your Passion in the Blessed Sacrament, have mercy on us.\nJesus, food of souls in the Blessed Sacrament, have mercy on us.\nJesus, medicine of immortality in the Blessed Sacrament, have mercy on us.\nJesus, bond of charity in the Blessed Sacrament, have mercy on us.\nJesus, pledge of future glory in the Blessed Sacrament, have mercy on us.\n\nBe merciful, spare us, O Lord.\nBe merciful, graciously hear us, O Lord.\nFrom unworthy reception of Your Body and Blood, O Lord, deliver us.\nFrom coldness and irreverence before the tabernacle, O Lord, deliver us.\nFrom neglect of Eucharistic adoration, O Lord, deliver us.\nFrom every offense against the Blessed Sacrament, O Lord, deliver us.\n\nThat we may adore You with living faith, we beseech You, hear us.\nThat we may receive You with purity of heart, we beseech You, hear us.\nThat we may grow in love through Holy Communion, we beseech You, hear us.\nThat the Holy Eucharist may be the center of our lives, we beseech You, hear us.\n\nLet us pray.\nLord Jesus Christ, who in this wonderful Sacrament have left us a memorial of Your Passion, grant us, we pray, so to venerate the sacred mysteries of Your Body and Blood that we may always experience within ourselves the fruit of Your redemption. You live and reign forever and ever. Amen.",
+    "occasion": "Eucharistic Adoration",
+    "category": "Litanies",
+    "summary": "A Eucharistic litany adoring Christ truly present in the Blessed Sacrament and asking for reverence and love.",
+    "sourceTitle": "The Fatima Center — Litany of the Blessed Sacrament",
+    "sourceURL": "https://fatima.org/wp-content/uploads/2021/06/Litany-Blessed-Sacrament.pdf",
+    "weekdays": [
+      1,
+      4
+    ],
+    "months": null,
+    "saintAliases": [
+      "Jesus",
+      "Blessed Sacrament",
+      "Eucharist"
+    ],
+    "tags": [
+      "litany",
+      "eucharist",
+      "adoration"
+    ]
+  },
+  {
+    "id": "litany-of-the-holy-cross",
+    "title": "Litany of the Holy Cross",
+    "text": "Lord, have mercy.\nChrist, have mercy.\nLord, have mercy.\n\nHoly Cross of Jesus Christ, save us by the power of God.\nHoly Cross, sign of our redemption, save us by the power of God.\nHoly Cross, standard of the King, save us by the power of God.\nHoly Cross, terror of demons, save us by the power of God.\nHoly Cross, hope of Christians, save us by the power of God.\nHoly Cross, support of the weak, save us by the power of God.\nHoly Cross, strength of martyrs, save us by the power of God.\nHoly Cross, consolation of the afflicted, save us by the power of God.\nHoly Cross, source of blessing, save us by the power of God.\nHoly Cross, path to eternal life, save us by the power of God.\n\nBy Your holy Cross, O Christ, redeem us.\nBy the wood on which salvation hung, redeem us.\nBy Your Passion and death, redeem us.\nBy the victory of Your Resurrection, redeem us.\n\nLet us pray.\nO God, who willed that Your Only Begotten Son should undergo the Cross to save the human race, grant, we pray, that we who have known His mystery on earth may merit the grace of His redemption in heaven. Through Christ our Lord. Amen.",
+    "occasion": "Holy Cross",
+    "category": "Litanies",
+    "summary": "A litany venerating the Holy Cross as the instrument of Christ's victory and our salvation.",
+    "sourceTitle": "Prayer Apostolate — Litany of the Holy Cross",
+    "sourceURL": "https://www.papamio.org/litany-of-the-holy-cross",
+    "weekdays": [
+      5
+    ],
+    "months": [
+      9
+    ],
+    "saintAliases": [
+      "Jesus",
+      "Holy Cross"
+    ],
+    "tags": [
+      "litany",
+      "cross",
+      "passion"
+    ]
+  },
+  {
+    "id": "litany-of-the-holy-guardian-angel",
+    "title": "Litany of the Holy Guardian Angel",
+    "text": "Lord, have mercy on us.\nChrist, have mercy on us.\nLord, have mercy on us.\nChrist, hear us.\nChrist, graciously hear us.\n\nGod the Father of Heaven, have mercy on us.\nGod the Son, Redeemer of the world, have mercy on us.\nGod the Holy Spirit, have mercy on us.\nHoly Trinity, one God, have mercy on us.\n\nHoly Mary, Queen of Angels, pray for us.\nHoly Angel, my guardian, pray for us.\nFaithful protector of my soul and body, pray for us.\nConstant companion on the way, pray for us.\nWise counselor in uncertainty, pray for us.\nDefender in temptation, pray for us.\nShield against the enemy, pray for us.\nComforter in sorrow, pray for us.\nGuide in prayer, pray for us.\nWitness of my life, pray for us.\nHelper at the hour of death, pray for us.\n\nFrom every sin, defend us.\nFrom the snares of the devil, defend us.\nFrom sudden death, defend us.\nFrom despair and presumption, defend us.\nFrom eternal loss, defend us.\n\nThat we may live in the grace of God, guide us.\nThat we may serve God faithfully, guide us.\nThat we may persevere to the end, guide us.\nThat we may praise God forever with the angels and saints, guide us.\n\nLet us pray.\nAlmighty and eternal God, in Your marvelous providence You send Your angels to watch over us. Grant that through the intercession and protection of our guardian angel we may be defended in this life and rejoice forever in Your presence in heaven. Through Christ our Lord. Amen.",
+    "occasion": "Guardian Angels",
+    "category": "Litanies",
+    "summary": "A litany asking one's guardian angel for protection, guidance, and perseverance in grace.",
+    "sourceTitle": "Liturgies.net — Litany to the Guardian Angel",
+    "sourceURL": "https://www.liturgies.net/saints/guardianangels/litanyguardianangel1.htm",
+    "weekdays": null,
+    "months": [
+      10
+    ],
+    "saintAliases": [
+      "Guardian Angel",
+      "Angels"
+    ],
+    "tags": [
+      "litany",
+      "guardian angel",
+      "angels"
+    ]
+  },
+  {
+    "id": "litany-of-the-immaculate-heart-of-mary",
+    "title": "Litany of the Immaculate Heart of Mary",
+    "text": "Lord, have mercy on us.\nChrist, have mercy on us.\nLord, have mercy on us.\nChrist, hear us.\nChrist, graciously hear us.\n\nGod our heavenly Father, have mercy on us.\nGod the Son, Redeemer of the world, have mercy on us.\nGod the Holy Spirit, have mercy on us.\nHoly Trinity, one God, have mercy on us.\n\nHeart of Mary, pray for us.\nImmaculate Heart of Mary, pray for us.\nHeart of Mary, according to the Heart of God, pray for us.\nHeart of Mary, united to the Heart of Jesus, pray for us.\nHeart of Mary, sanctuary of the Holy Spirit, pray for us.\nHeart of Mary, preserved from all stain of sin, pray for us.\nHeart of Mary, full of grace, pray for us.\nHeart of Mary, dwelling place of the Incarnate Word, pray for us.\nHeart of Mary, mother and teacher of the Church, pray for us.\nHeart of Mary, refuge of sinners, pray for us.\nHeart of Mary, comfort of the afflicted, pray for us.\nHeart of Mary, hope of the dying, pray for us.\nHeart of Mary, queen of peace, pray for us.\n\nLamb of God, who take away the sins of the world, spare us, O Lord.\nLamb of God, who take away the sins of the world, graciously hear us, O Lord.\nLamb of God, who take away the sins of the world, have mercy on us.\n\nLet us pray.\nO God, who prepared a worthy dwelling for the Holy Spirit in the Heart of the Blessed Virgin Mary, grant that through her maternal intercession we may become a temple pleasing to You and live ever more closely united to the Heart of her Son. Through Christ our Lord. Amen.",
+    "occasion": "Immaculate Heart of Mary",
+    "category": "Litanies",
+    "summary": "A Marian litany honoring the Immaculate Heart and seeking deeper union with Jesus through Mary.",
+    "sourceTitle": "Mary Queen of Heaven Resale Shop — Litanies",
+    "sourceURL": "https://mqhr.org/litanies",
+    "weekdays": [
+      6
+    ],
+    "months": [
+      6
+    ],
+    "saintAliases": [
+      "Mary",
+      "Immaculate Heart of Mary",
+      "Blessed Virgin Mary"
+    ],
+    "tags": [
+      "litany",
+      "immaculate heart",
+      "mary"
+    ]
+  },
+  {
+    "id": "litany-of-the-most-holy-name-of-jesus",
+    "title": "Litany of the Most Holy Name of Jesus",
+    "text": "Lord, have mercy on us.\nChrist, have mercy on us.\nLord, have mercy on us.\nJesus, hear us.\nJesus, graciously hear us.\n\nGod the Father of Heaven, have mercy on us.\nGod the Son, Redeemer of the world, have mercy on us.\nGod the Holy Spirit, have mercy on us.\nHoly Trinity, one God, have mercy on us.\n\nJesus, Son of the living God, have mercy on us.\nJesus, splendor of the Father, have mercy on us.\nJesus, brightness of eternal light, have mercy on us.\nJesus, King of glory, have mercy on us.\nJesus, sun of justice, have mercy on us.\nJesus, Son of the Virgin Mary, have mercy on us.\nJesus, most amiable, have mercy on us.\nJesus, most admirable, have mercy on us.\nJesus, mighty God, have mercy on us.\nJesus, father of the world to come, have mercy on us.\nJesus, angel of great counsel, have mercy on us.\nJesus, most powerful, have mercy on us.\nJesus, most patient, have mercy on us.\nJesus, most obedient, have mercy on us.\nJesus, meek and humble of heart, have mercy on us.\nJesus, lover of chastity, have mercy on us.\nJesus, our God, have mercy on us.\nJesus, our refuge, have mercy on us.\nJesus, father of the poor, have mercy on us.\nJesus, treasure of the faithful, have mercy on us.\nJesus, good shepherd, have mercy on us.\nJesus, true light, have mercy on us.\nJesus, eternal wisdom, have mercy on us.\nJesus, infinite goodness, have mercy on us.\nJesus, our way and our life, have mercy on us.\nJesus, joy of angels, have mercy on us.\nJesus, King of patriarchs, have mercy on us.\nJesus, master of apostles, have mercy on us.\nJesus, teacher of evangelists, have mercy on us.\nJesus, strength of martyrs, have mercy on us.\nJesus, light of confessors, have mercy on us.\nJesus, purity of virgins, have mercy on us.\nJesus, crown of all saints, have mercy on us.\n\nBe merciful, spare us, O Jesus.\nBe merciful, graciously hear us, O Jesus.\nFrom all evil, deliver us, O Jesus.\nFrom all sin, deliver us, O Jesus.\nFrom Your wrath, deliver us, O Jesus.\nFrom the snares of the devil, deliver us, O Jesus.\nFrom the spirit of impurity, deliver us, O Jesus.\nFrom everlasting death, deliver us, O Jesus.\nFrom neglect of Your inspirations, deliver us, O Jesus.\n\nThrough the mystery of Your holy Incarnation, deliver us, O Jesus.\nThrough Your Nativity, deliver us, O Jesus.\nThrough Your infancy, deliver us, O Jesus.\nThrough Your most divine life, deliver us, O Jesus.\nThrough Your labors, deliver us, O Jesus.\nThrough Your agony and passion, deliver us, O Jesus.\nThrough Your cross and dereliction, deliver us, O Jesus.\nThrough Your sufferings, deliver us, O Jesus.\nThrough Your death and burial, deliver us, O Jesus.\nThrough Your resurrection, deliver us, O Jesus.\nThrough Your ascension, deliver us, O Jesus.\nThrough Your institution of the Most Holy Eucharist, deliver us, O Jesus.\nThrough Your joys, deliver us, O Jesus.\nThrough Your glory, deliver us, O Jesus.\n\nLamb of God, who take away the sins of the world, spare us, O Jesus.\nLamb of God, who take away the sins of the world, graciously hear us, O Jesus.\nLamb of God, who take away the sins of the world, have mercy on us, O Jesus.\n\nJesus, hear us.\nJesus, graciously hear us.\n\nLet us pray.\nO Lord Jesus Christ, You have said: Ask and you shall receive; seek and you shall find; knock and it shall be opened to you. Mercifully attend to our supplications, and grant us the gift of Your divine charity, that we may ever love You with our whole heart and never cease to praise Your most holy Name. Amen.",
+    "occasion": "Holy Name of Jesus",
+    "category": "Litanies",
+    "summary": "The traditional Church litany venerating the saving Name and person of Jesus Christ.",
+    "sourceTitle": "EWTN — Holy Name Litany",
+    "sourceURL": "https://www.ewtn.com/catholicism/devotions/holy-name-litany-27905",
+    "weekdays": null,
+    "months": [
+      1
+    ],
+    "saintAliases": [
+      "Jesus",
+      "Holy Name of Jesus"
+    ],
+    "tags": [
+      "litany",
+      "holy name",
+      "jesus"
+    ]
+  },
+  {
+    "id": "litany-of-the-most-precious-blood-of-jesus",
+    "title": "Litany of the Most Precious Blood of Jesus",
+    "text": "Lord, have mercy on us.\nChrist, have mercy on us.\nLord, have mercy on us.\nChrist, hear us.\nChrist, graciously hear us.\n\nGod the Father of Heaven, have mercy on us.\nGod the Son, Redeemer of the world, have mercy on us.\nGod the Holy Spirit, have mercy on us.\nHoly Trinity, one God, have mercy on us.\n\nBlood of Christ, only-begotten Son of the eternal Father, save us.\nBlood of Christ, Incarnate Word of God, save us.\nBlood of Christ, of the new and eternal testament, save us.\nBlood of Christ, falling upon the earth in the Agony, save us.\nBlood of Christ, shed profusely in the Scourging, save us.\nBlood of Christ, flowing forth in the Crowning with thorns, save us.\nBlood of Christ, poured out on the Cross, save us.\nBlood of Christ, price of our salvation, save us.\nBlood of Christ, without which there is no forgiveness, save us.\nBlood of Christ, Eucharistic drink and refreshment of souls, save us.\nBlood of Christ, stream of mercy, save us.\nBlood of Christ, victor over demons, save us.\nBlood of Christ, courage of Martyrs, save us.\nBlood of Christ, strength of Confessors, save us.\nBlood of Christ, bringing forth Virgins, save us.\nBlood of Christ, help of those in peril, save us.\nBlood of Christ, relief of the burdened, save us.\nBlood of Christ, solace in sorrow, save us.\nBlood of Christ, hope of the penitent, save us.\nBlood of Christ, consolation of the dying, save us.\nBlood of Christ, peace and tenderness of hearts, save us.\nBlood of Christ, pledge of eternal life, save us.\nBlood of Christ, freeing souls from purgatory, save us.\nBlood of Christ, most worthy of all glory and honor, save us.\n\nLamb of God, who take away the sins of the world, spare us, O Lord.\nLamb of God, who take away the sins of the world, graciously hear us, O Lord.\nLamb of God, who take away the sins of the world, have mercy on us.\n\nYou have redeemed us, O Lord, in Your Blood.\nAnd made us, for our God, a kingdom.\n\nLet us pray.\nAlmighty and eternal God, You have appointed Your only-begotten Son the Redeemer of the world and willed to be appeased by His Blood. Grant, we beg You, that we may worthily adore this price of our salvation, and through its power be safeguarded from the evils of the present life so that we may rejoice in its fruits forever in heaven. Through Christ our Lord. Amen.",
+    "occasion": "Most Precious Blood",
+    "category": "Litanies",
+    "summary": "The Church's litany honoring the redeeming Blood shed by Christ for the salvation of the world.",
+    "sourceTitle": "EWTN — Litany of the Most Precious Blood of Jesus",
+    "sourceURL": "https://www.ewtn.com/catholicism/devotions/litany-of-the-most-precious-blood-of-jesus-248",
+    "weekdays": null,
+    "months": [
+      7
+    ],
+    "saintAliases": [
+      "Jesus",
+      "Precious Blood of Jesus"
+    ],
+    "tags": [
+      "litany",
+      "precious blood",
+      "jesus"
+    ]
+  },
+  {
+    "id": "litany-to-the-holy-angels",
+    "title": "Litany to the Holy Angels",
+    "text": "Lord, have mercy on us.\nChrist, have mercy on us.\nLord, have mercy on us.\nChrist, hear us.\nChrist, graciously hear us.\n\nGod the Father of Heaven, have mercy on us.\nGod the Son, Redeemer of the world, have mercy on us.\nGod the Holy Spirit, have mercy on us.\nHoly Trinity, one God, have mercy on us.\n\nHoly Mary, Queen of Angels, pray for us.\nSt. Michael, pray for us.\nSt. Gabriel, pray for us.\nSt. Raphael, pray for us.\nAll you holy Angels and Archangels, pray for us.\nAll you holy Choirs of blessed Spirits, pray for us.\nAll you holy Seraphim and Cherubim, pray for us.\nAll you holy Thrones and Dominations, pray for us.\nAll you holy Principalities and Powers, pray for us.\nAll you holy Virtues of Heaven, pray for us.\nAll you holy Angels set over kingdoms and provinces, pray for us.\nAll you holy Angels, guardians of the Church, pray for us.\nAll you holy Angels, our guardians, pray for us.\nAll you holy Angels, who behold the face of the Father, pray for us.\n\nBe merciful, spare us, O Lord.\nBe merciful, graciously hear us, O Lord.\nFrom all evil, deliver us, O Lord.\nFrom the snares of the devil, deliver us, O Lord.\nFrom sudden death, deliver us, O Lord.\nFrom everlasting death, deliver us, O Lord.\n\nThrough the ministry of Your holy Angels, we beseech You, hear us.\nThat You would grant us the protection of St. Michael, we beseech You, hear us.\nThat You would send Your angels to guard us in all our ways, we beseech You, hear us.\nThat with the angels we may praise You forever, we beseech You, hear us.\n\nLet us pray.\nO God, who in Your wonderful providence send Your angels to guard and protect us, grant that we may always be defended by their protection and rejoice eternally in their company. Through Christ our Lord. Amen.",
+    "occasion": "Holy Angels",
+    "category": "Litanies",
+    "summary": "A traditional invocation of the angels and archangels for protection, purity, and praise.",
+    "sourceTitle": "EWTN — Litany to the Holy Angels",
+    "sourceURL": "https://www.ewtn.com/catholicism/devotions/litany-to-the-holy-angels-264",
+    "weekdays": null,
+    "months": [
+      9
+    ],
+    "saintAliases": [
+      "Angels",
+      "Archangels",
+      "Michael",
+      "Gabriel",
+      "Raphael"
+    ],
+    "tags": [
+      "litany",
+      "angels",
+      "archangels"
+    ]
+  },
+  {
+    "id": "litany-to-the-holy-spirit",
+    "title": "Litany to the Holy Spirit",
+    "text": "Lord, have mercy on us.\nChrist, have mercy on us.\nLord, have mercy on us.\nChrist, hear us.\nChrist, graciously hear us.\n\nGod the Father of Heaven, have mercy on us.\nGod the Son, Redeemer of the world, have mercy on us.\nGod the Holy Spirit, have mercy on us.\nHoly Trinity, one God, have mercy on us.\n\nSpirit of the Father and the Son, boundless Life of both, sanctify us.\nHoly Spirit, proceeding from the Father and the Son, enter our hearts.\nHoly Spirit, equal to the Father and the Son, renew us.\nPromise of God the Father, have mercy on us.\nRay of heavenly light, have mercy on us.\nAuthor of all good, have mercy on us.\nSource of heavenly water, have mercy on us.\nConsuming fire, have mercy on us.\nArdent charity, have mercy on us.\nSpiritual unction, have mercy on us.\nSpirit of love and truth, have mercy on us.\nSpirit of wisdom and understanding, have mercy on us.\nSpirit of counsel and fortitude, have mercy on us.\nSpirit of knowledge and piety, have mercy on us.\nSpirit of the fear of the Lord, have mercy on us.\nSpirit of grace and prayer, have mercy on us.\nSpirit of peace and meekness, have mercy on us.\nSpirit of modesty and innocence, have mercy on us.\nHoly Spirit, the Comforter, have mercy on us.\nHoly Spirit, the Sanctifier, have mercy on us.\nHoly Spirit, who governs the Church, have mercy on us.\nGift of God Most High, have mercy on us.\nSpirit who fill the universe, have mercy on us.\nSpirit of the adoption of the children of God, have mercy on us.\n\nBe merciful, spare us, O Lord.\nBe merciful, graciously hear us, O Lord.\nFrom all evil, deliver us, O Lord.\nFrom every sin, deliver us, O Lord.\nFrom the snares of the devil, deliver us, O Lord.\nFrom neglect of Your inspirations, deliver us, O Lord.\n\nThat we may be filled with the grace of the Holy Spirit, we beseech You, hear us.\nThat we may be enlightened with His heavenly light, we beseech You, hear us.\nThat we may be strengthened in trial, we beseech You, hear us.\nThat we may persevere in holiness, we beseech You, hear us.\n\nLet us pray.\nGrant, O merciful Father, that Your divine Spirit may enlighten, inflame, and purify us, that He may penetrate us with His heavenly dew and make us fruitful in good works. Through Christ our Lord. Amen.",
+    "occasion": "Invocation of the Holy Spirit",
+    "category": "Litanies",
+    "summary": "A traditional litany invoking the sevenfold gifts and sanctifying action of the Holy Spirit.",
+    "sourceTitle": "EWTN — Litany to the Holy Spirit",
+    "sourceURL": "https://www.ewtn.com/catholicism/devotions/litany-to-the-holy-spirit-266",
+    "weekdays": [
+      2
+    ],
+    "months": null,
+    "saintAliases": [
+      "Holy Spirit",
+      "Pentecost"
+    ],
+    "tags": [
+      "litany",
+      "holy spirit",
+      "gifts"
+    ]
+  },
+  {
+    "id": "hail-mary",
+    "title": "Hail Mary",
+    "text": "Hail, Mary, full of grace, the Lord is with thee. Blessed art thou among women and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners, now and at the hour of our death. Amen.",
+    "occasion": "Any Time",
+    "category": "Marian Prayer",
+    "summary": "The Church's foundational prayer asking the Blessed Virgin Mary to intercede for us.",
+    "sourceTitle": "USCCB — Hail Mary",
+    "sourceURL": "https://www.usccb.org/prayers/hail-mary",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Virgin Mary",
+      "Mother of God"
+    ],
+    "tags": [
+      "marian",
+      "intercession",
+      "core prayer"
+    ]
   },
   {
     "id": "memorare",
-    "name": "The Memorare",
-    "occasion": "Anytime",
-    "text": "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession was left unaided. Inspired by this confidence, I fly unto thee, O Virgin of virgins, my mother; to thee do I come, before thee I stand, sinful and sorrowful. O Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me. Amen."
+    "title": "Memorare",
+    "text": "Remember, O most gracious Virgin Mary, that never was it known that anyone who fled to thy protection, implored thy help, or sought thy intercession, was left unaided. Inspired by this confidence I fly unto thee, O Virgin of virgins, my Mother. To thee do I come, before thee I stand, sinful and sorrowful. O Mother of the Word Incarnate, despise not my petitions, but in thy mercy hear and answer me. Amen.",
+    "occasion": "Any Time",
+    "category": "Marian Prayer",
+    "summary": "A traditional appeal of confidence in the Blessed Virgin Mary's intercession.",
+    "sourceTitle": "USCCB — Memorare",
+    "sourceURL": "https://www.usccb.org/prayers/memorare",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Virgin Mary",
+      "Mother of God"
+    ],
+    "tags": [
+      "marian",
+      "intercession",
+      "trust"
+    ]
   },
   {
-    "id": "sub-tuum",
-    "name": "Sub Tuum Praesidium",
-    "occasion": "Evening",
-    "text": "We fly to thy protection, O holy Mother of God. Despise not our petitions in our necessities, but deliver us always from all dangers, O glorious and blessed Virgin. Amen."
+    "id": "hail-holy-queen-salve-regina",
+    "title": "Hail, Holy Queen (Salve Regina)",
+    "text": "Hail, Holy Queen, Mother of Mercy, our life, our sweetness and our hope. To thee do we cry, poor banished children of Eve. To thee do we send up our sighs, mourning and weeping in this valley of tears. Turn then, most gracious advocate, thine eyes of mercy toward us, and after this our exile show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary.",
+    "occasion": "Any Time",
+    "category": "Marian Prayer",
+    "summary": "One of the Church's great Marian antiphons invoking the Queen Mother with filial confidence.",
+    "sourceTitle": "USCCB — Hail, Holy Queen (The Salve Regina)",
+    "sourceURL": "https://www.usccb.org/prayers/hail-holy-queen-salve-regina",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Virgin Mary",
+      "Mother of Mercy"
+    ],
+    "tags": [
+      "marian",
+      "antiphon",
+      "intercession"
+    ]
   },
   {
-    "id": "st-michael",
-    "name": "Prayer to Saint Michael",
-    "occasion": "Anytime",
-    "text": "Saint Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil. May God rebuke him, we humbly pray; and do Thou, O Prince of the Heavenly Host, by the power of God, cast into hell Satan and all evil spirits who wander through the world seeking the ruin of souls. Amen."
+    "id": "angelus",
+    "title": "Angelus",
+    "text": "V/. The Angel of the Lord declared unto Mary.\nR/. And she conceived of the Holy Spirit.\n\nHail Mary...\n\nV/. Behold the handmaid of the Lord.\nR/. Be it done unto me according to thy word.\n\nHail Mary...\n\nV/. And the Word was made flesh.\nR/. And dwelt among us.\n\nHail Mary...\n\nV/. Pray for us, O holy Mother of God.\nR/. That we may be made worthy of the promises of Christ.\n\nLet us pray: Pour forth, we beseech thee, O Lord, thy grace into our hearts; that we, to whom the Incarnation of Christ, thy Son, was made known by the message of an angel, may by his Passion and Cross be brought to the glory of his Resurrection. Through the same Christ our Lord. Amen.",
+    "occasion": "Morning, Noon, Evening",
+    "category": "Marian Prayer",
+    "summary": "The traditional remembrance of the Incarnation prayed throughout the day outside Eastertide.",
+    "sourceTitle": "USCCB — Angelus",
+    "sourceURL": "https://www.usccb.org/prayers/angelus",
+    "weekdays": null,
+    "months": [
+      1,
+      2,
+      3,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Annunciation",
+      "Virgin Mary"
+    ],
+    "tags": [
+      "marian",
+      "incarnation",
+      "daily devotion"
+    ]
   },
   {
-    "id": "hail-holy-queen",
-    "name": "Hail Holy Queen",
-    "occasion": "Evening",
-    "text": "Hail, holy Queen, Mother of Mercy, our life, our sweetness and our hope. To thee do we cry, poor banished children of Eve; to thee do we send up our sighs, mourning and weeping in this vale of tears. Turn then, most gracious Advocate, thine eyes of mercy toward us; and after this, our exile, show unto us the blessed fruit of thy womb, Jesus. O clement, O loving, O sweet Virgin Mary! Pray for us, O Holy Mother of God, that we may be made worthy of the promises of Christ. Amen."
+    "id": "regina-caeli",
+    "title": "Regina Caeli",
+    "text": "V/. Queen of Heaven, rejoice, alleluia.\nR/. For He whom you did merit to bear, alleluia.\nV/. Has risen, as he said, alleluia.\nR/. Pray for us to God, alleluia.\n\nV/. Rejoice and be glad, O Virgin Mary, alleluia.\nR/. For the Lord has truly risen, alleluia.\n\nLet us pray.\nO God, who have been pleased to gladden the world by the Resurrection of your Son our Lord Jesus Christ, grant, we pray, that through his Mother, the Virgin Mary, we may receive the joys of everlasting life. Through Christ our Lord. Amen.",
+    "occasion": "Eastertide",
+    "category": "Marian Prayer",
+    "summary": "The Easter season Marian antiphon prayed in place of the Angelus.",
+    "sourceTitle": "USCCB — Regina Caeli",
+    "sourceURL": "https://www.usccb.org/prayers/regina-caeli",
+    "weekdays": null,
+    "months": [
+      4,
+      5
+    ],
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Resurrection",
+      "Virgin Mary"
+    ],
+    "tags": [
+      "marian",
+      "easter",
+      "antiphon"
+    ]
+  },
+  {
+    "id": "sub-tuum-praesidium",
+    "title": "Sub Tuum Praesidium",
+    "text": "We turn to you for protection, holy Mother of God. Listen to our prayers and help us in our needs. Save us from every danger, glorious and blessed Virgin.",
+    "occasion": "Any Time",
+    "category": "Marian Prayer",
+    "summary": "An ancient Marian plea for protection and help in time of need.",
+    "sourceTitle": "Vatican — Mater Populi fidelis",
+    "sourceURL": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20251104_mater-populi-fidelis_en.html",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Mother of God",
+      "Virgin Mary"
+    ],
+    "tags": [
+      "marian",
+      "ancient",
+      "protection"
+    ]
+  },
+  {
+    "id": "alma-redemptoris-mater",
+    "title": "Alma Redemptoris Mater",
+    "text": "O loving Mother of the Redeemer, gate of heaven, star of the sea, assist your people who have fallen yet strive to rise again. To the wonderment of nature you bore your Creator, yet remained a virgin after as before. You who received Gabriel's joyful greeting, have pity on us poor sinners.",
+    "occasion": "Advent to February 1",
+    "category": "Marian Prayer",
+    "summary": "The seasonal Marian antiphon traditionally prayed from Advent until February 1.",
+    "sourceTitle": "EWTN — Alma Redemptoris Mater (O Loving Mother of our Redeemer)",
+    "sourceURL": "https://www.ewtn.com/catholicism/teachings/alma-redemptoris-mater-o-loving-mother-of-our-redeemer-12735",
+    "weekdays": null,
+    "months": [
+      12,
+      1
+    ],
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Virgin Mary",
+      "Mother of the Redeemer"
+    ],
+    "tags": [
+      "marian",
+      "antiphon",
+      "advent"
+    ]
+  },
+  {
+    "id": "ave-regina-caelorum",
+    "title": "Ave Regina Caelorum",
+    "text": "Hail, O Queen of Heaven. Hail, O Lady of Angels. Hail! thou root, hail! thou gate from whom unto the world a light has arisen: Rejoice, glorious Virgin, lovely beyond all others, farewell, most beautiful maiden, and pray for us to Christ.",
+    "occasion": "February 2 to Holy Week",
+    "category": "Marian Prayer",
+    "summary": "The seasonal Marian antiphon traditionally prayed from Candlemas until Holy Week.",
+    "sourceTitle": "EWTN — Ave Regina caelorum (Welcome, O Queen of Heaven)",
+    "sourceURL": "https://www.ewtn.com/catholicism/teachings/ave-regina-caelorum-welcome-o-queen-of-heaven-12736",
+    "weekdays": null,
+    "months": [
+      2,
+      3
+    ],
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Queen of Heaven",
+      "Virgin Mary"
+    ],
+    "tags": [
+      "marian",
+      "antiphon",
+      "lent"
+    ]
+  },
+  {
+    "id": "act-of-entrustment-to-mary",
+    "title": "Act of Entrustment to Mary",
+    "text": "O Virgin Mary, Jesus on the Cross wanted to entrust us to you, not to lessen but to reaffirm his exclusive role as Saviour of the world. In you, bright dawn of grace, all our trust is placed. Make us hear your Son's invitation: \"If anyone thirst, let him come to me and drink.\" O Mother, guide us to Christ. Teach us to know and love him, so that we too may become capable of true love and be springs of living water in the midst of a thirsting world. Totus Tuus ego sum! I am all yours! And each one of them cries to you, with me: Totus Tuus! Totus Tuus! Amen.",
+    "occasion": "Entrustment",
+    "category": "Marian Prayer",
+    "summary": "A Marian act of self-offering from Saint John Paul II centered on leading the soul to Christ.",
+    "sourceTitle": "Vatican — Act of Entrustment to Mary ('Behold, your Mother!')",
+    "sourceURL": "https://www.vatican.va/content/john-paul-ii/en/prayers/documents/hf_jp-ii_20030410_prayer-giovani.html",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "John Paul II",
+      "Virgin Mary"
+    ],
+    "tags": [
+      "marian",
+      "entrustment",
+      "john paul ii"
+    ]
+  },
+  {
+    "id": "act-of-entrustment-to-mary-jubilee-of-bishops",
+    "title": "Act of Entrustment to Mary for the Jubilee of Bishops",
+    "text": "Here we stand before you to entrust to your maternal care ourselves, the Church, the entire world. Plead for us with your beloved Son that he may give us in abundance the Holy Spirit, the Spirit of truth which is the fountain of life. Receive the Spirit for us and with us, as once in the first community gathered in Jerusalem around you, on the day of Pentecost. Open our hearts to justice and love. Lead all people to mutual understanding and to a firm resolve for peace. Amen.",
+    "occasion": "Entrustment",
+    "category": "Marian Prayer",
+    "summary": "Saint John Paul II's public entrustment of the Church and the world to Mary's maternal care.",
+    "sourceTitle": "Vatican — Act of Entrustment to Mary (8 October 2000)",
+    "sourceURL": "https://www.vatican.va/content/john-paul-ii/en/homilies/2000/documents/hf_jp-ii_hom_20001008_act-entrustment-mary.html",
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "John Paul II",
+      "Virgin Mary"
+    ],
+    "tags": [
+      "marian",
+      "entrustment",
+      "peace"
+    ]
+  },
+  {
+    "id": "prayer-to-our-lady-of-guadalupe",
+    "title": "A Prayer to Our Lady of Guadalupe",
+    "text": "Virgin of Guadalupe, Patroness of unborn children, we implore your intercession for every child at risk of abortion. Help expectant parents to welcome from God the priceless gift of their child's life. Console parents who have lost that gift through abortion, and lead them to forgiveness and healing through the Divine Mercy of your Son. Teach us to cherish and care for family and friends until God calls them home. Help us never to see others as burdens. Guide our public officials to defend each and every human life through just laws. Inspire us all to bring our faith into public life, to speak for those who have no voice. We ask this in the name of your Son, Jesus Christ, who is Love and Mercy itself. Amen.",
+    "occasion": "Our Lady of Guadalupe",
+    "category": "Marian Prayer",
+    "summary": "A prayer invoking Our Lady of Guadalupe for protection of life, mercy, and public witness.",
+    "sourceTitle": "USCCB — A Prayer to Our Lady of Guadalupe",
+    "sourceURL": "https://www.usccb.org/prayers/prayer-our-lady-guadalupe",
+    "weekdays": null,
+    "months": [
+      12
+    ],
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Our Lady of Guadalupe",
+      "Virgin Mary"
+    ],
+    "tags": [
+      "marian",
+      "guadalupe",
+      "pro-life"
+    ]
+  },
+  {
+    "id": "rosary-opening-and-closing-prayers",
+    "title": "Rosary Opening and Closing Prayers",
+    "text": "Opening:\nMake the Sign of the Cross.\nHolding the Crucifix, say the Apostles' Creed.\nOn the first bead, say an Our Father.\nSay one Hail Mary on each of the next three beads.\nSay the Glory Be.\nFor each of the five decades, announce the Mystery, then say the Our Father, ten Hail Marys, and the Glory Be.\n\nClosing:\nHail, Holy Queen...\nPray for us, O holy Mother of God.\nThat we may be made worthy of the promises of Christ.\n\nLet us pray.\nO God, whose Only Begotten Son, by his life, death, and resurrection, has purchased for us the rewards of eternal life, grant, we beseech thee, that meditating upon these mysteries of the Most Holy Rosary of the Blessed Virgin Mary, we may imitate what they contain and obtain what they promise, through the same Christ our Lord. Amen.",
+    "occasion": "Rosary",
+    "category": "Marian Prayer",
+    "summary": "A structured guide to the Rosary's opening and closing prayers for devotional use in the library.",
+    "sourceTitle": "USCCB — How to Pray the Rosary / Prayers of the Rosary",
+    "sourceURL": "https://www.usccb.org/how-to-pray-the-rosary",
+    "weekdays": null,
+    "months": [
+      10
+    ],
+    "saintAliases": [
+      "Mary",
+      "Blessed Virgin Mary",
+      "Our Lady of the Rosary",
+      "Virgin Mary"
+    ],
+    "tags": [
+      "marian",
+      "rosary",
+      "devotional guide"
+    ]
+  },
+  {
+    "id": "saint-michael-prayer",
+    "title": "Prayer to Saint Michael",
+    "text": "Saint Michael the Archangel, defend us in battle. Be our protection against the wickedness and snares of the devil. May God rebuke him, we humbly pray; and do thou, O Prince of the heavenly host, by the power of God, thrust into hell Satan and all the evil spirits who prowl about the world seeking the ruin of souls. Amen.",
+    "occasion": "Protection",
+    "category": "Intercessory Prayer",
+    "summary": "A concise prayer asking Saint Michael for spiritual protection.",
+    "sourceTitle": "Prayer of Pope Leo XIII",
+    "sourceURL": null,
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [
+      "Michael",
+      "Saint Michael",
+      "Archangel"
+    ],
+    "tags": [
+      "protection",
+      "battle",
+      "intercession"
+    ]
+  },
+  {
+    "id": "anima-christi",
+    "title": "Anima Christi",
+    "text": "Soul of Christ, sanctify me. Body of Christ, save me. Blood of Christ, inebriate me. Water from the side of Christ, wash me. Passion of Christ, strengthen me. O good Jesus, hear me. Within Thy wounds hide me. Suffer me not to be separated from Thee. From the malignant enemy defend me. In the hour of my death call me and bid me come unto Thee, that with Thy saints I may praise Thee forever and ever. Amen.",
+    "occasion": "Communion",
+    "category": "Eucharistic Prayer",
+    "summary": "A Eucharistic prayer of union with Christ often prayed after Communion.",
+    "sourceTitle": "Traditional Catholic Prayer",
+    "sourceURL": null,
+    "weekdays": [
+      1
+    ],
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "eucharist",
+      "communion",
+      "christ"
+    ]
+  },
+  {
+    "id": "act-of-contrition",
+    "title": "Act of Contrition",
+    "text": "O my God, I am heartily sorry for having offended Thee, and I detest all my sins because I dread the loss of heaven and the pains of hell, but most of all because they offend Thee, my God, who art all-good and deserving of all my love. I firmly resolve, with the help of Thy grace, to confess my sins, to do penance, and to amend my life. Amen.",
+    "occasion": "Examination of Conscience",
+    "category": "Repentance",
+    "summary": "A classic prayer of sorrow for sin and amendment of life.",
+    "sourceTitle": "Traditional Catholic Prayer",
+    "sourceURL": null,
+    "weekdays": [
+      7
+    ],
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "repentance",
+      "confession",
+      "mercy"
+    ]
+  },
+  {
+    "id": "act-of-faith",
+    "title": "Act of Faith",
+    "text": "O my God, I firmly believe that Thou art one God in three divine Persons, Father, Son, and Holy Spirit. I believe that Thy divine Son became man and died for our sins, and that He will come to judge the living and the dead. I believe these and all the truths which the holy Catholic Church teaches, because Thou hast revealed them, who canst neither deceive nor be deceived. Amen.",
+    "occasion": "Any Time",
+    "category": "Theological Virtues",
+    "summary": "A succinct profession of the Catholic faith.",
+    "sourceTitle": "Traditional Catholic Prayer",
+    "sourceURL": null,
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "faith",
+      "creed",
+      "virtue"
+    ]
+  },
+  {
+    "id": "act-of-hope",
+    "title": "Act of Hope",
+    "text": "O my God, relying on Thy almighty power and infinite mercy and promises, I hope to obtain pardon of my sins, the help of Thy grace, and life everlasting, through the merits of Jesus Christ, my Lord and Redeemer. Amen.",
+    "occasion": "Any Time",
+    "category": "Theological Virtues",
+    "summary": "A prayer of confident trust in God's mercy and promises.",
+    "sourceTitle": "Traditional Catholic Prayer",
+    "sourceURL": null,
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "hope",
+      "mercy",
+      "virtue"
+    ]
+  },
+  {
+    "id": "act-of-love",
+    "title": "Act of Love",
+    "text": "O my God, I love Thee above all things, with my whole heart and soul, because Thou art all-good and worthy of all love. I love my neighbor as myself for the love of Thee. I forgive all who have injured me and ask pardon of all whom I have injured. Amen.",
+    "occasion": "Any Time",
+    "category": "Theological Virtues",
+    "summary": "A prayer ordering the heart toward love of God and neighbor.",
+    "sourceTitle": "Traditional Catholic Prayer",
+    "sourceURL": null,
+    "weekdays": null,
+    "months": null,
+    "saintAliases": [],
+    "tags": [
+      "love",
+      "charity",
+      "virtue"
+    ]
+  },
+  {
+    "id": "veni-creator-spiritus",
+    "title": "Come, Holy Spirit",
+    "text": "Come, Holy Spirit, fill the hearts of Thy faithful and kindle in them the fire of Thy love. Send forth Thy Spirit and they shall be created. And Thou shalt renew the face of the earth.\n\nLet us pray. O God, who hast taught the hearts of the faithful by the light of the Holy Spirit, grant that by the gift of the same Spirit we may be always truly wise and ever rejoice in His consolation. Through Christ our Lord. Amen.",
+    "occasion": "Before Study or Discernment",
+    "category": "Holy Spirit",
+    "summary": "A traditional invocation for light, wisdom, and renewal in the Spirit.",
+    "sourceTitle": "Traditional Catholic Prayer",
+    "sourceURL": null,
+    "weekdays": [
+      2
+    ],
+    "months": null,
+    "saintAliases": [
+      "Pentecost",
+      "Holy Spirit"
+    ],
+    "tags": [
+      "holy spirit",
+      "wisdom",
+      "discernment"
+    ]
+  },
+  {
+    "id": "prayer-to-saint-joseph",
+    "title": "Prayer to Saint Joseph",
+    "text": "O glorious Saint Joseph, faithful follower of Jesus Christ, to thee do we raise our hearts and hands, to implore thy powerful intercession in obtaining from the benign Heart of Jesus all the helps and graces necessary for our spiritual and temporal welfare, particularly the grace of a happy death, and the special favor we now implore.\n\nO guardian of the Word Incarnate, we feel animated with confidence that thy prayers in our behalf will be graciously heard before the throne of God. O glorious Saint Joseph, through the love thou didst bear to Jesus Christ, and for the glory of His name, hear our prayers and obtain our petitions. Amen.",
+    "occasion": "Need and Protection",
+    "category": "Saintly Intercession",
+    "summary": "A traditional appeal to Saint Joseph for care, provision, and perseverance.",
+    "sourceTitle": "Traditional Catholic Prayer",
+    "sourceURL": null,
+    "weekdays": null,
+    "months": [
+      3
+    ],
+    "saintAliases": [
+      "Joseph",
+      "Saint Joseph"
+    ],
+    "tags": [
+      "joseph",
+      "family",
+      "protection"
+    ]
+  },
+  {
+    "id": "prayer-of-saint-francis",
+    "title": "Prayer of Saint Francis",
+    "text": "Lord, make me an instrument of Thy peace. Where there is hatred, let me sow love; where there is injury, pardon; where there is doubt, faith; where there is despair, hope; where there is darkness, light; and where there is sadness, joy.\n\nO Divine Master, grant that I may not so much seek to be consoled as to console, to be understood as to understand, to be loved as to love. For it is in giving that we receive; it is in pardoning that we are pardoned; and it is in dying that we are born to eternal life. Amen.",
+    "occasion": "Peace",
+    "category": "Saintly Intercession",
+    "summary": "A widely loved prayer for charity, humility, and peace.",
+    "sourceTitle": "Traditional Catholic Prayer",
+    "sourceURL": null,
+    "weekdays": null,
+    "months": [
+      10
+    ],
+    "saintAliases": [
+      "Francis",
+      "Francis of Assisi"
+    ],
+    "tags": [
+      "peace",
+      "charity",
+      "francis"
+    ]
   }
 ]

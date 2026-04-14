@@ -32,32 +32,35 @@ struct VaticanNewsService {
     }
 
     private func extractSaintName(from html: String) -> String {
-        // Try <h1 class="...">NAME</h1> pattern first
-        if let name = extractBetweenTags(html: html, openPattern: "<h1", closeTag: "</h1>") {
-            let clean = stripTags(name).trimmingCharacters(in: .whitespacesAndNewlines)
+        if let saintSection = extractSaintSection(from: html),
+           let name = extractBetweenTags(html: saintSection, openPattern: "<h2", closeTag: "</h2>") {
+            let clean = cleanText(name)
             if !clean.isEmpty { return clean }
         }
-        // Fallback: <title>NAME - Vatican News</title>
-        if let title = extractBetweenTags(html: html, openPattern: "<title", closeTag: "</title>") {
-            let clean = stripTags(title)
-                .components(separatedBy: " - ").first?
-                .trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-            if !clean.isEmpty { return clean }
-        }
+
         return ""
     }
 
     private func extractShortBio(from html: String) -> String {
-        // Look for the first substantial paragraph inside the main content area
-        var searchHtml = html
-        if let contentRange = html.range(of: "content__text") {
-            searchHtml = String(html[contentRange.upperBound...])
+        guard let saintSection = extractSaintSection(from: html),
+              let para = extractBetweenTags(html: saintSection, openPattern: "<p", closeTag: "</p>") else {
+            return ""
         }
-        if let para = extractBetweenTags(html: searchHtml, openPattern: "<p", closeTag: "</p>") {
-            let clean = stripTags(para).trimmingCharacters(in: .whitespacesAndNewlines)
-            if clean.count > 20 { return clean }
+
+        return cleanText(para)
+    }
+
+    private func extractSaintSection(from html: String) -> String? {
+        guard let sectionStart = html.range(of: "section--isStatic", options: .caseInsensitive) else {
+            return nil
         }
-        return ""
+
+        let fromSection = html[sectionStart.lowerBound...]
+        if let sectionEnd = fromSection.range(of: "</section>", options: .caseInsensitive) {
+            return String(fromSection[..<sectionEnd.upperBound])
+        }
+
+        return String(fromSection)
     }
 
     private func extractBetweenTags(html: String, openPattern: String, closeTag: String) -> String? {
@@ -67,6 +70,12 @@ struct VaticanNewsService {
         let afterGt = afterOpen[gtRange.upperBound...]
         guard let closeRange = afterGt.range(of: closeTag, options: .caseInsensitive) else { return nil }
         return String(afterGt[..<closeRange.lowerBound])
+    }
+
+    private func cleanText(_ input: String) -> String {
+        stripTags(input)
+            .replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)
+            .trimmingCharacters(in: .whitespacesAndNewlines)
     }
 
     private func stripTags(_ input: String) -> String {
