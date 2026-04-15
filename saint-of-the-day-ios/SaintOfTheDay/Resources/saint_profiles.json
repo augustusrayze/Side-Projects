@@ -4062,5 +4062,43 @@
         "sourceURL": null
       }
     ]
+  },
+  {
+    "canonicalName": "Saint Abbondio",
+    "aliases": [
+      "St. Abbondio",
+      "Saint Abbondio",
+      "Abbondio",
+      "Abbondio of Como",
+      "Abundius",
+      "Saint Abundius",
+      "St. Abundius",
+      "Abundius of Como"
+    ],
+    "shortBio": "Early bishop of Como remembered for defending orthodox Christological teaching and shepherding the Church in northern Italy with pastoral courage and fidelity.",
+    "timePeriod": "(5th century)",
+    "sections": [
+      {
+        "kind": "patronages",
+        "heading": "Patron of",
+        "body": "He is especially honored in Como and among Catholics devoted to episcopal fidelity, orthodox teaching, and steadfast pastoral leadership.",
+        "sourceTitle": "Catholic devotional tradition on Saint Abbondio",
+        "sourceURL": null
+      },
+      {
+        "kind": "miracles",
+        "heading": "Miracles",
+        "body": "Abbondio is remembered above all for the enduring witness of his pastoral holiness and doctrinal fidelity rather than for a large body of later miracle legends.",
+        "sourceTitle": "Historical and devotional tradition on Saint Abbondio",
+        "sourceURL": null
+      },
+      {
+        "kind": "writings",
+        "heading": "Writings",
+        "body": "No substantial body of writings is preserved under his name. His legacy is carried chiefly through the memory of his episcopal ministry and his defense of orthodox faith.",
+        "sourceTitle": "Historical tradition on Saint Abbondio",
+        "sourceURL": null
+      }
+    ]
   }
 ]

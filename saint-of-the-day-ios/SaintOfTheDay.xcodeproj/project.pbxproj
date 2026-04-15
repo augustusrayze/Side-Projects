@@ -80,7 +80,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AA000001000000000000100 /* SaintOfTheDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaintOfTheDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA000001000000000000100 /* Sancta | Catholic Prayer App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sancta | Catholic Prayer App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA000001000000000000101 /* SaintOfTheDayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintOfTheDayApp.swift; sourceTree = "<group>"; };
 		AA000001000000000000102 /* Saint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saint.swift; sourceTree = "<group>"; };
 		AA000001000000000000103 /* SaintSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaintSection.swift; sourceTree = "<group>"; };
@@ -352,14 +352,14 @@
 			path = Settings;
 			sourceTree = "<group>";
 		};
-		AA000001000000000000320 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				AA000001000000000000100 /* SaintOfTheDay.app */,
-				AA000001000000000000155 /* SaintOfTheDayWidget.appex */,
-			);
-			name = Products;
-			sourceTree = "<group>";
+        AA000001000000000000320 /* Products */ = {
+            isa = PBXGroup;
+            children = (
+                AA000001000000000000100 /* Sancta | Catholic Prayer App.app */,
+                AA000001000000000000155 /* SaintOfTheDayWidget.appex */,
+            );
+            name = Products;
+            sourceTree = "<group>";
 		};
 		AA000001000000000000330 /* Shared */ = {
 			isa = PBXGroup;
@@ -443,7 +443,7 @@
 			);
 			name = SaintOfTheDay;
 			productName = SaintOfTheDay;
-			productReference = AA000001000000000000100 /* SaintOfTheDay.app */;
+			productReference = AA000001000000000000100 /* Sancta | Catholic Prayer App.app */;
 			productType = "com.apple.product-type.application";
 		};
 		AA000001000000000000800 /* SaintOfTheDayWidget */ = {
@@ -632,7 +632,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.augustusrayze.saintoftheday;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Sancta | Catholic Prayer App";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -659,7 +659,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.augustusrayze.saintoftheday;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Sancta | Catholic Prayer App";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

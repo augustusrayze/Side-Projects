@@ -20,7 +20,6 @@ struct PrayerView: View {
                             PrayerHeaderCard(
                                 prayer: prayer,
                                 dateText: fullDateText(for: viewModel.selectedDate),
-                                saintName: viewModel.currentSaintName,
                                 isSaved: savedStore.contains(prayer),
                                 onToggleSaved: {
                                     savedStore.toggle(prayer)
@@ -113,7 +112,6 @@ struct PrayerView: View {
 private struct PrayerHeaderCard: View {
     let prayer: DailyPrayer
     let dateText: String
-    let saintName: String?
     let isSaved: Bool
     let onToggleSaved: () -> Void
 
@@ -155,18 +153,6 @@ private struct PrayerHeaderCard: View {
             HStack(spacing: 8) {
                 PrayerMetaPill(label: prayer.category)
                 PrayerMetaPill(label: prayer.occasion)
-            }
-
-            if let saintName, !saintName.isEmpty {
-                VStack(alignment: .leading, spacing: 4) {
-                    Text("Linked Saint")
-                        .font(.saintCaption)
-                        .foregroundStyle(Color.ancientGold)
-
-                    Text(saintName)
-                        .font(.saintBody)
-                        .foregroundStyle(Color.inkBrown)
-                }
             }
         }
         .padding(20)

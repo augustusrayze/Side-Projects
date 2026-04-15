@@ -64,7 +64,14 @@ final class SaintRepository {
             )
 
             let matchedFallback = cardFallbackService.record(forNames: profileNames + [resolvedSaint.canonicalName, resolvedSaint.wikipediaTitle])
-            let verifiedSaint = verifiedMatch(for: name, candidate: resolvedSaint, fallbackBio: vaticanBio, date: date)
+            let verifiedSaint = verifiedMatch(
+                for: name,
+                candidate: resolvedSaint,
+                fallbackBio: vaticanBio,
+                date: date,
+                profile: profile,
+                fallbackRecord: matchedFallback
+            )
             let canonicalSaint = saintWithCanonicalIdentity(
                 verifiedSaint,
                 originalName: name,
@@ -195,12 +202,44 @@ final class SaintRepository {
         return fallbackSaint(name: profile?.canonicalName ?? originalName, shortBio: bestShortBio(primary: profile?.shortBio, secondary: vaticanBio, tertiary: nil, quaternary: nil, fallback: vaticanBio), profileSections: profileSections, timePeriod: profile?.timePeriod, date: date)
     }
 
-    private func verifiedMatch(for originalName: String, candidate: Saint, fallbackBio: String, date: Date) -> Saint {
+    private func verifiedMatch(
+        for originalName: String,
+        candidate: Saint,
+        fallbackBio: String,
+        date: Date,
+        profile: SaintProfileRecord?,
+        fallbackRecord: SaintCardFallbackRecord?
+    ) -> Saint {
         guard isLikelySameSaint(originalName: originalName, candidateName: candidate.canonicalName) ||
-                isLikelySameSaint(originalName: originalName, candidateName: candidate.wikipediaTitle) else {
+                isLikelySameSaint(originalName: originalName, candidateName: candidate.wikipediaTitle) ||
+                matchesCuratedIdentity(candidate: candidate, profile: profile, fallbackRecord: fallbackRecord) else {
             return fallbackSaint(name: originalName, shortBio: fallbackBio, profileSections: [], timePeriod: nil, date: date)
         }
         return candidate
+    }
+
+    private func matchesCuratedIdentity(
+        candidate: Saint,
+        profile: SaintProfileRecord?,
+        fallbackRecord: SaintCardFallbackRecord?
+    ) -> Bool {
+        let candidateNames = [candidate.canonicalName, candidate.wikipediaTitle]
+            .map(normalizedSaintName)
+            .filter { !$0.isEmpty }
+
+        let curatedNames = (
+            [profile?.canonicalName, fallbackRecord?.canonicalName].compactMap { $0 }
+            + (profile?.aliases ?? [])
+            + (fallbackRecord?.aliases ?? [])
+        )
+        .map(normalizedSaintName)
+        .filter { !$0.isEmpty }
+
+        guard !candidateNames.isEmpty, !curatedNames.isEmpty else { return false }
+
+        return candidateNames.contains { candidateName in
+            curatedNames.contains(candidateName)
+        }
     }
 
     private func saintWithCanonicalIdentity(
