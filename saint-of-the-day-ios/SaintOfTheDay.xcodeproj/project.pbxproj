@@ -620,6 +620,7 @@
 				CODE_SIGN_ENTITLEMENTS = SaintOfTheDay/SaintOfTheDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J7F5F8F43A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = SaintOfTheDay/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Saint of the Day";
@@ -646,6 +647,7 @@
 				CODE_SIGN_ENTITLEMENTS = SaintOfTheDay/SaintOfTheDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J7F5F8F43A;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = SaintOfTheDay/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Saint of the Day";

@@ -45,8 +45,8 @@ struct SaintProvider: TimelineProvider {
         let entry = SaintEntry(date: Date(), saintData: loadSaintData())
 
         // Refresh shortly after midnight so tomorrow's saint appears on time
-        var components = Calendar.current.dateComponents([.year, .month, .day], from: Date())
-        components.day! += 1
+        let tomorrow = Calendar.current.date(byAdding: .day, value: 1, to: Date()) ?? Date().addingTimeInterval(86_400)
+        var components = Calendar.current.dateComponents([.year, .month, .day], from: tomorrow)
         components.hour = 0
         components.minute = 5
         let nextMidnight = Calendar.current.date(from: components) ?? Date().addingTimeInterval(86_400)

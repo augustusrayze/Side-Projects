@@ -2,7 +2,7 @@ import Foundation
 
 struct VaticanNewsService {
     func fetchSaint(for date: Date) async throws -> (name: String, shortBio: String) {
-        let url = buildURL(for: date)
+        guard let url = buildURL(for: date) else { throw VaticanNewsError.badResponse }
         var request = URLRequest(url: url)
         request.setValue("Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15", forHTTPHeaderField: "User-Agent")
         request.timeoutInterval = 10
@@ -24,11 +24,11 @@ struct VaticanNewsService {
 
     // MARK: - Private
 
-    private func buildURL(for date: Date) -> URL {
+    private func buildURL(for date: Date) -> URL? {
         let calendar = Calendar.current
         let month = String(format: "%02d", calendar.component(.month, from: date))
         let day = String(format: "%02d", calendar.component(.day, from: date))
-        return URL(string: "https://www.vaticannews.va/en/saints/\(month)/\(day).html")!
+        return URL(string: "https://www.vaticannews.va/en/saints/\(month)/\(day).html")
     }
 
     private func extractSaintName(from html: String) -> String {

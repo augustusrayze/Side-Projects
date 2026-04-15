@@ -16,7 +16,7 @@ final class TodayViewModel {
         let today = Calendar.current.startOfDay(for: Date())
         self.selectedDate = today
         self.todayRepo = SaintRepository(date: today)
-        self.yesterdayRepo = SaintRepository(date: Calendar.current.date(byAdding: .day, value: -1, to: today)!)
+        self.yesterdayRepo = SaintRepository(date: Calendar.current.date(byAdding: .day, value: -1, to: today) ?? today)
     }
 
     // MARK: - Today
