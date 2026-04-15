@@ -77,6 +77,10 @@ final class SaintRepository {
             try? cacheService.save(completedSaint, for: date)
             state = .loaded(completedSaint)
 
+            if Calendar.current.isDateInToday(date) {
+                SaintWidgetDataBridge.update(from: completedSaint)
+            }
+
             if Calendar.current.isDateInToday(date), let imageURL = completedSaint.imageURL {
                 Task {
                     await NotificationService.shared.updateNotificationImage(
@@ -93,6 +97,9 @@ final class SaintRepository {
                     try? cacheService.save(completedStale, for: date)
                 }
                 state = .loaded(completedStale)
+                if Calendar.current.isDateInToday(date) {
+                    SaintWidgetDataBridge.update(from: completedStale)
+                }
             } else {
                 state = .failed(error)
             }
