@@ -50,12 +50,20 @@ final class NotificationService: NSObject {
         }
 
         var components = DateComponents()
-        components.hour = 8
-        components.minute = 0
+        components.hour   = UserDefaults.standard.object(forKey: "notificationHour")   as? Int ?? 8
+        components.minute = UserDefaults.standard.object(forKey: "notificationMinute") as? Int ?? 0
 
         let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: true)
         let request = UNNotificationRequest(identifier: notificationID, content: content, trigger: trigger)
         try? await center.add(request)
+    }
+
+    /// Cancels the existing daily notification and reschedules it with the
+    /// currently stored hour/minute preference (no image update needed here).
+    func rescheduleNotification() async {
+        guard await isPermissionGranted() else { return }
+        center.removePendingNotificationRequests(withIdentifiers: [notificationID])
+        await scheduleDailyNotification(imageURL: nil, saintName: nil, date: Date())
     }
 
     /// Called after today's saint loads — cancels existing notification and reschedules with image.

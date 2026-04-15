@@ -76,6 +76,7 @@ struct SavedView: View {
                             Image(systemName: "arrow.up.arrow.down")
                                 .foregroundStyle(Color.inkBrown)
                         }
+                        .accessibilityLabel("Sort saved items")
                     }
                 }
             }
@@ -98,14 +99,14 @@ struct SavedView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 32)
 
-            HStack(spacing: 12) {
+            VStack(spacing: 10) {
                 Button {
                     router.selectedTab = .saints
                 } label: {
                     Text("Go to Saints")
                         .font(.saintBody)
                         .foregroundStyle(Color.parchment)
-                        .padding(.horizontal, 18)
+                        .frame(maxWidth: .infinity)
                         .padding(.vertical, 12)
                         .background(Color.ancientGold)
                         .clipShape(RoundedRectangle(cornerRadius: 8))
@@ -117,7 +118,7 @@ struct SavedView: View {
                     Text("Go to Prayer")
                         .font(.saintBody)
                         .foregroundStyle(Color.inkBrown)
-                        .padding(.horizontal, 18)
+                        .frame(maxWidth: .infinity)
                         .padding(.vertical, 12)
                         .background(Color.ancientGold.opacity(0.12))
                         .overlay(

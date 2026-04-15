@@ -68,6 +68,7 @@ struct SaintHeroCard: View {
                             )
                     }
                     .buttonStyle(.plain)
+                    .accessibilityLabel(savedStore.contains(saint) ? "Remove from saved" : "Save saint")
                 }
                 .padding(.trailing, 16)
                 .padding(.bottom, 16)

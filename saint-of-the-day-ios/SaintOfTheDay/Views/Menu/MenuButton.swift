@@ -25,5 +25,7 @@ struct MenuButton: View {
             }
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("Open menu")
+        .accessibilityHint("Daily Prayer, Mass Readings, Liturgical Calendar, and settings")
     }
 }

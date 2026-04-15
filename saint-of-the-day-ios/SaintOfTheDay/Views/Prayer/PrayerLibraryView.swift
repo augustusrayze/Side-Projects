@@ -40,6 +40,10 @@ struct PrayerLibraryView: View {
                 categoryPickerSection
 
                 VStack(spacing: 12) {
+                    Image(systemName: "magnifyingglass")
+                        .font(.system(size: 34, weight: .light))
+                        .foregroundStyle(Color.ancientGold)
+
                     Text("No prayers matched that search.")
                         .font(.saintHeading)
                         .foregroundStyle(Color.inkBrown)
@@ -47,6 +51,7 @@ struct PrayerLibraryView: View {
                     Text("Try a broader title or switch categories.")
                         .font(.saintBody)
                         .foregroundStyle(Color.inkBrown.opacity(0.72))
+                        .multilineTextAlignment(.center)
                 }
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 36)
@@ -231,6 +236,7 @@ private struct PrayerLibraryRow: View {
                     .frame(width: 32, height: 32)
             }
             .buttonStyle(.plain)
+            .accessibilityLabel(isSaved ? "Remove prayer from saved" : "Save prayer")
         }
         .padding(16)
         .cardStyle()

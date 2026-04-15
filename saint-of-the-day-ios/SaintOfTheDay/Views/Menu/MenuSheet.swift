@@ -89,8 +89,8 @@ struct MenuSheet: View {
                         .buttonStyle(.plain)
 
                         MenuGoldDivider()
-                    } else if saint != nil {
-                        ShareLink(item: shareText(for: saint!)) {
+                    } else if let saint {
+                        ShareLink(item: shareText(for: saint)) {
                             MenuRow(
                                 icon: "square.and.arrow.up",
                                 label: "Share Today's Saint",

@@ -6,7 +6,7 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             List {
-                // Notifications
+                // MARK: Notifications
                 Section {
                     HStack {
                         Label("Daily Notifications", systemImage: "bell.fill")
@@ -17,7 +17,17 @@ struct SettingsView: View {
                             .foregroundStyle(viewModel.notificationsEnabled ? Color.ancientGold : Color.inkBrown.opacity(0.4))
                     }
 
-                    if !viewModel.notificationsEnabled {
+                    if viewModel.notificationsEnabled {
+                        DatePicker(
+                            "Notification time",
+                            selection: notificationTimeBinding,
+                            displayedComponents: .hourAndMinute
+                        )
+                        .foregroundStyle(Color.inkBrown)
+                        .tint(Color.ancientGold)
+                        .accessibilityLabel("Daily notification time")
+                        .accessibilityHint("Choose when you receive today's saint notification")
+                    } else {
                         Button {
                             Task { await viewModel.requestNotificationPermission() }
                         } label: {
@@ -36,9 +46,15 @@ struct SettingsView: View {
                     Text("Notifications")
                         .font(.saintCaption)
                         .foregroundStyle(Color.inkBrown.opacity(0.6))
+                } footer: {
+                    if viewModel.notificationsEnabled {
+                        Text("You'll receive a notification at the chosen time each day with your featured saint.")
+                            .font(.saintCaption)
+                            .foregroundStyle(Color.inkBrown.opacity(0.5))
+                    }
                 }
 
-                // About
+                // MARK: About
                 Section {
                     HStack {
                         Label("Version", systemImage: "info.circle")
@@ -79,5 +95,15 @@ struct SettingsView: View {
         .task {
             await viewModel.checkNotificationStatus()
         }
+    }
+
+    /// Binding that reads from viewModel and triggers a reschedule on change.
+    private var notificationTimeBinding: Binding<Date> {
+        Binding(
+            get: { viewModel.notificationTime },
+            set: { newTime in
+                Task { await viewModel.updateNotificationTime(newTime) }
+            }
+        )
     }
 }

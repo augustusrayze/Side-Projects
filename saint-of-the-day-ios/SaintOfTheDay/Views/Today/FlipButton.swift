@@ -40,5 +40,7 @@ struct FlipButton: View {
         .buttonStyle(.plain)
         .disabled(isLoading)
         .animation(.easeInOut(duration: 0.2), value: isShowingYesterday)
+        .accessibilityLabel(isShowingYesterday ? "Return to today's saint" : "View yesterday's saint")
+        .accessibilityHint(isLoading ? "Loading" : "")
     }
 }

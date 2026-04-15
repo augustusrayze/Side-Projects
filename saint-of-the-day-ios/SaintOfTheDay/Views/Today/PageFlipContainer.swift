@@ -72,67 +72,16 @@ struct PageFlipContainer: View {
             MenuSheet(saint: currentSaint)
         }
         .fullScreenCover(isPresented: $showDatePicker) {
-            ZStack {
-                Color.black.opacity(0.12)
-                    .ignoresSafeArea()
-                    .onTapGesture {
-                        showDatePicker = false
-                    }
-
-                VStack {
-                    VStack(spacing: 20) {
-                        HStack {
-                            Text("Select a Date")
-                                .font(.saintHeading)
-                                .foregroundStyle(Color.inkBrown)
-
-                            Spacer()
-
-                            Button("Close") {
-                                showDatePicker = false
-                            }
-                            .font(.saintBody)
-                            .foregroundStyle(Color.inkBrown.opacity(0.8))
-                        }
-
-                        DatePicker(
-                            "Choose a Date",
-                            selection: $pendingDate,
-                            in: ...Date(),
-                            displayedComponents: .date
-                        )
-                        .datePickerStyle(.graphical)
-
-                        Button {
-                            let selectedDate = pendingDate
-                            showDatePicker = false
-                            Task {
-                                await viewModel.selectDate(selectedDate)
-                            }
-                        } label: {
-                            Text("Open Saint")
-                                .font(.saintBody)
-                                .foregroundStyle(Color.parchment)
-                                .frame(maxWidth: .infinity)
-                                .padding(.vertical, 14)
-                                .background(Color.ancientGold)
-                                .clipShape(RoundedRectangle(cornerRadius: 8))
-                        }
-                    }
-                    .padding(20)
-                    .background(Color.parchment)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 16)
-                            .stroke(Color.ancientGold.opacity(0.35), lineWidth: 1)
-                    )
-                    .shadow(color: Color.inkBrown.opacity(0.18), radius: 16, x: 0, y: 8)
-                    .padding(.horizontal, 20)
-                    .padding(.top, 110)
-
-                    Spacer()
+            DatePickerOverlay(
+                pendingDate: $pendingDate,
+                confirmLabel: "Open Saint",
+                onClose: { showDatePicker = false },
+                onConfirm: {
+                    let selectedDate = pendingDate
+                    showDatePicker = false
+                    Task { await viewModel.selectDate(selectedDate) }
                 }
-            }
+            )
         }
     }
 
@@ -318,5 +267,6 @@ struct PageFlipContainer: View {
                 .foregroundStyle(Color.inkBrown)
         }
         .buttonStyle(.plain)
+        .accessibilityLabel("Browse saints by date")
     }
 }

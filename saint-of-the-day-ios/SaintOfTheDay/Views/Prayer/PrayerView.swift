@@ -65,6 +65,7 @@ struct PrayerView: View {
                             .foregroundStyle(Color.inkBrown)
                     }
                     .buttonStyle(.plain)
+                    .accessibilityLabel("Browse prayers by date")
                 }
 
                 ToolbarItem(placement: .topBarTrailing) {
@@ -76,6 +77,7 @@ struct PrayerView: View {
                             .foregroundStyle(Color.inkBrown)
                     }
                     .buttonStyle(.plain)
+                    .accessibilityLabel("Prayer library")
                 }
             }
             .task {
@@ -88,15 +90,14 @@ struct PrayerView: View {
             }
         }
         .fullScreenCover(isPresented: $showDatePicker) {
-            PrayerDatePickerOverlay(
+            DatePickerOverlay(
                 pendingDate: $pendingDate,
+                confirmLabel: "Open Prayer",
                 onClose: { showDatePicker = false },
-                onOpen: {
+                onConfirm: {
                     let selectedDate = pendingDate
                     showDatePicker = false
-                    Task {
-                        await viewModel.selectDate(selectedDate)
-                    }
+                    Task { await viewModel.selectDate(selectedDate) }
                 }
             )
         }
@@ -148,6 +149,7 @@ private struct PrayerHeaderCard: View {
                         )
                 }
                 .buttonStyle(.plain)
+                .accessibilityLabel(isSaved ? "Remove prayer from saved" : "Save prayer")
             }
 
             HStack(spacing: 8) {
@@ -258,67 +260,6 @@ private struct PrayerMetaPill: View {
             .padding(.horizontal, 10)
             .padding(.vertical, 6)
             .background(Color.ancientGold.opacity(0.12), in: Capsule())
-    }
-}
-
-private struct PrayerDatePickerOverlay: View {
-    @Binding var pendingDate: Date
-    let onClose: () -> Void
-    let onOpen: () -> Void
-
-    var body: some View {
-        ZStack {
-            Color.black.opacity(0.12)
-                .ignoresSafeArea()
-                .onTapGesture(perform: onClose)
-
-            VStack {
-                VStack(spacing: 20) {
-                    HStack {
-                        Text("Select a Date")
-                            .font(.saintHeading)
-                            .foregroundStyle(Color.inkBrown)
-
-                        Spacer()
-
-                        Button("Close", action: onClose)
-                            .font(.saintBody)
-                            .foregroundStyle(Color.inkBrown.opacity(0.8))
-                    }
-
-                    DatePicker(
-                        "Choose a Date",
-                        selection: $pendingDate,
-                        in: ...Date(),
-                        displayedComponents: .date
-                    )
-                    .datePickerStyle(.graphical)
-
-                    Button(action: onOpen) {
-                        Text("Open Prayer")
-                            .font(.saintBody)
-                            .foregroundStyle(Color.parchment)
-                            .frame(maxWidth: .infinity)
-                            .padding(.vertical, 14)
-                            .background(Color.ancientGold)
-                            .clipShape(RoundedRectangle(cornerRadius: 8))
-                    }
-                    .buttonStyle(.plain)
-                }
-                .padding(20)
-                .background(Color.parchment)
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 16)
-                        .stroke(Color.ancientGold.opacity(0.35), lineWidth: 1)
-                )
-                .shadow(color: Color.inkBrown.opacity(0.18), radius: 16, x: 0, y: 8)
-                .padding(.horizontal, 20)
-                .padding(.top, 110)
-
-                Spacer()
-            }
-        }
     }
 }
 
